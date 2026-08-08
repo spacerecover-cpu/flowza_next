@@ -10,10 +10,17 @@ export interface Desk {
 const HOUR_X = 800 / 24;
 const x = (hour: number) => 60 + hour * HOUR_X;
 
+/**
+ * Desk hours in UTC, derived from local office hours:
+ * Bengaluru (UTC+5:30) 09:30–18:30, Muscat (UTC+4) 09:00–18:00,
+ * Dubai (UTC+4) 09:00–19:00. The three offices sit within ninety minutes of
+ * each other, so the staffed band is a working day rather than a follow-the-sun
+ * rota — the chart says so rather than implying otherwise.
+ */
 const DESKS: Desk[] = [
-  { city: 'DUBAI', fromHour: 2, toHour: 14 },
-  { city: 'LONDON', fromHour: 7, toHour: 18 },
-  { city: 'AUSTIN', fromHour: 13, toHour: 23 },
+  { city: 'BENGALURU', fromHour: 4, toHour: 13 },
+  { city: 'MUSCAT', fromHour: 5, toHour: 14 },
+  { city: 'DUBAI', fromHour: 5, toHour: 15 },
 ];
 
 /** Union of all desk hours — everything outside this is the on-call window. */
@@ -32,7 +39,7 @@ export function CoverageBand({ className }: CoverageBandProps) {
       className={['dgm', 'cov', className].filter(Boolean).join(' ')}
       viewBox="0 0 900 230"
       role="img"
-      aria-label={`Support coverage across a day in UTC. Dubai is staffed 02:00 to 14:00, London 07:00 to 18:00, Austin 13:00 to 23:00. Combined desk coverage runs ${String(DESK_FROM).padStart(2, '0')}:00 to ${DESK_TO}:00, leaving a three hour window from 23:00 to 02:00 handled by an on-call rota.`}
+      aria-label={`Support coverage across a day in UTC. Bengaluru is staffed 04:00 to 13:00, Muscat 05:00 to 14:00, Dubai 05:00 to 15:00. Combined desk coverage runs ${String(DESK_FROM).padStart(2, '0')}:00 to ${DESK_TO}:00, leaving the remaining ${24 - (DESK_TO - DESK_FROM)} hours from ${DESK_TO}:00 to ${String(DESK_FROM).padStart(2, '0')}:00 handled by an on-call rota.`}
     >
       <g className="tick">
         {ticks.map((t) => (

@@ -87,13 +87,33 @@ export const CONTACT_ROUTES: ContactRoute[] = [
 ];
 
 export interface Office {
+  /** The role this office plays, shown as the card's label. */
+  kind: string;
+  /** City and country, as the card heading. */
   city: string;
-  zone: string;
-  note: string;
+  /** The postal address, as it is written on correspondence. */
+  address: string;
+  /** Which accent the label carries. Head office, development, everything else. */
+  accent: 'head' | 'dev' | 'other';
 }
 
 export const OFFICES: Office[] = [
-  { city: 'Dubai', zone: 'UTC+4 · HQ', note: 'Engineering, implementation and the Middle East desk. Where the platform is built.' },
-  { city: 'London', zone: 'UTC+0/+1', note: 'European implementation, the trust team and the accounting specialists behind the ledger.' },
-  { city: 'Austin', zone: 'UTC−6/−5', note: 'The Americas desk and the second half of the support day.' },
+  {
+    kind: 'Head office',
+    city: 'Bengaluru, India',
+    address: 'Sai Sree Layout, Parappana Agrahara, Bengaluru, Karnataka, India',
+    accent: 'head',
+  },
+  {
+    kind: 'Development center',
+    city: 'Muscat, Oman',
+    address: 'Near Centara Hotel, Ghala, Muscat, Oman',
+    accent: 'dev',
+  },
+  {
+    kind: 'Other locations',
+    city: 'Dubai, United Arab Emirates',
+    address: 'National Insurance Building, Office 603, Opposite Deira City Center, Deira, Dubai, United Arab Emirates',
+    accent: 'other',
+  },
 ];
