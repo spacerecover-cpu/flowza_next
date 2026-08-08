@@ -1,8 +1,10 @@
 'use client';
 
 import React, { Suspense } from 'react';
+import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ROLES } from '@/lib/data/roles';
+import { SYSTEMS } from '@/lib/data/systems';
 
 function RoleSwitcherInner() {
   const router = useRouter();
@@ -34,7 +36,7 @@ function RoleSwitcherInner() {
           </button>
         ))}
         <p className="role__hint tiny">
-          Four teams, four questions, four different applications. Pick a role to see which FlowZa AI application answers it.
+          Four teams, four questions. Pick a role to see which FlowZa AI applications answer it.
         </p>
       </div>
       <div className="brief" aria-live="polite">
@@ -49,6 +51,21 @@ function RoleSwitcherInner() {
             <p className="small" style={{ color: 'var(--fg)' }}>{role.whatChanges}</p>
           </div>
         </div>
+        <div className="brief__blocks" style={{ marginTop: 'var(--s5)' }}>
+          <div>
+            <span className="brief__k">
+              {role.applications.length > 0 ? 'Which applications answer it' : 'How it is answered'}
+            </span>
+            <p className="small">
+              {role.applications.length > 0
+                ? role.applications
+                    .map((a) => SYSTEMS.find((s) => s.key === a.key)?.name)
+                    .filter(Boolean)
+                    .join(', ')
+                : 'The same security standard, built into every application.'}
+            </p>
+          </div>
+        </div>
         <div className="brief__stats">
           {role.stats.map((s, i) => (
             <div key={i} className="stat">
@@ -57,6 +74,9 @@ function RoleSwitcherInner() {
             </div>
           ))}
         </div>
+        <Link className="btn btn--text" href={`/solutions/${role.slug}`} style={{ marginTop: 'var(--s5)' }}>
+          {role.name} in full <span className="arw">&rarr;</span>
+        </Link>
       </div>
     </div>
   );

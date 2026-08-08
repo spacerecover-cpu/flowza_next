@@ -41,9 +41,9 @@ export function SiteFooter() {
             <ul>
               <li><Link href="/industries">By industry</Link></li>
               <li><Link href="/solutions">By function</Link></li>
-              <li><Link href="/industries?sector=retail-hospitality">Retail &amp; hospitality</Link></li>
-              <li><Link href="/industries?sector=logistics-freight">Logistics &amp; freight</Link></li>
-              <li><Link href="/solutions?team=finance">Office of the CFO</Link></li>
+              <li><Link href="/industries?sector=retail-hospitality#industry-config">Retail &amp; hospitality</Link></li>
+              <li><Link href="/industries?sector=logistics-freight#industry-config">Logistics &amp; freight</Link></li>
+              <li><Link href="/solutions/finance">Office of the CFO</Link></li>
               <li><Link href="/solutions">Migration paths</Link></li>
             </ul>
           </div>

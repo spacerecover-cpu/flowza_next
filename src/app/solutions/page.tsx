@@ -37,7 +37,10 @@ export default function SolutionsPage() {
       </Chapter>
 
       {/* ROLE SWITCHER */}
-      <Chapter>
+      {/* The nav and the footer link straight to #by-function: the switcher sits
+          below the fold, so without the anchor all four functions landed at the
+          top of this page and looked identical. */}
+      <Chapter id="by-function">
         <Wrap>
           <div className="section-head rv">
             <Eyebrow>The Monday question</Eyebrow>

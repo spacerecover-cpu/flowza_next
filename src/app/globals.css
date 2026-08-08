@@ -1515,6 +1515,12 @@ p:last-child { margin-bottom: 0 }
   text-transform:uppercase;color:var(--fg-3);margin-bottom:var(--s3)}
 .brief__stats{display:grid;grid-template-columns:1fr 1fr;gap:var(--s5);margin-top:var(--s6);
   border-top:1px solid var(--edge);padding-top:var(--s5)}
+/* the two published numbers at the top of a function page. .facts is a
+   four-column row and .brief__stats is sized for the narrow switcher panel, so
+   at full width both leave the pair stranded at opposite edges. */
+.fnstats{display:grid;grid-template-columns:repeat(2,minmax(0,20rem));gap:var(--s7);
+  border-top:1px solid var(--line);margin-top:clamp(40px,5vw,var(--s8));padding-top:var(--s5)}
+@media(max-width:700px){.fnstats{grid-template-columns:1fr;gap:var(--s5)}}
 .hand text{font-family:var(--mono);letter-spacing:.06em}
 .hand .bx{fill:none;stroke:var(--edge);stroke-width:1}
 .hand .bx-live{fill:var(--raise);stroke:var(--sig);stroke-width:1}

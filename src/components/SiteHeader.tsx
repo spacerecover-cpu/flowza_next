@@ -231,10 +231,10 @@ function MegaSolutions({ open, onClose }: { open: boolean; onClose: () => void }
         </div>
         <div className="mega__col">
           <p className="mega__title">By function</p>
-          <Link className="mlink" href="/solutions?team=finance" onClick={onClose}><span><span className="mlink__t">Office of the CFO</span><span className="mlink__d">Close, controls, forecast</span></span></Link>
-          <Link className="mlink" href="/solutions?team=operations" onClick={onClose}><span><span className="mlink__t">Operations</span><span className="mlink__d">Throughput and exceptions</span></span></Link>
-          <Link className="mlink" href="/solutions?team=revenue" onClick={onClose}><span><span className="mlink__t">Revenue teams</span><span className="mlink__d">Pipeline to cash</span></span></Link>
-          <Link className="mlink" href="/solutions?team=it-security" onClick={onClose}><span><span className="mlink__t">IT &amp; Security</span><span className="mlink__d">Consolidation and control</span></span></Link>
+          <Link className="mlink" href="/solutions/finance" onClick={onClose}><span><span className="mlink__t">Office of the CFO</span><span className="mlink__d">Close, controls, forecast</span></span></Link>
+          <Link className="mlink" href="/solutions/operations" onClick={onClose}><span><span className="mlink__t">Operations</span><span className="mlink__d">Throughput and exceptions</span></span></Link>
+          <Link className="mlink" href="/solutions/revenue" onClick={onClose}><span><span className="mlink__t">Revenue teams</span><span className="mlink__d">Pipeline to cash</span></span></Link>
+          <Link className="mlink" href="/solutions/it-security" onClick={onClose}><span><span className="mlink__t">IT &amp; Security</span><span className="mlink__d">Consolidation and control</span></span></Link>
           <Link className="btn btn--text" href="/solutions" onClick={onClose} style={{ marginTop: 'var(--s5)' }}>
             All functions <span className="arw">→</span>
           </Link>
