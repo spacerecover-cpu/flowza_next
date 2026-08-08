@@ -391,7 +391,9 @@ p:last-child { margin-bottom: 0 }
   gap: var(--s6);
 }
 .brand { display: flex; align-items: center; gap: 9px; text-decoration: none; flex: none }
-.brand__mark { width: 25px; height: 25px; flex: none }
+/* the mark is taller than it is wide, so it is contained in its square box
+   rather than stretched to fill it */
+.brand__mark { width: 25px; height: 25px; flex: none; object-fit: contain }
 .brand__word { font-family: var(--display); font-weight: 600; font-size: 1.125rem; letter-spacing: -.035em; color: var(--graphite) }
 .brand__sup {
   font-family: var(--mono);
