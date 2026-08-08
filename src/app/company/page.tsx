@@ -110,7 +110,7 @@ export default function CompanyPage() {
           <Cols style={{ alignItems: 'end', marginBottom: 'clamp(40px,5vw,var(--s8))' }}>
             <div className="c-7 rv">
               <Eyebrow>Coverage</Eyebrow>
-              <h2 className="d-l">Twenty-one hours staffed.<br />Three hours on call.</h2>
+              <h2 className="d-l">Eleven hours staffed.<br />Thirteen on call.</h2>
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
@@ -194,8 +194,8 @@ export default function CompanyPage() {
                   </table>
                 </div>
                 <p className="tiny" style={{ marginTop: 'var(--s4)' }}>
-                  Addresses and named contacts are issued with your account rather than published here, which keeps them out
-                  of scrapers and means you always have a person rather than an alias.
+                  Named contacts and direct numbers are issued with your account rather than published here, so you always
+                  have a person rather than an alias. The offices themselves are below.
                 </p>
               </div>
             </div>
@@ -208,9 +208,15 @@ export default function CompanyPage() {
             <div className="offs">
               {OFFICES.map((o) => (
                 <div key={o.city}>
+                  <span className={`offs__k offs__k--${o.accent}`}>{o.kind}</span>
                   <span className="offs__c">{o.city}</span>
-                  <span className="offs__z">{o.zone}</span>
-                  <span className="offs__a">{o.note}</span>
+                  <span className="offs__a">
+                    <svg className="offs__pin" viewBox="0 0 12 14" fill="none" aria-hidden="true">
+                      <path d="M6 13S1.5 8.6 1.5 5.5A4.5 4.5 0 0 1 10.5 5.5C10.5 8.6 6 13 6 13Z" stroke="currentColor" strokeWidth="1.2" />
+                      <circle cx="6" cy="5.4" r="1.6" stroke="currentColor" strokeWidth="1.2" />
+                    </svg>
+                    <span>{o.address}</span>
+                  </span>
                 </div>
               ))}
             </div>

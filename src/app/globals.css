@@ -1801,9 +1801,22 @@ p:last-child { margin-bottom: 0 }
 .offs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--edge-2); border: 1px solid var(--edge-2) }
 @media (max-width: 760px) { .offs { grid-template-columns: 1fr } }
 .offs > div { background: var(--bg); padding: var(--s5) }
-.offs__c { font-family: var(--display); font-size: 1.0625rem; font-weight: 600; letter-spacing: -.022em }
-.offs__z { display: block; font-family: var(--mono); font-size: .625rem; letter-spacing: .1em; color: var(--sig); margin-top: 5px }
-.offs__a { display: block; font-size: .8125rem; color: var(--fg-2); margin-top: var(--s3); line-height: 1.55 }
+/* the label above the city. Three accents so head office, the development
+   centre and everything else are distinguishable at a glance. */
+.offs__k {
+  display: block;
+  font-family: var(--mono);
+  font-size: .625rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: var(--s3);
+}
+.offs__k--head { color: var(--sig-amber) }
+.offs__k--dev { color: var(--sig) }
+.offs__k--other { color: var(--fg-3) }
+.offs__c { display: block; font-family: var(--display); font-size: 1.0625rem; font-weight: 600; letter-spacing: -.022em }
+.offs__a { display: flex; gap: 7px; font-size: .8125rem; color: var(--fg-2); margin-top: var(--s3); line-height: 1.55 }
+.offs__pin { flex: none; width: 12px; height: 14px; margin-top: 3px; color: var(--fg-3) }
 
 /* ============================================================
    INDUSTRY: PROFESSIONAL SERVICES
