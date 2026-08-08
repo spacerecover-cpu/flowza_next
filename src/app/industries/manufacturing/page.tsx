@@ -7,168 +7,126 @@ import { Eyebrow } from '@/components/Eyebrow';
 import { FAQ } from '@/components/FAQ';
 import { RelatedLinks } from '@/components/RelatedLinks';
 import { KeylineList } from '@/components/KeylineList';
-import { BomExplosion } from '@/components/BomExplosion';
-import { ScrapPareto } from '@/components/ScrapPareto';
-import { CapacityExplorer, CapacityProfile, CapacityPanel } from '@/components/CapacityProfile';
 
+/**
+ * Rewritten to what the nine actually do for a manufacturer.
+ *
+ * The previous version was built on work orders, bill-of-material explosion,
+ * work-centre constraint analysis and scrap Pareto charts. None of those exist
+ * in any FlowZa AI application — the catalogue has no MRP, no routings and no
+ * shop-floor scheduling. The page now covers the parts that are real (stock and
+ * warehouse, landed cost, the delivery fleet, the ledger, payroll) and states
+ * the boundary plainly rather than implying a production system.
+ */
 export const metadata: Metadata = {
   title: 'Manufacturing — FlowZa AI',
   description:
-    'One station sets the pace of the line. Find the constraint from real work order data, explode bills of material against live stock, and attribute scrap to a cause.',
+    'FlowZa AI runs the business around your shop floor, not the shop floor itself: warehouse and stock, landed cost, the delivery fleet, the ledger and statutory payroll for India and the Gulf.',
 };
 
 export default function ManufacturingPage() {
   return (
     <>
-      <CapacityExplorer initialIndex={2}>
-
-        {/* HERO */}
-        <Chapter style={{ paddingTop: 'clamp(48px,6vw,var(--s9))' }} net>
-          <Wrap>
-            <Cols style={{ alignItems: 'center' }}>
-              <div className="c-5 rv">
-                <p className="ibadge">
-                  <Link href="/industries">Industries</Link>
-                  <i />
-                  Manufacturing
-                </p>
-                <h1 className="d-xl" style={{ marginBottom: 'var(--s5)' }}>
-                  One station<br />sets the pace<br />of the whole<br />line.
-                </h1>
-                <p className="lede" style={{ marginBottom: 'var(--s7)' }}>
-                  Adding capacity anywhere except the constraint adds cost and nothing else. FlowZa measures capacity, queue and setup at every work centre from real work order data, so the constraint is a fact rather than an opinion — and so you notice when it moves.
-                </p>
-                <div className="row">
-                  <Link className="btn btn--primary" href="/pricing">
-                    Book a walkthrough <span className="arw">→</span>
-                  </Link>
-                  <Link className="btn btn--ghost" href="/platform">The platform</Link>
-                </div>
-              </div>
-              <div className="c-7 rv rv-d2">
-                <CapacityProfile />
-              </div>
-            </Cols>
-          </Wrap>
-        </Chapter>
-
-        {/* CONSTRAINT PANEL */}
-        <Chapter variant="raised">
-          <Wrap>
-            <Cols>
-              <div className="c-7 rv">
-                <Eyebrow>The constraint</Eyebrow>
-                <h2 className="d-l" style={{ marginBottom: 'var(--s5)' }}>
-                  Select a station.<br />See what it is<br />really costing.
-                </h2>
-                <p className="body-l" style={{ marginBottom: 'var(--s5)' }}>
-                  Utilisation figures above one hundred per cent are the tell — the station is being asked for more than it can deliver, and the difference is accumulating as queue somewhere upstream.
-                </p>
-                <p className="small">
-                  The uncomfortable part is that relieving the constraint does not remove it. It moves it, usually to the station that was second in line, which is why capacity decisions need to be made against the whole profile rather than one number.
-                </p>
-              </div>
-              <div className="c-5 rv rv-d2">
-                <CapacityPanel />
-              </div>
-            </Cols>
-          </Wrap>
-        </Chapter>
-
-      </CapacityExplorer>
-
-      {/* AVAILABILITY / BOM */}
-      <Chapter variant="instrument" net>
+      {/* HERO */}
+      <Chapter style={{ paddingTop: 'clamp(48px,6vw,var(--s9))' }} net>
         <Wrap>
-          <Cols style={{ alignItems: 'end', marginBottom: 'clamp(40px,5vw,var(--s8))' }}>
-            <div className="c-7 rv">
-              <Eyebrow>Availability</Eyebrow>
-              <h2 className="d-l">A shortage two levels<br />down still stops<br />the build.</h2>
-            </div>
-            <div className="c-5 rv rv-d2">
-              <p className="lede">
-                Bills of material are only useful exploded against real stock. FlowZa checks every level against the same item records the warehouse counts, so a promise date reflects what is actually available rather than what the top level suggests.
+          <Cols style={{ alignItems: 'end', marginBottom: 'clamp(48px,6vw,var(--s8))' }}>
+            <div className="c-6 rv">
+              <p className="ibadge">
+                <Link href="/industries">Industries</Link>
+                <i />
+                Manufacturing
               </p>
+              <h1 className="d-xl">
+                Not the shop floor.<br />Everything<br />around it.
+              </h1>
+            </div>
+            <div className="c-6 rv rv-d2">
+              <p className="lede">
+                FlowZa AI does not schedule your lines and does not pretend to. What it runs is the business
+                that surrounds them — the stores, the inbound and outbound movements, the true landed cost of
+                what you buy, the vehicles that deliver it, and the books and payroll underneath all of it.
+              </p>
+              <div className="row" style={{ marginTop: 'var(--s6)' }}>
+                <Link className="btn btn--primary" href="/pricing">
+                  Book a walkthrough <span className="arw">&rarr;</span>
+                </Link>
+                <Link className="btn btn--ghost" href="/products/logispro">FlowZa LogisPro</Link>
+              </div>
             </div>
           </Cols>
-          <BomExplosion />
+        </Wrap>
+      </Chapter>
+
+      {/* WHAT IT COVERS */}
+      <Chapter variant="raised">
+        <Wrap>
+          <div className="section-head rv">
+            <Eyebrow>What it covers</Eyebrow>
+            <h2 className="d-l">Four applications a<br />manufacturer actually uses.</h2>
+          </div>
           <KeylineList
             twoCol
             className="rv"
-            style={{ marginTop: 'clamp(40px,5vw,var(--s8))' }}
             items={[
               {
-                heading: 'Requisitions raised from the explosion',
-                body: 'A confirmed shortage proposes a purchase requisition against the preferred supplier at the agreed price, with the lead time already reflected in the revised promise date.',
+                heading: 'FlowZa LogisPro — the stores and the movements',
+                body: 'Bins, picking, putaway and cycle counts across sites, with inbound goods and outbound despatch on one board. Where stock physically is, and what moved it, without a spreadsheet in the middle.',
               },
               {
-                heading: 'Engineering changes are versioned',
-                body: 'A revised bill of material creates a new version with an effective date rather than editing history, so a unit built last year still explodes to the parts it was actually built from.',
+                heading: 'FlowZa Finance — the ledger and the landed cost',
+                body: 'Purchases, sales, inventory valuation and the double-entry books in one application, with GST for India and VAT and corporate tax for the Gulf maintained as the rules change.',
               },
               {
-                heading: 'Substitutes are declared, not improvised',
-                body: 'Approved alternates sit on the bill with their own cost, so a substitution is a priced decision and the margin effect is visible immediately.',
+                heading: 'FlowZa Fleetza — the vehicles that deliver',
+                body: 'Live GPS, driver behaviour scoring and predictive maintenance across your own delivery fleet, resolved to a true cost per kilometre rather than an assumed rate.',
               },
               {
-                heading: 'Scrap consumes real stock',
-                body: 'A rejected unit returns its usable components and writes off the rest against the work order, which is what makes the cost of quality a measured number.',
+                heading: 'FlowZa PMS — the appraisal and increment cycle',
+                body: 'KRA and KPI cycles calibrated across supervisors, with increments resolved against the statutory rules of the country each person is employed in.',
               },
             ]}
           />
         </Wrap>
       </Chapter>
 
-      {/* SCRAP PARETO */}
-      <Chapter>
-        <Wrap>
-          <Cols style={{ alignItems: 'end', marginBottom: 'clamp(40px,5vw,var(--s8))' }}>
-            <div className="c-7 rv">
-              <Eyebrow>Cost of quality</Eyebrow>
-              <h2 className="d-l">Three causes explain<br />three quarters of<br />the scrap.</h2>
-            </div>
-            <div className="c-5 rv rv-d2">
-              <p className="lede">
-                Scrap is usually reported as a single percentage, which is exactly the format that prevents anyone acting on it. Attributed to a cause, a station and a shift, it becomes a queue of fixable problems.
-              </p>
-            </div>
-          </Cols>
-          <ScrapPareto />
-        </Wrap>
-      </Chapter>
-
-      {/* WORK IN PROGRESS */}
-      <Chapter variant="raised">
-        <Wrap>
-          <Cols>
-            <div className="c-4 rv">
-              <Eyebrow>Work in progress</Eyebrow>
-              <h2 className="d-m">A balance, not an estimate</h2>
-            </div>
-            <div className="c-8 rv rv-d2">
-              <KeylineList
-                twoCol
-                style={{ borderTopColor: 'var(--edge)' }}
-                items={[
-                  {
-                    heading: 'Material, labour and overhead as incurred',
-                    body: 'Issues to the work order and time booked against it accumulate on the same transaction, so work in progress is a ledger balance you can walk down to individual postings.',
-                  },
-                  {
-                    heading: 'Variance where it happened',
-                    body: 'Usage and rate variances attach to the station and the shift that produced them rather than appearing as a single monthly figure with no owner.',
-                  },
-                  {
-                    heading: 'Standard costs that get revisited',
-                    body: 'Actuals are compared to standards continuously, and FlowZa flags when a standard has drifted far enough to be misleading rather than waiting for an annual review.',
-                  },
-                  {
-                    heading: 'Serialised to the unit',
-                    body: 'Where finished units carry a unique QRForge code, each scan is logged with its time and place, so a quality escape can be traced to the batch and the station that produced it — and the code can be re-pointed at a recall notice without reprinting anything.',
-                  },
-                ]}
-              />
-            </div>
-          </Cols>
+      {/* THE BOUNDARY */}
+      <Chapter variant="instrument" net>
+        <Wrap tight>
+          <div className="section-head rv">
+            <Eyebrow>Scope</Eyebrow>
+            <h2 className="d-l">What FlowZa AI<br />does not do here.</h2>
+            <p className="lede" style={{ marginTop: 'var(--s5)' }}>
+              Being clear about the edge is part of the offer. If any of the following is what you are
+              shopping for, none of the nine is the answer and we would rather say so now.
+            </p>
+          </div>
+          <KeylineList
+            className="rv"
+            items={[
+              {
+                heading: 'No bill of materials or MRP',
+                body: 'There is no BOM, no explosion against demand, and no material requirements planning. What a finished unit is made of is not modelled.',
+              },
+              {
+                heading: 'No work orders or routings',
+                body: 'Production orders, operation sequences and shop-floor booking are outside every one of the nine.',
+              },
+              {
+                heading: 'No capacity or constraint scheduling',
+                body: 'Work-centre loading, finite scheduling and bottleneck analysis are not in the product. Stock movement is tracked; the line that produced it is not.',
+              },
+              {
+                heading: 'No quality or scrap analysis',
+                body: 'Non-conformance, scrap coding and cause analysis are not modelled. Consumption is a stock movement here, not a quality record.',
+              },
+            ]}
+          />
+          <p className="tiny rv" style={{ marginTop: 'var(--s6)' }}>
+            Manufacturers commonly run a dedicated MRP or MES alongside FlowZa AI and use its applications
+            for stores, logistics, the ledger and payroll. Each application exposes its own API, so the
+            handover between the two is one you build deliberately.
+          </p>
         </Wrap>
       </Chapter>
 
@@ -180,30 +138,39 @@ export default function ManufacturingPage() {
             className="rv"
             items={[
               {
-                question: 'Discrete or process manufacturing?',
-                answer: 'Both, though they use different parts of the model. Discrete work uses bills of material, routings and serial or lot tracking. Process work uses formulations, yields and co-products. A business running both — assembling units from materials it also blends — runs them on one set of records rather than two systems.',
+                question: 'Can it replace our ERP?',
+                answer:
+                  'Only the financial and distribution half of one. FlowZa Finance covers purchases, sales, inventory valuation, the double-entry ledger, payroll and statutory filing, and FlowZa LogisPro covers the warehouse. If your ERP is also running production planning, that part stays where it is.',
               },
               {
-                question: 'Do you connect to machines and PLCs?',
-                answer: 'Machine data is consumed as events, typically through an existing historian or MES rather than by talking to controllers directly. Counts, downtime reasons and cycle times drive the capacity profile. Replacing shop-floor control systems is not part of a deployment.',
+                question: 'Does it track stock by batch or serial number?',
+                answer:
+                  'Stock is tracked by item and location across sites, with movements and cycle counts. Batch and serial traceability through a production process is not modelled, because the production process itself is not modelled.',
               },
               {
-                question: 'Can we plan finite capacity, not just infinite?',
-                answer: 'Yes. Scheduling respects work centre capacity, calendars, setup times and sequence-dependent changeovers, and will tell you the earliest honest completion date rather than the one that fits the order book. Where a date cannot be met, it shows what would have to move.',
+                question: 'We print codes on cartons and pallets. Is that covered?',
+                answer:
+                  'Yes, by FlowZa QRForge, which is a separate application on its own subscription. It mints thousands of unique codes from one CSV, logs every scan with time and place, and lets you change where a printed code points without reprinting anything.',
               },
               {
-                question: 'How do you handle subcontract operations?',
-                answer: "An outside operation is a step in the routing that happens at a supplier's location. Material issued to them stays on your balance sheet, the purchase order for the service links to the work order, and the return is a receipt against that step — so nothing disappears while it is off site.",
+                question: 'Which application should we start with?',
+                answer:
+                  'Whichever problem is urgent. If stock accuracy is the pain, start with LogisPro. If it is the close, the tax filing or payroll, start with Finance. Each is a complete product on its own, bought on its own subscription, and neither needs the other to be useful.',
               },
             ]}
           />
-          <h3 className="d-s rv" style={{ margin: 'var(--s9) 0 var(--s5)' }}>Related</h3>
+        </Wrap>
+      </Chapter>
+
+      {/* RELATED */}
+      <Chapter variant="raised">
+        <Wrap>
           <RelatedLinks
             className="rv"
             links={[
-              { href: '/products/qrforge', title: 'FlowZa QRForge', subtitle: 'Serialisation and recall' },
-              { href: '/industries/logistics', title: 'Logistics and Freight', subtitle: 'Moving what you build' },
-              { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
+              { href: '/products/logispro', title: 'FlowZa LogisPro', subtitle: 'Routes, shipments and warehouses' },
+              { href: '/products/finance', title: 'FlowZa Finance', subtitle: 'Accounting, ERP and payroll on one ledger' },
+              { href: '/industries', title: 'All industries', subtitle: 'Compare all seven sectors' },
             ]}
           />
         </Wrap>

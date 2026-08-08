@@ -218,15 +218,14 @@ function MegaSolutions({ open, onClose }: { open: boolean; onClose: () => void }
           <div className="mega__grid">
             <Link className="mlink" href="/industries/retail" onClick={onClose}><span><span className="mlink__t">Retail &amp; Hospitality</span><span className="mlink__d">Space, labour and channels</span></span></Link>
             <Link className="mlink" href="/industries/logistics" onClick={onClose}><span><span className="mlink__t">Logistics &amp; Freight</span><span className="mlink__d">Lane portfolio and cash cycle</span></span></Link>
-            <Link className="mlink" href="/industries/manufacturing" onClick={onClose}><span><span className="mlink__t">Manufacturing</span><span className="mlink__d">Constraint, BOM and scrap</span></span></Link>
-            <Link className="mlink" href="/industries/services" onClick={onClose}><span><span className="mlink__t">Professional Services</span><span className="mlink__d">Utilisation and realisation</span></span></Link>
-            <Link className="mlink" href="/industries/construction" onClick={onClose}><span><span className="mlink__t">Construction</span><span className="mlink__d">Certification and commitment</span></span></Link>
-            <Link className="mlink" href="/industries/healthcare" onClick={onClose}><span><span className="mlink__t">Healthcare</span><span className="mlink__d">Pathways and cost per episode</span></span></Link>
+            <Link className="mlink" href="/industries/manufacturing" onClick={onClose}><span><span className="mlink__t">Manufacturing</span><span className="mlink__d">Stores, fleet and the ledger</span></span></Link>
+            <Link className="mlink" href="/industries/services" onClick={onClose}><span><span className="mlink__t">Professional Services</span><span className="mlink__d">Billing, payroll and appraisals</span></span></Link>
+            <Link className="mlink" href="/industries/construction" onClick={onClose}><span><span className="mlink__t">Construction</span><span className="mlink__d">Plant, stores and payroll</span></span></Link>
             <Link className="mlink" href="/industries/wellness" onClick={onClose}><span><span className="mlink__t">Wellness &amp; Beauty</span><span className="mlink__d">Retention and lifetime value</span></span></Link>
-            <Link className="mlink" href="/industries/public" onClick={onClose}><span><span className="mlink__t">Public Sector</span><span className="mlink__d">Commitment and casework</span></span></Link>
+            <Link className="mlink" href="/industries/public" onClick={onClose}><span><span className="mlink__t">Public Sector</span><span className="mlink__d">Housing applications and fleet</span></span></Link>
           </div>
           <Link className="btn btn--text" href="/industries" onClick={onClose} style={{ marginTop: 'var(--s5)' }}>
-            Compare all eight <span className="arw">→</span>
+            Compare all seven <span className="arw">→</span>
           </Link>
         </div>
         <div className="mega__col">

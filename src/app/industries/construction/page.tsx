@@ -7,20 +7,28 @@ import { Eyebrow } from '@/components/Eyebrow';
 import { FAQ } from '@/components/FAQ';
 import { RelatedLinks } from '@/components/RelatedLinks';
 import { KeylineList } from '@/components/KeylineList';
-import { SCurve } from '@/components/SCurve';
-import { CostBreakdown } from '@/components/CostBreakdown';
 
+/**
+ * Rewritten to what the nine actually do for a contractor.
+ *
+ * The previous version was built on commitment accounting at the requisition,
+ * an S-curve of certified value against programme, retention tracking and a
+ * package-level cost breakdown. None of that exists: there is no project ledger,
+ * no valuation or certification process and no commitment stage in any of the
+ * nine. What is real is the plant and vehicles, the materials moving to site,
+ * the books, and statutory payroll for a workforce spread across countries.
+ */
 export const metadata: Metadata = {
   title: 'Construction — FlowZa AI',
   description:
-    'Cost lands as incurred, revenue when certified. See the unbilled wedge weekly, and report commitment rather than spend.',
+    'The yard, the fleet, the books and the payroll — not the project ledger. What FlowZa AI covers for a contractor, and the job-costing it deliberately does not.',
 };
 
 export default function ConstructionPage() {
   return (
     <>
       {/* HERO */}
-      <Chapter variant="instrument" style={{ paddingTop: 'clamp(48px,6vw,var(--s9))' }} net>
+      <Chapter style={{ paddingTop: 'clamp(48px,6vw,var(--s9))' }} net>
         <Wrap>
           <Cols style={{ alignItems: 'end', marginBottom: 'clamp(48px,6vw,var(--s8))' }}>
             <div className="c-6 rv">
@@ -30,99 +38,95 @@ export default function ConstructionPage() {
                 Construction
               </p>
               <h1 className="d-xl">
-                The job is<br />profitable until<br />someone<br />certifies it.
+                The yard and<br />the payroll, not<br />the programme.
               </h1>
             </div>
             <div className="c-6 rv rv-d2">
               <p className="lede">
-                Cost lands as it is incurred. Revenue lands when a surveyor agrees it. The distance between those two curves is the money you have already spent and not yet been permitted to invoice — and on most jobs nobody plots it until the month-end pack.
+                A contractor runs two businesses at once: the projects, and the plant, people and money that
+                serve them. FlowZa AI is built for the second. It will not value your works or track a
+                retention release — it will tell you what your plant costs, where your materials went, and
+                whether the payroll is compliant in four countries.
               </p>
               <div className="row" style={{ marginTop: 'var(--s6)' }}>
                 <Link className="btn btn--primary" href="/pricing">
-                  Book a walkthrough <span className="arw">→</span>
+                  Book a walkthrough <span className="arw">&rarr;</span>
                 </Link>
-                <Link className="btn btn--ghost" href="/products/finance">FlowZa Finance</Link>
+                <Link className="btn btn--ghost" href="/products/fleetza">FlowZa Fleetza</Link>
               </div>
             </div>
           </Cols>
-
-          <div className="panel rv" style={{ padding: 'var(--s6)' }}>
-            <div className="row" style={{ justifyContent: 'space-between', marginBottom: 'var(--s5)' }}>
-              <span className="mono" style={{ fontSize: '.625rem', letterSpacing: '.11em', color: 'var(--fg-3)' }}>
-                JOB 4412 · CUMULATIVE % OF CONTRACT VALUE
-              </span>
-              <span className="tag tag--ai">Unbilled 14 points</span>
-            </div>
-            <div className="dscroll" style={{ ['--dmin' as string]: '620px' }}>
-              <SCurve />
-            </div>
-            <p className="tiny" style={{ marginTop: 'var(--s4)' }}>
-              The shaded wedge is work performed and paid for but not yet certified. It peaks at fourteen points around month seven, which on a ten million contract is one and a half million of your own cash inside someone else&apos;s programme. Plotting it weekly rather than monthly is the entire intervention.
-            </p>
-          </div>
         </Wrap>
       </Chapter>
 
-      {/* COMMITMENT */}
-      <Chapter>
-        <Wrap>
-          <Cols style={{ alignItems: 'end', marginBottom: 'clamp(40px,5vw,var(--s8))' }}>
-            <div className="c-7 rv">
-              <Eyebrow>Commitment</Eyebrow>
-              <h2 className="d-l">Spent is not the<br />number that<br />matters.</h2>
-            </div>
-            <div className="c-5 rv rv-d2">
-              <p className="lede">
-                A package is exposed the moment the order is placed, not when the invoice arrives. Reporting spend without commitment is how a job looks fine in October and is overspent in November.
-              </p>
-            </div>
-          </Cols>
-          <div className="rv">
-            <CostBreakdown />
-            <p className="tiny" style={{ marginTop: 'var(--s4)' }}>
-              Cladding is only 58% spent and already 103% exposed, because the orders are placed and a variation is unsigned. Mechanical and electrical looks comfortable on spend and has 49% sitting in commitments. Neither shows on a spend report.
-            </p>
-          </div>
-        </Wrap>
-      </Chapter>
-
-      {/* THE CONTRACT RUNS THE LEDGER */}
+      {/* WHAT IT COVERS */}
       <Chapter variant="raised">
         <Wrap>
           <div className="section-head rv">
-            <Eyebrow>The contract runs the ledger</Eyebrow>
-            <h2 className="d-l">Retention and variations<br />are accounting, not<br />admin.</h2>
+            <Eyebrow>What it covers</Eyebrow>
+            <h2 className="d-l">The half of the business<br />that is not the site.</h2>
           </div>
           <KeylineList
             twoCol
             className="rv"
             items={[
               {
-                heading: 'Retention held and released automatically',
-                body: 'The percentage, the defects period and the release date are contract terms the ledger enforces. Retention receivable ages visibly instead of being remembered by whoever ran that job.',
+                heading: 'FlowZa Fleetza — plant and vehicles',
+                body: 'Live GPS across tippers, vans and plant, driver behaviour scoring, and predictive maintenance driven by actual use rather than a calendar — resolved to a true cost per kilometre and per asset.',
               },
               {
-                heading: 'Variations priced before they are built',
-                body: 'An instruction creates a variation with a value, a status and an effect on the forecast. Unsigned variations show as at-risk work in progress rather than optimism in the cost report.',
+                heading: 'FlowZa LogisPro — materials and the stores',
+                body: 'Bins, picking and cycle counts in the yard, with deliveries to site sequenced against time windows and vehicle capacity rather than planned on a whiteboard.',
               },
               {
-                heading: 'Applications reconcile to certificates',
-                body: 'What you applied for, what was certified and what was paid sit on the same record, so under-certification is a number with a history rather than an argument.',
+                heading: 'FlowZa Finance — the books',
+                body: 'Purchases, subcontractor invoices, the double-entry ledger and multi-entity consolidation, with GST for India and VAT and corporate tax for the Gulf maintained as the rules change.',
               },
               {
-                heading: 'Plant charged where it worked',
-                body: 'Owned plant is an asset with a day rate that posts to the job it stood on. Hire is a commitment the moment it is ordered. Both hit the same cost line.',
-              },
-              {
-                heading: 'Subcontractor compliance blocks payment',
-                body: 'Expired insurance, an out-of-date certificate or a missing tax status stops the payment run rather than surfacing in an audit six months later.',
-              },
-              {
-                heading: 'Cost to complete, not cost incurred',
-                body: 'Forecast final cost is rebuilt from commitments, remaining scope and current productivity, so the margin you report is the margin you will end with.',
+                heading: 'FlowZa Finance — payroll across four countries',
+                body: 'EPF, ESI, professional tax and gratuity for India; WPS bank files for the UAE; social insurance for Oman and GOSI for Saudi Arabia — the part of a mobile workforce that gets expensive when it is wrong.',
               },
             ]}
           />
+        </Wrap>
+      </Chapter>
+
+      {/* THE BOUNDARY */}
+      <Chapter variant="instrument" net>
+        <Wrap tight>
+          <div className="section-head rv">
+            <Eyebrow>Scope</Eyebrow>
+            <h2 className="d-l">What FlowZa AI<br />does not do here.</h2>
+            <p className="lede" style={{ marginTop: 'var(--s5)' }}>
+              Construction finance has a vocabulary of its own, and none of it is implemented in the nine.
+              If these are the words in your requirements document, this is not the product.
+            </p>
+          </div>
+          <KeylineList
+            className="rv"
+            items={[
+              {
+                heading: 'No commitment accounting',
+                body: 'A purchase order does not create a committed-cost position against a budget. Cost lands in the ledger when it is invoiced, in the ordinary way.',
+              },
+              {
+                heading: 'No valuations, certificates or retention',
+                body: 'Applications for payment, certified value, the unbilled wedge between the two, and retention held and released are not modelled anywhere in the product.',
+              },
+              {
+                heading: 'No project or job ledger',
+                body: 'There is no cost code structure, no package-level budget and no cost-value reconciliation. Profitability by job is not a report FlowZa AI produces.',
+              },
+              {
+                heading: 'No programme or progress tracking',
+                body: 'Planned against actual progress, S-curves and forecast-to-complete belong to a project system, and that is not what any of the nine is.',
+              },
+            ]}
+          />
+          <p className="tiny rv" style={{ marginTop: 'var(--s6)' }}>
+            Contractors commonly run a dedicated job-costing or project system and use FlowZa AI for plant,
+            stores, the statutory books and payroll. Each application exposes its own API for the handover.
+          </p>
         </Wrap>
       </Chapter>
 
@@ -134,26 +138,39 @@ export default function ConstructionPage() {
             className="rv"
             items={[
               {
-                question: 'Do you handle joint ventures and multiple funders?',
-                answer: 'A joint venture is an entity in the model with its own ledger and its own share rules. Cost and revenue post once and allocate by the agreed percentages, and each partner\'s statement comes from the same records rather than a separate spreadsheet per venture.',
+                question: 'Can we cost a job in it?',
+                answer:
+                  'Not as a contractor means it. FlowZa Finance can carry a dimension on a transaction so purchases and invoices can be analysed by project, but there is no budget to compare against, no committed cost, no valuation and no cost-value reconciliation. If job costing is the requirement, keep the system that does it.',
               },
               {
-                question: 'Can it replace our estimating software?',
-                answer: 'It is not an estimating tool and we would not pretend otherwise. The estimate imports as the budget structure, and from that point on FlowZa owns commitment, actual and forecast. Keeping a specialist estimating package is the normal arrangement.',
+                question: 'What about plant hire, internal and external?',
+                answer:
+                  'FlowZa Fleetza gives you the true running cost of plant you own — acquisition, fuel, workshop invoices, insurance and depreciation resolved per asset. Recharging that to a project at an internal hire rate is a ledger convention you would set up in FlowZa Finance, not a plant-hire module.',
               },
               {
-                question: 'How does this work with site teams who are not at a desk?',
-                answer: 'Site instructions, day-works, plant hours and delivery receipts are captured on a phone against the job and the package. That is the whole point — the commitment is recorded when the order is given, not when the paperwork reaches the office.',
+                question: 'We employ across India and the Gulf. Is payroll really covered?',
+                answer:
+                  'Yes, and it is the strongest reason contractors look at FlowZa Finance. India covers EPF, ESI, professional tax, gratuity and POSH; the UAE covers WPS bank files; Oman covers social insurance; Saudi Arabia covers GOSI. Further GCC coverage is on the roadmap rather than in the product.',
+              },
+              {
+                question: 'Do we tag plant and materials?',
+                answer:
+                  'FlowZa QRForge mints asset tags in bulk and logs every scan with time and place, and lets you re-point a printed code without reprinting it. It is a separate application on its own subscription.',
               },
             ]}
           />
-          <h3 className="d-s rv" style={{ margin: 'var(--s9) 0 var(--s5)' }}>Related</h3>
+        </Wrap>
+      </Chapter>
+
+      {/* RELATED */}
+      <Chapter variant="raised">
+        <Wrap>
           <RelatedLinks
             className="rv"
             links={[
-              { href: '/products/finance', title: 'FlowZa Finance', subtitle: 'Retention, WIP and certificates' },
-              { href: '/industries/manufacturing', title: 'Manufacturing', subtitle: 'If you fabricate as well as build' },
-              { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
+              { href: '/products/fleetza', title: 'FlowZa Fleetza', subtitle: 'Live tracking, driver scores and maintenance' },
+              { href: '/products/finance', title: 'FlowZa Finance', subtitle: 'Accounting, ERP and payroll on one ledger' },
+              { href: '/industries', title: 'All industries', subtitle: 'Compare all seven sectors' },
             ]}
           />
         </Wrap>

@@ -1904,18 +1904,6 @@ p:last-child { margin-bottom: 0 }
 @media(max-width:680px){.cbs__hd,.cbs__r{grid-template-columns:minmax(0,1fr) 70px}.cbs__bar{display:none}}
 
 /* ============================================================
-   INDUSTRY: HEALTHCARE
-   ============================================================ */
-.pw text{font-family:var(--mono);letter-spacing:.05em}
-.pw .wait{fill:var(--edge-2)}
-.pw .touch{fill:var(--sig)}
-.pw .stage{font-size:8.5px;fill:var(--fg-3)}
-.pw .lead{stroke:var(--edge);stroke-width:1}
-.pw .big{font-family:var(--display);font-size:34px;font-weight:600;letter-spacing:-.03em;fill:var(--sig)}
-.pw .bigl{font-size:9px;fill:var(--fg-3)}
-.pw .keyl{font-size:9px}
-
-/* ============================================================
    INDUSTRY: WELLNESS AND BEAUTY
    ============================================================ */
 .coh{display:grid;grid-template-columns:88px repeat(6,1fr);gap:3px;min-width:560px}

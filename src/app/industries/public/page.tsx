@@ -7,16 +7,23 @@ import { Eyebrow } from '@/components/Eyebrow';
 import { FAQ } from '@/components/FAQ';
 import { RelatedLinks } from '@/components/RelatedLinks';
 import { KeylineList } from '@/components/KeylineList';
-import { BudgetConsumption } from '@/components/BudgetConsumption';
-import { CaseAgeing } from '@/components/CaseAgeing';
 
+/**
+ * Rewritten to what the nine actually do for a public body.
+ *
+ * The previous version was built on commitment accounting at the requisition
+ * and case ageing against a statutory window. Neither exists in the product.
+ * What is real, and genuinely strong here, is FlowZa RentFlow for housing
+ * applications — one pipeline, five consistent checks, and the reason for every
+ * decision recorded, which is exactly what an appeal or an audit asks for.
+ */
 export const metadata: Metadata = {
   title: 'Public sector — FlowZa AI',
   description:
-    'Commitment accounting at the requisition, case ageing against the statutory window, and a platform designed to be audited.',
+    'Housing applications screened consistently with the reason for every decision recorded, plus fleet, the ledger and statutory payroll. What FlowZa AI covers for a public body, and the casework it does not.',
 };
 
-export default function PublicPage() {
+export default function PublicSectorPage() {
   return (
     <>
       {/* HERO */}
@@ -30,128 +37,138 @@ export default function PublicPage() {
                 Public Sector
               </p>
               <h1 className="d-xl">
-                You cannot<br />spend an<br />appropriation<br />twice.
+                Decisions you<br />can defend on<br />appeal.
               </h1>
             </div>
             <div className="c-6 rv rv-d2">
               <p className="lede">
-                Commercial finance asks what you have spent. Public finance asks what you have committed, because an order placed against an exhausted budget is a governance failure whether or not the invoice has arrived. Most systems record the invoice.
+                A public body is judged on consistency. The same application, arriving twice, should be
+                decided the same way — and when it is challenged, the reason has to be retrievable. That is
+                the shape FlowZa RentFlow is built for, and it is the strongest fit any of the nine has here.
               </p>
               <div className="row" style={{ marginTop: 'var(--s6)' }}>
                 <Link className="btn btn--primary" href="/pricing">
-                  Book a walkthrough <span className="arw">→</span>
+                  Book a walkthrough <span className="arw">&rarr;</span>
                 </Link>
-                <Link className="btn btn--ghost" href="/enterprise">Audit and access</Link>
+                <Link className="btn btn--ghost" href="/products/rentflow">FlowZa RentFlow</Link>
               </div>
             </div>
           </Cols>
-
-          <div className="rv">
-            <BudgetConsumption />
-            <p className="tiny" style={{ marginTop: 'var(--s4)' }}>
-              Roads has spent 71% and committed a further 33%. On a spend report it is comfortably inside budget with five months to run. On a commitment basis it is already four points over, and the next requisition should not be approved. IT modernisation shows the opposite shape — barely spent, largely committed — which is a delivery question rather than a financial one.
-            </p>
-          </div>
         </Wrap>
       </Chapter>
 
-      {/* CASEWORK */}
-      <Chapter variant="instrument" net>
-        <Wrap>
-          <Cols style={{ alignItems: 'end', marginBottom: 'clamp(40px,5vw,var(--s8))' }}>
-            <div className="c-7 rv">
-              <Eyebrow>Casework</Eyebrow>
-              <h2 className="d-l">Eighty-nine cases are<br />past the statutory<br />window.</h2>
-            </div>
-            <div className="c-5 rv rv-d2">
-              <p className="lede">
-                An average response time is a comfortable number. The distribution is the accountable one, because the obligation is per case and the tail is where the complaints, the appeals and the ombudsman referrals come from.
-              </p>
-            </div>
-          </Cols>
-          <div className="panel rv" style={{ padding: 'var(--s6)' }}>
-            <div className="dscroll" style={{ ['--dmin' as string]: '620px' }}>
-              <CaseAgeing />
-            </div>
-            <p className="tiny" style={{ marginTop: 'var(--s4)' }}>
-              The mean of 11.4 days is comfortably inside the obligation and describes none of the eighty-nine cases that are not. Work is queued by age against the threshold rather than by arrival order, so the tail is worked first.
-            </p>
-          </div>
-        </Wrap>
-      </Chapter>
-
-      {/* CONTROL */}
-      <Chapter>
+      {/* WHAT IT COVERS */}
+      <Chapter variant="raised">
         <Wrap>
           <div className="section-head rv">
-            <Eyebrow>Control</Eyebrow>
-            <h2 className="d-l">Designed to be<br />audited.</h2>
+            <Eyebrow>What it covers</Eyebrow>
+            <h2 className="d-l">Housing applications,<br />fleet, books and pay.</h2>
           </div>
           <KeylineList
             twoCol
             className="rv"
             items={[
               {
-                heading: 'Commitment accounting at the requisition',
-                body: 'The budget check happens when someone asks to spend, not when the invoice is entered. An appropriation cannot be exceeded by orders nobody has posted yet.',
+                heading: 'FlowZa RentFlow — the housing pipeline',
+                body: 'Every application in one queue with its stage and its owner visible, screened against credit, background, eviction history, income and references — the same five checks, in the same order, every time.',
               },
               {
-                heading: 'Procurement thresholds enforced, not advised',
-                body: 'Value bands determine the required competition, the approvals and the publication obligations. Crossing a threshold changes the workflow automatically rather than relying on the buyer remembering.',
+                heading: 'FlowZa RentFlow — the recorded reason',
+                body: 'The reason for every accept and decline is stored against the application, which is what an appeal, an ombudsman or an internal audit actually asks to see.',
               },
               {
-                heading: 'Every decision attributable',
-                body: 'Who approved what, on what authority and under which delegation, held in an immutable log. Reconstructing a decision for an auditor or a committee is a query rather than an investigation.',
+                heading: 'FlowZa Fleetza — the vehicle fleet',
+                body: 'Refuse vehicles, inspection vans and pool cars tracked live, with driver behaviour scoring and predictive maintenance, resolved to a true cost per kilometre for the fleet return.',
               },
               {
-                heading: 'Virement is a controlled event',
-                body: 'Moving budget between programmes follows the delegation rules, records the justification and leaves both sides of the transfer visible in the year-end position.',
-              },
-              {
-                heading: 'Disclosure without a data project',
-                body: 'Spend over the publication threshold, contract registers and payment performance are reports over live records, not an annual extract someone assembles by hand.',
-              },
-              {
-                heading: 'Year-end is a boundary, not an event',
-                body: 'Accruals, commitments carried forward and the treatment of underspend follow rules configured once. The closing position is visible in month nine, which is when it can still be influenced.',
+                heading: 'FlowZa Finance — the ledger and payroll',
+                body: 'Purchases, the double-entry books, multi-entity consolidation, and statutory payroll for India and the Gulf, maintained centrally as the rules change.',
               },
             ]}
           />
         </Wrap>
       </Chapter>
 
+      {/* THE BOUNDARY */}
+      <Chapter variant="instrument" net>
+        <Wrap tight>
+          <div className="section-head rv">
+            <Eyebrow>Scope</Eyebrow>
+            <h2 className="d-l">What FlowZa AI<br />does not do here.</h2>
+            <p className="lede" style={{ marginTop: 'var(--s5)' }}>
+              Public sector procurement asks for a long list, and a good deal of it is not here. The gaps
+              are worth reading before a tender rather than during one.
+            </p>
+          </div>
+          <KeylineList
+            className="rv"
+            items={[
+              {
+                heading: 'No general case management',
+                body: 'RentFlow handles housing applications specifically. Licensing, planning, benefits, complaints and social care casework are not modelled, and case ageing against a statutory window is not a report the product produces.',
+              },
+              {
+                heading: 'No commitment accounting',
+                body: 'A requisition does not create a committed-cost position against a budget line. Cost lands in the ledger when it is invoiced.',
+              },
+              {
+                heading: 'No citizen portal or identity',
+                body: 'There is no public-facing account, no single citizen identifier and no integration with a national identity scheme.',
+              },
+              {
+                heading: 'No FOI, records management or statutory reporting packs',
+                body: 'Retention schedules, disclosure workflows and prescribed statutory returns are outside every one of the nine.',
+              },
+            ]}
+          />
+          <p className="tiny rv" style={{ marginTop: 'var(--s6)' }}>
+            Where a body already runs a case management platform, RentFlow is usually adopted for the
+            housing pipeline alone, on its own subscription, and hands the decision on over its API.
+          </p>
+        </Wrap>
+      </Chapter>
+
       {/* FAQ */}
-      <Chapter variant="raised">
+      <Chapter>
         <Wrap tight>
           <h2 className="d-m rv" style={{ marginBottom: 'var(--s7)' }}>Questions public bodies ask</h2>
           <FAQ
             className="rv"
             items={[
               {
-                question: 'Can this meet our national accounting framework?',
-                answer: 'The ledger is multi-book, so a statutory framework and a management view are maintained over the same transactions rather than reconciled afterwards. The specific framework — IPSAS, a national code, or a sector variant — is configuration, and it is one of the first things modelled during deployment.',
+                question: 'Can an applicant challenge a decision?',
+                answer:
+                  'That is the case the product is built for. Every accept and decline carries the reason it was given, stored against the application alongside the screening results it was based on, so a challenge is answered from the record rather than from recollection.',
               },
               {
-                question: 'What about procurement regulations and publication duties?',
-                answer: 'Thresholds, competition rules and publication obligations are configured per jurisdiction and enforced in the workflow. Where a national tendering portal must be used, it is treated as an integration at the perimeter rather than reimplemented inside the platform.',
+                question: 'Does RentFlow manage the tenancy afterwards?',
+                answer:
+                  'No, and it says so on its own page. It collects the application, runs the screening and records the decision. Leases, rent, deposits, renewals and maintenance are outside it — an approved applicant is available over the API and as an export so the system that runs the tenancy can pick it up.',
               },
               {
-                question: 'Where would our data be held?',
-                answer: 'In the region selected at provisioning, including backups and replicas, and it does not move without an explicit logged migration. Where sovereignty requirements go beyond region selection, that is an enterprise conversation before contract rather than a configuration afterwards.',
+                question: 'Where is our data held?',
+                answer:
+                  'Region of residency is chosen at provisioning and does not move. Within each application, data is partitioned per organisation with keys scoped to the tenant, and access is enforced beneath the application code at the point the query runs.',
               },
               {
-                question: 'Our staff have used the same system for fifteen years.',
-                answer: 'Then the risk is change, not software, and the parallel run exists for exactly that. Both systems process the same period until the closes agree, and the incumbent stays available read-only afterwards. We would rather extend that period than compress it.',
+                question: 'How does it fit our audit requirements?',
+                answer:
+                  'Every application keeps an immutable log recording who did what, from where, and on whose behalf, in the same shape across the nine. AI actions carry the identity of the person who authorised them. The security overview is written to be handed to a reviewer directly.',
               },
             ]}
           />
-          <h3 className="d-s rv" style={{ margin: 'var(--s9) 0 var(--s5)' }}>Related</h3>
+        </Wrap>
+      </Chapter>
+
+      {/* RELATED */}
+      <Chapter variant="raised">
+        <Wrap>
           <RelatedLinks
             className="rv"
             links={[
-              { href: '/enterprise', title: 'Enterprise', subtitle: 'Audit, access and residency' },
-              { href: '/products/finance', title: 'FlowZa Finance', subtitle: 'Multi-book and controls' },
-              { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
+              { href: '/products/rentflow', title: 'FlowZa RentFlow', subtitle: 'Tenant applications, screened and decided' },
+              { href: '/enterprise', title: 'Security and compliance', subtitle: 'Access, residency, recovery and assurance' },
+              { href: '/industries', title: 'All industries', subtitle: 'Compare all seven sectors' },
             ]}
           />
         </Wrap>
