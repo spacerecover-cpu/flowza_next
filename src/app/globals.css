@@ -624,6 +624,17 @@ p:last-child { margin-bottom: 0 }
 .dgm { width: 100%; height: auto }
 .dgm text { font-family: var(--mono); font-size: 9.5px; letter-spacing: .06em; fill: var(--slate) }
 .dgm .lbl-b { font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: -.01em; fill: var(--graphite) }
+/* Colour every diagram label with a CLASS, never a fill="" attribute. An SVG
+   presentation attribute sits below author CSS in the cascade, so the rule
+   above silently beats it — which is how the FlowZa AI label ended up slate
+   on graphite at 2.8:1 instead of the near-white it was written to be. */
+.dgm .node-core-t {
+  fill: var(--on-dark);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .13em;
+}
+.dgm .dgm-note { fill: var(--slate-2) }
 .dgm .wire { stroke: var(--line); stroke-width: 1; fill: none }
 .dgm .wire-live {
   stroke: var(--ledger);
