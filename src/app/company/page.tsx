@@ -175,6 +175,34 @@ export default function CompanyPage() {
                 A single contact form that routes everything to one inbox wastes a day of your time and ours. Pick the row
                 that matches what you need.
               </p>
+              <div className="dcon">
+                <a
+                  className="dcon__l"
+                  href="https://wa.me/96892107562"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M2.2 13.8l.8-2.9A5.8 5.8 0 1 1 5.2 13l-3 .8Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+                    <path d="M6 5.6c.2-.5.4-.5.6-.5h.4c.2 0 .4 0 .5.4l.5 1.2c0 .2 0 .3-.1.4l-.3.4c-.1.1-.2.2-.1.4.2.4.6.9 1 1.2.4.3.7.4.9.5.2 0 .3 0 .4-.1l.4-.5c.1-.2.3-.1.4 0l1.1.6c.2.1.3.2.3.3 0 .2 0 .6-.2.9-.2.3-.8.6-1.1.6-.6 0-1.2-.1-2.4-.7-1.4-.7-2.3-2.2-2.4-2.3-.1-.2-.6-.9-.6-1.7 0-.8.4-1.2.6-1.4Z" fill="currentColor" />
+                  </svg>
+                  <span>
+                    <b>WhatsApp</b>
+                    <span className="dcon__v">+968 9210 7562</span>
+                  </span>
+                </a>
+                <a className="dcon__l" href="mailto:sales@flowza.ai">
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <rect x="1.5" y="3.5" width="13" height="9" rx="1" stroke="currentColor" strokeWidth="1.3" />
+                    <path d="M1.9 4.2 8 8.6l6.1-4.4" stroke="currentColor" strokeWidth="1.3" />
+                  </svg>
+                  <span>
+                    <b>Sales</b>
+                    <span className="dcon__v">sales@flowza.ai</span>
+                  </span>
+                </a>
+              </div>
+
               <p className="tiny">
                 Response times are the ones written into standard agreements. Enterprise agreements can tighten them, and P1
                 targets are contractual rather than aspirational.
@@ -198,8 +226,9 @@ export default function CompanyPage() {
                   </table>
                 </div>
                 <p className="tiny" style={{ marginTop: 'var(--s4)' }}>
-                  Named contacts and direct numbers are issued with your account rather than published here, so you always
-                  have a person rather than an alias. The offices themselves are below.
+                  WhatsApp and the sales address on the left reach us without an account. Once you have a deployment, named
+                  contacts and escalation numbers are issued with it, so you always have a person rather than an alias. The
+                  offices are below.
                 </p>
               </div>
             </div>

@@ -464,10 +464,10 @@ export function SiteHeader() {
           </Link>
         </nav>
 
+        {/* No sign-in link. The nine applications each run on their own
+            subdomain with their own account, so a single "Sign in" would imply
+            one login across the platform that does not exist. */}
         <div className="nav__end">
-          <Link className="btn btn--ghost btn--sm" href="/pricing">
-            Sign in
-          </Link>
           <Link className="btn btn--primary btn--sm" href="/pricing">
             Book a walkthrough
           </Link>
