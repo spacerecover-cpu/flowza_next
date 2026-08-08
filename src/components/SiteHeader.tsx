@@ -3,17 +3,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
-/* ------------------------------------------------------------------ BRAND MARK */
-function BrandMark() {
-  return (
-    <svg className="brand__mark" viewBox="0 0 25 25" fill="none" aria-hidden="true">
-      <rect width="25" height="25" rx="5.5" fill="#121412" />
-      <path d="M6.5 18.5V12.5H12.5V6.5" stroke="#F6F6F3" strokeWidth="2" strokeLinecap="square" />
-      <path d="M12.5 6.5H18.5" stroke="#34B37D" strokeWidth="2" strokeLinecap="square" />
-    </svg>
-  );
-}
+import { BrandMark } from '@/components/BrandMark';
 
 /* ------------------------------------------------------------------ CARET */
 function Caret() {
