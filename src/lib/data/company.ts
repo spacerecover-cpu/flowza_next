@@ -5,12 +5,12 @@ export interface WorkingAgreement {
 
 export const WORKING_AGREEMENTS: WorkingAgreement[] = [
   {
-    heading: 'One product, no forks',
-    body: 'We do not build a bespoke version for a large customer. If something is worth building it goes into the platform for everyone, and if it is not, we say no. This loses deals. It is also the reason an upgrade has never split the customer base.',
+    heading: 'No bespoke forks',
+    body: 'We do not build a bespoke version of an application for a large customer. If something is worth building it goes into that application for everyone, and if it is not, we say no. This loses deals. It is also the reason an upgrade has never split the customer base.',
   },
   {
     heading: 'Engineers do implementation',
-    body: 'The person mapping your chart of accounts also writes platform code. It makes implementation more expensive per hour and much cheaper overall, because the awkward parts get fixed in the product instead of worked around in a configuration.',
+    body: 'The person mapping your chart of accounts also writes the code for the application it runs in. It makes implementation more expensive per hour and much cheaper overall, because the awkward parts get fixed in the application instead of worked around in a configuration.',
   },
   {
     heading: 'Support can ship a fix',

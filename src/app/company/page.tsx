@@ -11,7 +11,7 @@ import { WORKING_AGREEMENTS, TEAM_SPLIT, PARTNER_TYPES, CONTACT_ROUTES, OFFICES 
 export const metadata: Metadata = {
   title: 'Company — FlowZa AI',
   description:
-    'FlowZa is a product company, not a consultancy. How the team works, who our partners are, where our support hours actually fall, and how to reach the right person.',
+    'FlowZa AI builds and operates its own cloud applications rather than consulting on someone else’s. How the team works, who our partners are, where our support hours actually fall, and how to reach the right person.',
 };
 
 const coverageItems = [
@@ -30,22 +30,26 @@ export default function CompanyPage() {
           <Cols style={{ alignItems: 'end' }}>
             <div className="c-7 rv">
               <Eyebrow>Company</Eyebrow>
-              <h1 className="d-xl">We build one<br />product and<br />run it ourselves.</h1>
+              {/* nbsp binds "behind it." so a wide screen breaks before "behind"
+                  rather than orphaning "it." on a line of its own. A phone still
+                  fits the whole line. */}
+              <h1 className="d-xl">We build it.<br />We run it.<br />We stand behind&nbsp;it.</h1>
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                FlowZa is not a consultancy with a software arm. The people who design the platform operate it, carry the
-                pager when it breaks, and sit alongside the people implementing it for you. That is a deliberate constraint,
-                and it is why there is only one product.
+                FlowZa builds and operates its own cloud applications, with the people behind the products staying close to
+                the businesses that rely on them. From product design and engineering to infrastructure and support, we take
+                ownership of the entire experience&mdash;so we can keep improving what we build and deliver lasting value to
+                our customers.
               </p>
             </div>
           </Cols>
 
           <div className="facts rv">
             <div><div className="facts__n">2023</div><div className="facts__l">Founded, and independent since</div></div>
-            <div><div className="facts__n">84</div><div className="facts__l">People, across three offices</div></div>
-            <div><div className="facts__n">1</div><div className="facts__l">Product, one codebase, no forks</div></div>
-            <div><div className="facts__n">21h</div><div className="facts__l">Staffed support each day, on-call for the rest</div></div>
+            <div><div className="facts__n">9</div><div className="facts__l">Independent cloud applications</div></div>
+            <div><div className="facts__n">1</div><div className="facts__l">Unified platform</div></div>
+            <div><div className="facts__n">24/7</div><div className="facts__l">Cloud operations and customer support</div></div>
           </div>
         </Wrap>
       </Chapter>
@@ -80,7 +84,7 @@ export default function CompanyPage() {
 
           <div className="rv" style={{ marginTop: 'clamp(40px,5vw,var(--s8))' }}>
             <p className="mono" style={{ fontSize: '.625rem', letterSpacing: '.12em', color: 'var(--fg-3)', marginBottom: 'var(--s4)' }}>
-              WHERE THE 84 PEOPLE SIT
+              WHERE THE TEAM SITS
             </p>
             <div
               className="dist"
@@ -97,7 +101,7 @@ export default function CompanyPage() {
               ))}
             </div>
             <p className="tiny" style={{ marginTop: 'var(--s4)' }}>
-              Two thirds of the company touches the product directly. A commercial team that is smaller than the support team
+              Two thirds of the company works on the applications directly. A commercial team that is smaller than the support team
               is a deliberate choice, and it shows up in how we sell.
             </p>
           </div>
@@ -232,7 +236,7 @@ export default function CompanyPage() {
             <h2 className="d-l">We hire slowly and<br />write everything down.</h2>
             <p className="lede" style={{ margin: '0 auto var(--s7)' }}>
               Roles open irregularly because we only post one when the work genuinely exists. If you have operated the kind
-              of business this platform runs, that experience counts for more here than a framework on your CV.
+              of business these applications run, that experience counts for more here than a framework on your CV.
             </p>
             <div className="row" style={{ justifyContent: 'center' }}>
               <Link className="btn btn--primary" href="/pricing">Book a walkthrough <span className="arw">→</span></Link>
