@@ -454,9 +454,8 @@ p:last-child { margin-bottom: 0 }
 }
 .mega__col { grid-column: span 3; min-width: 0 }
 .mega__col--wide { grid-column: span 6 }
-/* the products menu is one wide column of nine, three across */
+/* the products menu is one wide column holding all nine */
 .mega__col--nine { grid-column: span 9 }
-.mega__grid--3 { grid-template-columns: 1fr 1fr 1fr }
 .mega__title {
   font-family: var(--mono);
   font-size: .625rem;
@@ -468,6 +467,9 @@ p:last-child { margin-bottom: 0 }
   border-bottom: 1px solid var(--line-2);
 }
 .mega__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px }
+/* the nine sit three across. Must follow .mega__grid: same specificity, so the
+   later rule is the one that lands. */
+.mega__grid--3 { grid-template-columns: 1fr 1fr 1fr }
 .mlink {
   display: flex;
   gap: 11px;
