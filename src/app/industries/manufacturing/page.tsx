@@ -12,7 +12,7 @@ import { ScrapPareto } from '@/components/ScrapPareto';
 import { CapacityExplorer, CapacityProfile, CapacityPanel } from '@/components/CapacityProfile';
 
 export const metadata: Metadata = {
-  title: 'Manufacturing — Flowza',
+  title: 'Manufacturing — Flowza AI',
   description:
     'One station sets the pace of the line. Find the constraint from real work order data, explode bills of material against live stock, and attribute scrap to a cause.',
 };

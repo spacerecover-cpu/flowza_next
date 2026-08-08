@@ -10,7 +10,7 @@ import { KeylineList } from '@/components/KeylineList';
 import { LaneExplorer, LaneQuadrant, LanePanel } from '@/components/LaneQuadrant';
 
 export const metadata: Metadata = {
-  title: 'Logistics and freight — Flowza',
+  title: 'Logistics and freight — Flowza AI',
   description:
     'Lanes are a portfolio. Price each one from posted cost, close the gap between paying for a movement and being paid for it, and stop running empty.',
 };

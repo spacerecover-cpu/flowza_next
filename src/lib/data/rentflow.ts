@@ -256,7 +256,7 @@ export const RENT_METRICS: readonly { value: string; label: string }[] = [
 export const RENT_FAQ: readonly { question: string; answer: string }[] = [
   {
     question: 'Does RentFlow manage the tenancy after approval?',
-    answer: 'No. It collects the application, runs the screening and records the decision. Leases, rent, deposits, renewals and maintenance are outside it. The approved applicant is available to the rest of Flowza as a party record, so nothing is retyped, but RentFlow itself stops at the decision.',
+    answer: 'No. It collects the application, runs the screening and records the decision. Leases, rent, deposits, renewals and maintenance are outside it. An approved applicant, with the screening results and the recorded reason, is available over the RentFlow API and as an export so the system you use to run the tenancy can pick it up — but RentFlow itself stops at the decision.',
   },
   {
     question: 'Where do the five checks come from?',

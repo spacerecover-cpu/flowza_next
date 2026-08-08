@@ -11,7 +11,7 @@ import { SCurve } from '@/components/SCurve';
 import { CostBreakdown } from '@/components/CostBreakdown';
 
 export const metadata: Metadata = {
-  title: 'Construction — Flowza',
+  title: 'Construction — Flowza AI',
   description:
     'Cost lands as incurred, revenue when certified. See the unbilled wedge weekly, and report commitment rather than spend.',
 };

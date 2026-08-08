@@ -35,15 +35,15 @@ export const metadata: Metadata = {
   // routes ("Company — Flowza — Flowza"). A bare string is the default title for
   // any route that ships without one of its own; the object form is not usable
   // here because Next's type pairs `default` with a required `template`.
-  title: 'Flowza — nine business systems, one operating fabric',
+  title: 'Flowza AI — nine cloud applications for business operations',
   description:
-    'Flowza runs nine purpose-built business systems for MEA and India — Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS — on one shared data layer. Customers, inventory and ledger entries move between them without re-entry.',
+    'Flowza AI is a platform of nine specialised cloud applications for business management and workflow automation — Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS. Each application is independent, priced on its own and deployed on its own. Choose only the applications your business needs.',
   openGraph: {
     type: 'website',
-    siteName: 'Flowza',
-    title: 'Flowza — Nine business systems. One operating fabric.',
+    siteName: 'Flowza AI',
+    title: 'Flowza AI — Nine cloud applications. One trusted platform.',
     description:
-      'Nine systems, each good at its own job, sharing one data layer. A customer created at the till is already the member at the club and the guest at the spa — no export, no matching key, no re-entry.',
+      'Specialised business software for finance, logistics, wellness, fleet, retail, clubs, rentals and operations. Each application is purpose-built for its industry and can be deployed independently as your business grows.',
   },
 };
 
@@ -140,34 +140,34 @@ const INDUSTRIES = [
 
 const FAQ_ENTRIES: { question: string; answer: string }[] = [
   {
-    question: 'What is Flowza?',
+    question: 'What is Flowza AI?',
     answer:
-      'Flowza is a set of nine business operating systems for the Middle East, Africa and India: Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS. Each runs as its own application on its own subdomain, and each is licensed independently. What they share is a single data layer holding six record types — party, item, ledger entry, location, person and document — so a record created in one system is already present in the others.',
+      'Flowza AI is a platform of nine specialised cloud applications for business management in the Middle East, Africa and India: Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS. Each runs as its own application on its own subdomain, holds its own data, and is bought and priced on its own. They belong to one ecosystem and are built to a common security and compliance standard, but they are independent products rather than modules of one system.',
   },
   {
-    question: 'Is Flowza one product or nine?',
+    question: 'Is Flowza AI one product or nine?',
     answer:
-      'Nine. Flowza does not claim to be a single application. Each of the nine has its own screens, its own release train and its own app subdomain, and most customers start with one. The claim Flowza does make is narrower and checkable: the nine write to and read from the same records, so nothing is exported, re-keyed or reconciled between them. Nine systems connect to one shared layer rather than to each other.',
+      'Nine. Flowza AI is not a single application and does not claim to be one. Each of the nine has its own screens, its own database, its own release train, its own app subdomain and its own subscription. Most customers run one. Buying a second is a separate decision on separate terms, and no application requires another to be present in order to work.',
   },
   {
-    question: 'How is Flowza different from a suite of integrated products?',
+    question: 'How is Flowza AI different from an all-in-one ERP suite?',
     answer:
-      'A suite integrates products that each hold their own version of the truth, which is why an all-in-one platform still asks you to import your customer list. Flowza removes the copies instead of syncing them. Five of the nine systems write to the same party record, so a customer at the till, a member at the club, a guest at the spa and an applicant in RentFlow are one row with one history. There is no matching key and no nightly de-duplication job, because nothing was ever separate enough to need one.',
+      'A suite is sold whole and priced on everything it contains, which is why businesses pay for modules nobody opens and accept a generic version of the one thing they care most about. Flowza AI sells specialised applications separately. Each is built around the constraint its own industry actually has — the treatment room, the vehicle hour, the trading minute — and each is a finished product on its own. You choose only the applications your business needs.',
   },
   {
-    question: 'Which countries is Flowza compliant in?',
+    question: 'Which countries is Flowza AI compliant in?',
     answer:
       'Four. India covers GST including CGST, SGST, IGST and reverse charge, e-way bills and GST returns, TDS and input tax credit tracking, and statutory payroll including EPF, ESI, Professional Tax, gratuity and POSH. The UAE covers VAT at 5 per cent, corporate tax at 9 per cent and WPS payroll bank files. Oman covers VAT at 5 per cent, social insurance payroll and a country chart-of-accounts pack. Saudi Arabia covers GOSI payroll and Arabic right-to-left documents. Further GCC coverage is on the roadmap rather than in the product.',
   },
   {
-    question: 'Where does AI fit into Flowza?',
+    question: 'Where does AI fit into Flowza AI?',
     answer:
-      'Copilot queries the shared data layer rather than any single application, so a question that spans the till, the warehouse and the ledger is one question rather than three reports. It resolves requests against live records, builds the steps and executes them under the same role-based permissions as the person who asked, never above them. Every AI action is written to the same audit log as every human action, attributed to the person who authorised it.',
+      'Inside each application, on the job that application does. LogisPro sequences a route against real constraints, Fleetza scores driver behaviour into something coachable, Finance reads an invoice and proposes the posting, PMS calibrates ratings across managers. In every case the AI works on the records that application holds, executes under the same role-based permissions as the person who asked, never above them, and writes every action to that application audit log attributed to the person who authorised it.',
   },
   {
-    question: 'Do I have to buy all nine?',
+    question: 'Do I have to buy more than one application?',
     answer:
-      'No. Almost nobody adopts nine systems at once. Most deployments start with the one system that solves the urgent problem, run it alongside the incumbent until the numbers agree, then cut over. Adding a second system later skips the data migration, because the customers, items and ledger entries it needs are already in the shared layer.',
+      'No. Each application is a complete product on its own and most customers run exactly one. A deployment is scoped to a single application: model it, migrate into it, run it alongside the incumbent until the numbers agree, then cut over. Adopting a second application later is its own project, on its own subscription and its own timetable, and it does not disturb the first.',
   },
 ];
 
@@ -177,12 +177,12 @@ const jsonLd = {
     {
       '@type': 'Organization',
       '@id': 'https://flowza.ai/#org',
-      name: 'Flowza',
-      alternateName: ['Flowza AI', 'FlowZa'],
+      name: 'Flowza AI',
+      alternateName: ['Flowza', 'FlowZa'],
       description:
-        'Flowza builds nine purpose-built AI business operating systems for the Middle East, Africa and India. The nine run as separate applications on separate subdomains but share one data layer, so customers, inventory and ledger entries pass between them without re-entry.',
+        'Flowza AI builds nine specialised AI cloud applications for business management and workflow automation in the Middle East, Africa and India. Each application runs on its own subdomain, holds its own data and carries its own subscription, so a business can buy only the applications it needs.',
       url: 'https://flowza.ai/',
-      slogan: 'Nine systems. One operating fabric.',
+      slogan: 'Nine cloud applications. One trusted platform.',
       areaServed: [
         { '@type': 'Country', name: 'India' },
         { '@type': 'Country', name: 'United Arab Emirates' },
@@ -194,14 +194,14 @@ const jsonLd = {
       '@type': 'WebSite',
       '@id': 'https://flowza.ai/#site',
       url: 'https://flowza.ai/',
-      name: 'Flowza',
+      name: 'Flowza AI',
       publisher: { '@id': 'https://flowza.ai/#org' },
     },
     {
       '@type': 'ItemList',
-      name: 'The nine Flowza systems',
+      name: 'The nine Flowza AI applications',
       description:
-        'Nine business operating systems sharing one data layer. Each runs as its own application on its own subdomain and is licensed independently.',
+        'Nine specialised cloud applications for business operations. Each runs as its own application on its own subdomain, holds its own data, and is priced and licensed independently.',
       numberOfItems: 9,
       itemListElement: NINE.map((system, i) => ({
         '@type': 'ListItem',

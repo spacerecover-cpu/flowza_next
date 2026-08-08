@@ -2,9 +2,9 @@ import React from 'react';
 import { POSTING_LINES } from '@/lib/data/pos';
 
 /**
- * What the sale on the receipt writes into Flowza Finance. Two systems on one
- * data layer: POS owns the sale, Finance owns the ledger, and there is no export
- * file between them.
+ * What the sale on the receipt records inside Flowza POS: the stock movement,
+ * the revenue split, the tax, the tender and the customer's history, all written
+ * as the sale clears rather than reconstructed later.
  *
  * Rendered as a flat run of rows rather than a wrapper, because the site sets
  * the keyline off the last row rather than off a container.

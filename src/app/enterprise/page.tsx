@@ -7,9 +7,9 @@ import { Eyebrow } from '@/components/Eyebrow';
 import { Stat } from '@/components/Stat';
 
 export const metadata: Metadata = {
-  title: 'Enterprise security and compliance — Flowza',
+  title: 'Enterprise security and compliance — Flowza AI',
   description:
-    'Access control, encryption, residency, recovery objectives and assurance status across all nine Flowza systems and the layer beneath them.',
+    'Access control, encryption, data residency, recovery objectives and assurance status — the standard every Flowza AI cloud application is built to, stated plainly enough to hand to a security reviewer.',
 };
 
 export default function EnterprisePage() {
@@ -21,13 +21,14 @@ export default function EnterprisePage() {
           <Cols style={{ alignItems: 'end' }}>
             <div className="c-7 rv">
               <Eyebrow>Enterprise</Eyebrow>
-              <h1 className="d-xl">Consolidation<br />raises the bar<br />on trust.</h1>
+              <h1 className="d-xl">One standard,<br />in every<br />application.</h1>
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                Consolidating onto one data layer makes that layer both more valuable and more consequential — nine systems
-                reading it is nine ways in, and one place where a mistake would matter everywhere. These are the controls
-                that make that defensible, stated plainly enough to hand to a security reviewer.
+                Every Flowza AI application is built to the same security and operational bar, and enforces it inside its
+                own boundary. That is deliberately useful in procurement: the review you run on the first application tells
+                you what to expect of the next, and a finding in one cannot reach another. These are the controls, stated
+                plainly enough to hand to a security reviewer.
               </p>
             </div>
           </Cols>
@@ -68,7 +69,7 @@ export default function EnterprisePage() {
               <ul className="klist klist--2" style={{ borderTopColor: 'var(--edge)' }}>
                 <li><h3>Encryption</h3><p className="small">TLS 1.3 in transit. AES-256 at rest with per-tenant key separation and scheduled rotation. Customer-managed keys are available on enterprise agreements.</p></li>
                 <li><h3>Residency</h3><p className="small">The storage region is selected at provisioning and does not change without an explicit, logged migration. Backups and replicas stay within the selected jurisdiction.</p></li>
-                <li><h3>Isolation</h3><p className="small">Tenant identity is enforced in the data layer rather than in application code, so a query cannot cross a tenant boundary even if application logic is wrong.</p></li>
+                <li><h3>Isolation</h3><p className="small">Within each application, tenant identity is enforced beneath the application code, at the point the query runs — so a query cannot cross a tenant boundary even if the application logic is wrong.</p></li>
                 <li><h3>Retention and deletion</h3><p className="small">Configurable retention per object class, legal hold, and verified deletion on termination with a certificate issued on completion.</p></li>
                 <li><h3>Backups</h3><p className="small">Continuous point-in-time recovery with cross-region copies. Restores are exercised on a schedule rather than assumed to work.</p></li>
                 <li><h3>Sub-processors</h3><p className="small">A current list is published with the purpose and region of each, and material changes are notified in advance of taking effect.</p></li>

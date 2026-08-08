@@ -171,7 +171,7 @@ function MegaProducts({ open, onClose }: { open: boolean; onClose: () => void })
     <MegaPanel id="m-products" label="Products" open={open}>
       <div className="mega__inner">
         <div className="mega__col mega__col--nine">
-          <p className="mega__title">Nine systems — one data layer</p>
+          <p className="mega__title">Nine applications — choose what you need</p>
           <div className="mega__grid mega__grid--3">
             {PRODUCT_LINKS.map((product) => (
               <Link className="mlink" href={product.href} key={product.href} onClick={onClose}>
@@ -190,8 +190,8 @@ function MegaProducts({ open, onClose }: { open: boolean; onClose: () => void })
             <span className="tag tag--ai">AI</span>
             <p style={{ margin: 'var(--s4) 0 var(--s2)', fontSize: '1rem', fontFamily: 'var(--display)', fontWeight: 600, letterSpacing: '-.025em', lineHeight: 1.1 }}>Flowza Copilot</p>
             <p className="tiny" style={{ marginBottom: 'var(--s4)' }}>
-              Reads across all nine in one query, because they answer from the same records. Acts under your
-              permission model, never above it.
+              AI built into the work each application does — routing, scoring, forecasting, invoice reading.
+              It acts under your permission model, never above it.
             </p>
             <Link className="btn btn--text" href="/#ai" onClick={onClose}>
               How it works <span className="arw">→</span>
@@ -203,11 +203,11 @@ function MegaProducts({ open, onClose }: { open: boolean; onClose: () => void })
         <div className="mega__foot-in">
           <Link className="qa" href="/platform" onClick={onClose}>
             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1v12" stroke="currentColor" strokeWidth="1.5" /></svg>
-            What the nine share
+            About the platform
           </Link>
           <Link className="qa" href="/#systems" onClick={onClose}>
             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1" y="2" width="12" height="10" stroke="currentColor" strokeWidth="1.3" /></svg>
-            See which records flow where
+            Compare the nine applications
           </Link>
           <Link className="qa" href="/enterprise" onClick={onClose}>
             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1l5 2v4c0 3-2 5-5 6-3-1-5-3-5-6V3l5-2z" stroke="currentColor" strokeWidth="1.3" /></svg>
@@ -265,14 +265,14 @@ function MegaPlatform({ open, onClose }: { open: boolean; onClose: () => void })
     <MegaPanel id="m-platform" label="Platform" open={open}>
       <div className="mega__inner">
         <div className="mega__col">
-          <p className="mega__title">The data layer</p>
-          <Link className="mlink" href="/platform#schema" onClick={onClose}><span><span className="mlink__t">Shared records</span><span className="mlink__d">One party, item and entry</span></span></Link>
-          <Link className="mlink" href="/platform" onClick={onClose}><span><span className="mlink__t">How the nine connect</span><span className="mlink__d">What each writes and reads</span></span></Link>
-          <Link className="mlink" href="/platform#api" onClick={onClose}><span><span className="mlink__t">Developer API</span><span className="mlink__d">One surface, same permissions</span></span></Link>
+          <p className="mega__title">The platform</p>
+          <Link className="mlink" href="/platform#schema" onClick={onClose}><span><span className="mlink__t">Independent by design</span><span className="mlink__d">What is common, what is not</span></span></Link>
+          <Link className="mlink" href="/platform" onClick={onClose}><span><span className="mlink__t">The four pillars</span><span className="mlink__d">How the ecosystem is built</span></span></Link>
+          <Link className="mlink" href="/platform#api" onClick={onClose}><span><span className="mlink__t">Developer API</span><span className="mlink__d">One per application you hold</span></span></Link>
         </div>
         <div className="mega__col">
           <p className="mega__title">Intelligence</p>
-          <Link className="mlink" href="/#ai" onClick={onClose}><span><span className="mlink__t">Copilot</span><span className="mlink__d">Ask across all nine</span></span></Link>
+          <Link className="mlink" href="/#ai" onClick={onClose}><span><span className="mlink__t">AI in each application</span><span className="mlink__d">Built into the job it does</span></span></Link>
           <Link className="mlink" href="/#ai" onClick={onClose}><span><span className="mlink__t">Agents</span><span className="mlink__d">Work that runs itself</span></span></Link>
           <Link className="mlink" href="/#ai" onClick={onClose}><span><span className="mlink__t">Forecasting</span><span className="mlink__d">Demand, cash, churn</span></span></Link>
         </div>
@@ -298,20 +298,20 @@ function MegaDevs({ open, onClose }: { open: boolean; onClose: () => void }) {
     <MegaPanel id="m-devs" label="Developers" open={open}>
       <div className="mega__inner">
         <div className="mega__col mega__col--wide">
-          <p className="mega__title">Build on the data layer</p>
-          <Link className="mlink" href="/platform#schema" onClick={onClose}><span><span className="mlink__t">The shared record types</span><span className="mlink__d">Six objects all nine systems agree on</span></span></Link>
-          <Link className="mlink" href="/platform#api" onClick={onClose}><span><span className="mlink__t">REST, GraphQL and extensions</span><span className="mlink__d">Custom objects, functions, tenant branching</span></span></Link>
-          <Link className="mlink" href="/enterprise#access" onClick={onClose}><span><span className="mlink__t">Permissions and tenant isolation</span><span className="mlink__d">Enforced below every system</span></span></Link>
-          <Link className="btn btn--text" href="/platform" onClick={onClose} style={{ marginTop: 'var(--s5)' }}>How the nine connect <span className="arw">→</span></Link>
+          <p className="mega__title">Build on any application</p>
+          <Link className="mlink" href="/platform#api" onClick={onClose}><span><span className="mlink__t">REST and GraphQL</span><span className="mlink__d">The same conventions in every application</span></span></Link>
+          <Link className="mlink" href="/platform#api" onClick={onClose}><span><span className="mlink__t">Custom objects and functions</span><span className="mlink__d">Extend the application you hold</span></span></Link>
+          <Link className="mlink" href="/enterprise#access" onClick={onClose}><span><span className="mlink__t">Permissions and tenant isolation</span><span className="mlink__d">Enforced inside every application</span></span></Link>
+          <Link className="btn btn--text" href="/platform" onClick={onClose} style={{ marginTop: 'var(--s5)' }}>About the platform <span className="arw">→</span></Link>
         </div>
         <div className="mega__col">
           <div className="mega__feature">
             <p className="mono tiny" style={{ color: 'var(--slate-2)', marginBottom: 'var(--s3)' }}>
-              GET /v1/parties/:id
+              GET pos.flowza.ai/v1/customers/:id
             </p>
             <p className="tiny">
-              One party record. A POS customer, a Club member and a RentFlow applicant resolve to the same row
-              — no export, no matching key.
+              Each application serves its own API over its own records, with its own credentials — and the
+              same conventions across the nine.
             </p>
           </div>
         </div>

@@ -4,43 +4,38 @@ import { Chapter } from '@/components/Chapter';
 import { Wrap } from '@/components/Wrap';
 import { Cols } from '@/components/Cols';
 import { Eyebrow } from '@/components/Eyebrow';
-import { ConsolidationCalculator } from '@/components/ConsolidationCalculator';
 import { FAQ } from '@/components/FAQ';
 import { TIERS } from '@/lib/data/pricing';
+import { SYSTEMS } from '@/lib/data/systems';
 
 export const metadata: Metadata = {
-  title: 'Pricing — Flowza',
+  title: 'Pricing — Flowza AI',
   description:
-    'Priced per person, not per application. Take one system or take nine — compare a shared data layer against your current licence stack.',
+    'Every Flowza AI application is priced independently, by product, features and scale of deployment. Start with a single cloud application and add others only when your business needs them.',
 };
 
 const faqItems = [
   {
+    question: 'How is each application priced?',
+    answer:
+      'On its own. Every Flowza AI application has its own pricing model, set by what the product is, which features you switch on, and the scale you deploy it at. A point-of-sale rollout across forty tills and a QR code programme for one marketing team are not the same shape of purchase, and they are not quoted from the same table. Ask about the application you want and you will get a price for that application.',
+  },
+  {
+    question: 'Do I have to buy more than one?',
+    answer:
+      'No. Each application is a complete product on its own and most customers run one. Buying a second is a separate decision, on a separate subscription, at whatever point a second problem becomes urgent — and nothing in the first application stops working, or starts working better, because of it.',
+  },
+  {
     question: 'Is implementation included?',
-    answer: 'Modelling, migration tooling and the parallel run are included on Growth and above. Bespoke engineering — a custom integration to a system we do not already support, or data remediation on your side — is quoted separately and fixed before it starts.',
-  },
-  {
-    question: 'What counts as a user?',
-    answer: 'A named person who signs in. Shop-floor terminals, POS tills and read-only viewers are licensed at a reduced rate, and API service accounts are not charged per seat. Customers and suppliers using portals are never charged.',
-  },
-  {
-    question: 'Does AI usage cost extra?',
-    answer: 'Copilot is included in the seat price with fair-use limits that the overwhelming majority of teams never reach. Autonomous agents on Scale consume a monthly run allowance; additional capacity is purchased in blocks and shown against your usage before you commit.',
+    answer:
+      'Guided setup is included with every application. Migration tooling and a parallel run are included where the application involves moving live financial or operational data. Bespoke engineering — a custom integration to a system we do not already support, or data remediation on your side — is quoted separately and fixed before it starts.',
   },
   {
     question: 'What happens if we want to leave?',
-    answer: 'Your data is exportable at any time in full fidelity, including history and attachments, through the API or a bulk export. There is no exit fee and no proprietary format holding the records. We would rather you stay because the alternative is worse, not because leaving is hard.',
+    answer:
+      'Your data is exportable at any time in full fidelity, including history and attachments, through that application’s API or a bulk export. There is no exit fee and no proprietary format holding the records. Leaving one application does not affect any other application you hold.',
   },
 ];
-
-/*
- * No page-level FAQPage here. The single-file site declares exactly one, in
- * `parts/00-head.html`, and that one is ported to the root layout's @graph — so
- * it is already on this page. The block that used to sit here was a second
- * FAQPage whose four answers described the retired eighteen-module positioning
- * and did not match the visible questions below, which is the one thing
- * FAQPage markup must never do.
- */
 
 export default function PricingPage() {
   return (
@@ -51,13 +46,13 @@ export default function PricingPage() {
           <Cols style={{ alignItems: 'end', marginBottom: 'clamp(40px,5vw,var(--s8))' }}>
             <div className="c-7 rv">
               <Eyebrow>Pricing</Eyebrow>
-              <h1 className="d-xl">One licence.<br />Nine systems.</h1>
+              <h1 className="d-xl">Flexible pricing.<br />Choose only<br />what you need.</h1>
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                Priced per person, not per application. Adding a second or a fifth system does not start another contract,
-                another security review or another migration — the records it needs are already in the layer, and the
-                people are already licensed.
+                Every Flowza AI application has its own pricing model, based on the product, the features you
+                switch on and the scale of the deployment. Start with a single application and expand
+                whenever your business needs additional capabilities.
               </p>
             </div>
           </Cols>
@@ -68,8 +63,7 @@ export default function PricingPage() {
                 {tier.flagLabel && <span className="tier__flag">{tier.flagLabel}</span>}
                 <span className="tier__n">{tier.name}</span>
                 <div>
-                  <span className="tier__p">{tier.price}</span>
-                  {tier.unit && <span className="tier__u"> {tier.unit}</span>}
+                  <span className="tier__shape">{tier.shape}</span>
                 </div>
                 <p className="tier__d">{tier.description}</p>
                 <ul>
@@ -88,23 +82,36 @@ export default function PricingPage() {
           </div>
 
           <p className="tiny rv" style={{ marginTop: 'var(--s4)' }}>
-            Billed annually. Monthly billing available at a 20% premium. Read-only and shop-floor seats are licensed at a reduced rate.
+            These describe the shape of a deployment, not a price list. Pricing varies by application — see
+            pricing on each product page, or ask for a quote covering the applications you want.
           </p>
         </Wrap>
       </Chapter>
 
-      {/* CALCULATOR */}
+      {/* PER-APPLICATION PRICING */}
       <Chapter variant="raised">
         <Wrap>
           <div className="section-head rv">
-            <Eyebrow>Consolidation</Eyebrow>
-            <h2 className="d-l">Count what you already pay for.</h2>
+            <Eyebrow>By application</Eyebrow>
+            <h2 className="d-l">Each application.<br />Priced independently.</h2>
             <p className="lede" style={{ marginTop: 'var(--s5)' }}>
-              Tick the categories you currently license. The comparison uses illustrative list prices — replace them with
-              your own contract rates for a real figure, and remember that the licences are usually the smaller half of the cost.
+              There is no bundle price, because there is no bundle. Pick the application that solves your
+              problem and ask about that one — you are not quoted for the other eight, and you are not
+              charged for them.
             </p>
           </div>
-          <ConsolidationCalculator />
+
+          <ul className="klist klist--2 rv">
+            {SYSTEMS.map((system) => (
+              <li key={system.key}>
+                <h3>{system.name}</h3>
+                <p className="small" style={{ marginBottom: 'var(--s3)' }}>{system.tagline}</p>
+                <Link className="btn btn--text" href={system.href}>
+                  See pricing <span className="arw">→</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </Wrap>
       </Chapter>
 

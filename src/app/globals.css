@@ -659,9 +659,7 @@ p:last-child { margin-bottom: 0 }
 .frag.is-unified .frag__net { opacity: 1 }
 .frag__wires { position: absolute; inset: 0; width: 100%; height: 100% }
 .frag__wires--mess { opacity: 1; transition: opacity 400ms var(--ease) }
-.frag__wires--clean { opacity: 0; transition: opacity 400ms var(--ease) 260ms }
 .frag.is-unified .frag__wires--mess { opacity: 0; transition-delay: 0ms }
-.frag.is-unified .frag__wires--clean { opacity: 1 }
 .tile {
   position: absolute;
   left: var(--x);
@@ -683,6 +681,7 @@ p:last-child { margin-bottom: 0 }
     transform 760ms var(--ease),
     border-color var(--t) var(--ease),
     color var(--t) var(--ease),
+    opacity var(--t) var(--ease),
     box-shadow var(--t) var(--ease);
 }
 .frag.is-unified .tile {
@@ -692,6 +691,14 @@ p:last-child { margin-bottom: 0 }
   border-color: var(--line-2);
   color: var(--graphite);
   box-shadow: none;
+}
+/* settled state: the handful this business keeps stay solid, the rest ghost out.
+   Nothing draws a line between the survivors — they are independent products. */
+.frag.is-unified .tile--drop { opacity: .2 }
+.frag.is-unified .tile--keep {
+  border-color: var(--ledger);
+  color: var(--ledger);
+  background: var(--ledger-wash);
 }
 .frag__badge { position: absolute; left: 16px; top: 16px; z-index: 3; display: flex; gap: 8px; align-items: center }
 .frag__ctrl { display: flex; gap: var(--s2); margin-top: var(--s4); align-items: center; flex-wrap: wrap }
@@ -1371,19 +1378,22 @@ p:last-child { margin-bottom: 0 }
 /* ---------------------------------------------------------------- PRICING */
 .tiers {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   background: var(--edge-2);
   border: 1px solid var(--edge-2);
 }
-@media (max-width: 1000px) { .tiers { grid-template-columns: 1fr 1fr } }
-@media (max-width: 600px)  { .tiers { grid-template-columns: 1fr } }
+@media (max-width: 900px) { .tiers { grid-template-columns: 1fr } }
 .tier { background: var(--bg); padding: var(--s6) var(--s5); display: flex; flex-direction: column; gap: var(--s4); position: relative }
 .tier--hi { background: var(--graphite); color: var(--paper) }
 .tier--hi .tier__d, .tier--hi .tier__u, .tier--hi li { color: rgba(246, 246, 243, .72) }
 .tier--hi .tier__n, .tier--hi .tier__p { color: var(--paper) }
 .tier__n { font-family: var(--display); font-size: 1.125rem; font-weight: 600; letter-spacing: -.03em }
 .tier__p { font-family: var(--mono); font-size: 2rem; letter-spacing: -.045em; line-height: 1; color: var(--fg) }
+/* the shape of a deployment sits where a headline price used to. There is no
+   single price to print: every application is quoted on its own. */
+.tier__shape { font-family: var(--mono); font-size: 1.0625rem; letter-spacing: -.02em; line-height: 1.2; color: var(--fg) }
+.tier--hi .tier__shape { color: var(--paper) }
 .tier__u { font-size: .75rem; color: var(--fg-3) }
 .tier__d { font-size: .8125rem; color: var(--fg-2); line-height: 1.55; min-height: 56px }
 .tier ul {

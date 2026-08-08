@@ -428,7 +428,7 @@ export default function QRForgePage() {
                 The one system whose output leaves the building
               </h3>
               <p className="body-l" style={{ marginBottom: 'var(--s5)' }}>
-                Eight of the nine Flowza systems are read by people who work for you. QRForge is not. A
+                Eight of the nine Flowza AI applications are read by people who work for you. QRForge is not. A
                 code printed on a carton or a menu is a Flowza record that a member of the public can
                 reach — from a pavement, a table, a shelf, months after it was printed and long after
                 whoever printed it has moved on.
@@ -438,8 +438,8 @@ export default function QRForgePage() {
                 destination held as a record, permissions on who may re-point a live code, and 99.99%
                 uptime on the redirect. It is also why the scan record is worth keeping. A person you
                 have never met told you where they were, what they were holding and when they were
-                interested, and that record is available to the other systems on the data layer without
-                being exported to reach them.
+                interested, and QRForge keeps that record with the campaign it belongs to — queryable
+                over its API for whatever you want to do with it next.
               </p>
             </div>
           </Cols>

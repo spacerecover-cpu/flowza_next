@@ -373,9 +373,9 @@ export default function SpaMasterPage() {
                   Illustrative figures in AED. The final column is the reactivation list: value sitting
                   with clients who have not been in for ninety days. On this site it is the annual
                   facial membership and the gift vouchers that need a campaign, and neither is obvious
-                  from the sales column alone. Because these are the same records Flowza Finance reads,
-                  the accounting treatment of an unredeemed balance does not require a second set of
-                  numbers.
+                  from the sales column alone. Spa Master tracks each unredeemed balance and its age, so
+                  the deferred revenue figure your accountant asks for at period end is a report rather
+                  than a reconstruction.
                 </p>
               </Panel>
             </div>
@@ -461,10 +461,10 @@ export default function SpaMasterPage() {
             </div>
             <div className="c-5 rv rv-d2">
               <p className="small">
-                Spa Master runs on its own app subdomain and shares the client, stock and transaction
-                records with the other Flowza systems. A guest who buys a product at the reception till,
-                a package balance carried between sites, and the revenue those produce are one set of
-                records rather than three exports.
+                Spa Master runs on its own app subdomain, on its own subscription, and holds its own
+                records. Across your sites that means one client profile: a guest who buys a product at
+                reception, a package balance carried from another location, and the revenue those
+                produce sit together rather than in three separate site systems.
               </p>
             </div>
           </Cols>

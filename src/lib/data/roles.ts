@@ -20,7 +20,7 @@ export const ROLES: FunctionRole[] = [
       'Coding, matching and accrual run continuously against the same transactions the operators create. Exposure and margin are computed at read time, and any balance walks down to its source document without leaving the ledger.',
     stats: [
       { value: '3.2 days', label: 'Review-only close, once matching runs continuously' },
-      { value: '0', label: 'Exports between the ledger and anything else' },
+      { value: 'To source', label: 'Every balance walks down to the document behind it' },
     ],
   },
   {
@@ -31,9 +31,9 @@ export const ROLES: FunctionRole[] = [
     hardToday:
       'Stock sits in one system, orders in another and capacity in a spreadsheet. By the time the three agree the decision window has closed, and the exception has already become a customer complaint.',
     whatChanges:
-      'One live position per location, including units reserved by orders raised elsewhere. Work arrives by exception — the twelve movements that need a decision, not the four hundred that do not.',
+      'One live position per location, including units reserved by orders raised at another site. Work arrives by exception — the twelve movements that need a decision, not the four hundred that do not.',
     stats: [
-      { value: '1', label: 'Stock position, shared by every module' },
+      { value: '1', label: 'Live stock position per location, across every site' },
       { value: 'Predicted', label: 'Late arrivals flagged before they are late' },
     ],
   },
@@ -57,12 +57,12 @@ export const ROLES: FunctionRole[] = [
     name: 'IT & Security',
     question: 'How many vendors am I patching, and who can see what?',
     hardToday:
-      'Eleven contracts, eleven permission models and fifty-five possible integration paths. Offboarding means touching every one of them, and proving who saw a record means collecting logs in five different formats.',
+      'Eleven contracts, eleven permission models and eleven renewal dates. Offboarding means touching every one of them, and proving who saw a record means collecting logs in five different formats.',
     whatChanges:
-      'One tenant, one identity integration, one audit log. Deprovisioning in your directory removes access everywhere in the same operation, and an access review becomes a single query.',
+      'Every Flowza AI application connects to your directory the same way and keeps an audit log in the same shape, so single sign-on is configured once per application rather than reinvented, and an access review asks the same question of each one.',
     stats: [
-      { value: '55 → 0', label: 'Internal integration paths left to maintain' },
-      { value: 'One', label: 'Security review, one questionnaire, one renewal' },
+      { value: 'One', label: 'Vendor, one questionnaire, one renewal conversation' },
+      { value: 'Same', label: 'Security model to review in every application' },
     ],
   },
 ];

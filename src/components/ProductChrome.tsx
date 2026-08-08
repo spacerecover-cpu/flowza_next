@@ -1,16 +1,16 @@
 import React from 'react';
 
 /**
- * Chrome shared by all nine product pages.
+ * Chrome reused across the nine product pages.
  *
- * These are deliberately atoms, not a page template. Nine products that
- * shared a layout would read as one product with nine skins, which is the
+ * These are deliberately atoms, not a page template. Nine independent products
+ * sharing a layout would read as one product with nine skins, which is the
  * opposite of what the positioning claims. What they share is the design
  * system: the same badge row, the same four published numbers, the same
  * treatment for an attributed quote.
  */
 
-/** The subdomain a product actually runs on. Nine systems means nine apps. */
+/** The subdomain a product runs on. Nine applications means nine apps. */
 export function AppLink({ host, className }: { host: string; className?: string }) {
   return (
     <a

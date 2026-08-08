@@ -82,7 +82,7 @@ export const PMS_STAGES: readonly PmsStage[] = [
     enters: 'The agreed rating, the employee’s salary structure, the statutory rule set for their country, and the increment strategy.',
     leaves: 'A resolved figure in local currency, with the component structure preserved rather than collapsed into one new total.',
     written: 'Which rule set was applied, which strategy, and what each component became. Gulf wage-protection figures are computed here; the bank-file (WPS) export is on the roadmap.',
-    because: 'Elsewhere this arrives at payroll as an instruction in an email. Here it crosses the shared data layer to Flowza Finance, which pays it.',
+    because: 'Elsewhere this arrives at payroll as an instruction in an email, retyped by whoever opens it. Here it is a structured payroll instruction your payroll system reads directly.',
   },
   {
     title: '04 · Document',
@@ -468,11 +468,11 @@ export const PMS_ENGINE_NOTES: readonly { heading: string; body: string }[] = [
   },
   {
     heading: 'It resolves pay; it does not pay',
-    body: 'PMS decides what the figure should be and hands it to Flowza Finance, which runs the payroll, produces the statutory files and posts to the ledger. Two systems, one figure, no re-entry.',
+    body: 'PMS decides what the figure should be and issues it as a structured payroll instruction. Your payroll system runs the payroll, produces the statutory files and posts to the ledger — Flowza Finance if you hold it, or whatever you already use.',
   },
   {
     heading: 'Wage protection, stated plainly',
-    body: 'The Gulf wage-protection figures are computed in PMS today. The bank file that a wage-protection system ingests — the WPS export — is on the roadmap. If that file is what you need this quarter, it is produced in Flowza Finance, and we would rather say so here than let you find out in an implementation.',
+    body: 'The Gulf wage-protection figures are computed in PMS today. The bank file that a wage-protection system ingests — the WPS export — is on the roadmap. If that file is what you need this quarter, it is produced in Flowza Finance, a separate application on a separate subscription, and we would rather say so here than let you find out in an implementation.',
   },
 ];
 
@@ -645,7 +645,7 @@ export const PMS_REGION_NOTES: readonly { heading: string; body: string }[] = [
 export const PMS_CYCLE_CARRIES: readonly { heading: string; body: string }[] = [
   { heading: 'KRAs and KPIs, per cycle',              body: 'Key result areas and the indicators under them are defined per cycle, so a change of objectives mid-year is a new cycle rather than an edit to the record of the old one.' },
   { heading: 'Succession planning on the same cycle', body: 'Successor readiness is assessed against the same evidence as the rating, in the same cycle, by the same reviewers. It is not a separate form filled in from memory in a different quarter.' },
-  { heading: 'One person across PMS and Finance',     body: 'PMS shares the person record with the HR suite in Flowza Finance. An employee is one person with one identity across both systems, which is why a resolved increment does not need to be typed into a payroll screen.' },
+  { heading: 'A payroll instruction, not an email',   body: 'The resolved increment leaves PMS as a structured instruction carrying the employee reference your payroll system already uses, so it can be read straight in rather than typed into a payroll screen from a PDF.' },
 ];
 
 /* ------------------------------------------- where PMS sits in the nine */
@@ -666,15 +666,15 @@ export const PMS_OWNERSHIP: readonly PmsOwnershipColumn[] = [
     ],
   },
   {
-    heading: 'What crosses between them',
+    heading: 'How the handover works',
     items: [
-      'The resolved figure, with the component structure intact rather than a single new total.',
-      'The person record itself — PMS shares it with the HR suite in Flowza Finance, so an employee is one person in both.',
-      'Nothing else, and nothing by export. They are separate systems on one data layer, not one application.',
+      'PMS issues a structured payroll instruction: the resolved figure with its component structure intact, not a single new total.',
+      'Your payroll system reads it — over the PMS API, or as a scheduled file if that suits your process better.',
+      'They are two separate applications with two separate databases. The handover is one you configure deliberately, not something that happens underneath you.',
     ],
   },
   {
-    heading: 'Flowza Finance owns',
+    heading: 'A payroll system owns',
     items: [
       'The payroll run that pays the figure PMS resolved.',
       'The statutory files — including the WPS bank files for the Gulf, which is where that export lives today.',
@@ -712,8 +712,8 @@ export const PMS_METRICS: readonly { value: string; label: string }[] = [
 
 export const PMS_FAQ: readonly { question: string; answer: string }[] = [
   {
-    question: 'Why do two Flowza systems touch salary?',
-    answer: 'Because deciding pay and paying it are different jobs with different evidence behind them. PMS resolves what someone should be paid from a rating that has been calibrated, against the statutory rules of their country, preserving the component structure of their salary. Flowza Finance runs the payroll, produces the statutory files and posts to the ledger. The figure crosses the shared data layer once, and the person is the same person in both systems rather than two records that have to be matched.',
+    question: 'Does PMS run our payroll?',
+    answer: 'No, and that is deliberate — deciding pay and paying it are different jobs with different evidence behind them. PMS resolves what someone should be paid from a rating that has been calibrated, against the statutory rules of their country, preserving the component structure of their salary. It then issues that as a structured payroll instruction your payroll system reads. That can be Flowza Finance, which is a separate application on a separate subscription, or the payroll system you already run.',
   },
   {
     question: 'Is bell-curve calibration a forced ranking?',

@@ -12,12 +12,23 @@ import { ProductExplorer } from '@/components/ProductExplorer';
 import { CountUp } from '@/components/CountUp';
 
 export const metadata: Metadata = {
-  // Absolute: the site's own home title already carries the brand, so the
-  // layout's "%s — Flowza" template must not be applied on top of it.
-  title: { absolute: 'Flowza — nine business systems, one operating fabric' },
+  title: { absolute: 'Flowza AI — nine cloud applications for business operations' },
   description:
-    'Flowza runs nine purpose-built business systems for MEA and India — Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS — on one shared data layer, so customers, inventory and ledger entries move between them without re-entry.',
+    'Flowza AI is a platform of nine specialised cloud applications for business management — finance, logistics, wellness, fleet, retail, clubs, rentals, QR codes and performance. Each application is independent, priced on its own, and can be deployed on its own. Choose only the applications your business needs.',
 };
+
+/** The nine, in catalogue order, as the hero diagram lists them. */
+const HERO_APPS = [
+  'FLOWZA FINANCE',
+  'FLOWZA LOGISPRO',
+  'FLOWZA SPA MASTER',
+  'FLOWZA FLEETZA',
+  'FLOWZA QRFORGE',
+  'FLOWZA POS',
+  'FLOWZA CLUB',
+  'FLOWZA RENTFLOW',
+  'FLOWZA PMS',
+];
 
 export default function HomePage() {
   return (
@@ -27,22 +38,23 @@ export default function HomePage() {
         <Wrap>
           <div className="hero__grid">
             <div className="rv in">
-              <Eyebrow>Business operating systems for MEA and India</Eyebrow>
+              <Eyebrow>Cloud business applications for MEA and India</Eyebrow>
               <h1 className="d-xl">
-                Nine systems.<br />One operating<br />fabric.
+                Nine cloud<br />applications.<br />One trusted<br />platform.
               </h1>
               <p className="lede">
-                Finance, logistics, wellness, fleet, codes, retail, clubs, rentals and performance each
-                run as their own system, on their own app. What they share is the layer underneath — so a
-                customer, a stock item or a ledger entry created in one is already present in the rest.
-                Nothing is re-entered, because there is only ever one copy.
+                Flowza AI delivers specialised cloud software for finance, logistics, wellness, fleet,
+                clubs, rentals, retail, codes and performance. Each application is purpose-built for the
+                job it does and can be deployed on its own, with its own subscription — so you start with
+                the one that solves the problem in front of you, and add others only when your business
+                needs them.
               </p>
               <div className="hero__cta">
                 <Link className="btn btn--primary" href="/pricing">
                   Book a walkthrough <span className="arw">→</span>
                 </Link>
                 <Link className="btn btn--ghost" href="/#systems">
-                  See what they share
+                  Browse the applications
                 </Link>
               </div>
               <p className="hero__note">
@@ -53,56 +65,50 @@ export default function HomePage() {
             <div className="rv in rv-d2">
               <svg
                 className="dgm"
-                viewBox="0 0 480 400"
+                viewBox="0 0 480 420"
                 role="img"
-                aria-label="Diagram of the Flowza architecture. Nine named systems — Finance, LogisPro, Spa Master, Fleetza, QRForge above, and POS, Club, RentFlow, PMS below — each connect by a single line to one shared data layer running across the middle. The layer carries three named channels: party, item and ledger entry. The systems connect to the layer rather than to one another."
+                aria-label="Diagram of the Flowza AI platform. One box at the top is labelled Flowza AI. Beneath it, nine separate boxes are listed — Flowza Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS. A single line runs down from Flowza AI and branches once to each application. The nine applications are not connected to one another, and there is no shared data store between them."
               >
-                {/* the shared layer */}
-                <rect className="node-core" x="18" y="178" width="444" height="68" rx="3" />
-                <text x="20" y="166" fontSize="8.5" fill="var(--slate-2)">THE SHARED DATA LAYER</text>
-                <g fontSize="8" fill="var(--on-dark-2)">
-                  <text x="32" y="199">PARTY</text><text x="32" y="216">ITEM</text><text x="32" y="233">ENTRY</text>
-                </g>
-                <g stroke="var(--ledger-dark)" strokeWidth="1" opacity=".75">
-                  <path d="M78 195.5H446" /><path d="M78 212.5H446" /><path d="M78 229.5H446" />
-                </g>
+                {/* the umbrella */}
+                <rect className="node-core" x="14" y="12" width="150" height="34" rx="3" />
+                <text x="30" y="33" fontSize="9" fill="var(--on-dark)" letterSpacing=".12em">FLOWZA AI</text>
+                <text x="176" y="33" fontSize="8.5" fill="var(--slate-2)">THE PLATFORM</text>
 
-                {/* five systems above */}
-                <g>
-                  <rect className="node" x="12" y="52" width="82" height="30" rx="2" /><text x="21" y="71" fontSize="8">FINANCE</text>
-                  <rect className="node" x="106" y="52" width="82" height="30" rx="2" /><text x="115" y="71" fontSize="8">LOGISPRO</text>
-                  <rect className="node" x="200" y="52" width="82" height="30" rx="2" /><text x="209" y="71" fontSize="8">SPA MASTER</text>
-                  <rect className="node" x="294" y="52" width="82" height="30" rx="2" /><text x="303" y="71" fontSize="8">FLEETZA</text>
-                  <rect className="node" x="388" y="52" width="82" height="30" rx="2" /><text x="397" y="71" fontSize="8">QRFORGE</text>
-                </g>
-                {/* four systems below */}
-                <g>
-                  <rect className="node" x="59" y="342" width="82" height="30" rx="2" /><text x="68" y="361" fontSize="8">POS</text>
-                  <rect className="node" x="153" y="342" width="82" height="30" rx="2" /><text x="162" y="361" fontSize="8">CLUB</text>
-                  <rect className="node" x="247" y="342" width="82" height="30" rx="2" /><text x="256" y="361" fontSize="8">RENTFLOW</text>
-                  <rect className="node" x="341" y="342" width="82" height="30" rx="2" /><text x="350" y="361" fontSize="8">PMS</text>
-                </g>
-
+                {/* the spine, and one branch per application */}
                 <g className="wire">
-                  <path d="M53 82V178" /><path d="M147 82V178" /><path d="M241 82V178" /><path d="M335 82V178" /><path d="M429 82V178" />
-                  <path d="M100 342V246" /><path d="M194 342V246" /><path d="M288 342V246" /><path d="M382 342V246" />
+                  <path d="M89 46V371" />
+                  {HERO_APPS.map((_, i) => (
+                    <path key={i} d={`M89 ${71 + i * 38}H180`} />
+                  ))}
                 </g>
-                <g className="wire-live" style={{ '--len': '880' } as React.CSSProperties}>
-                  <path d="M53 82V178" /><path d="M147 82V178" /><path d="M241 82V178" /><path d="M335 82V178" /><path d="M429 82V178" />
-                  <path d="M100 342V246" /><path d="M194 342V246" /><path d="M288 342V246" /><path d="M382 342V246" />
+                <g className="wire-live" style={{ '--len': '1200' } as React.CSSProperties}>
+                  <path d="M89 46V371" />
+                  {HERO_APPS.map((_, i) => (
+                    <path key={i} d={`M89 ${71 + i * 38}H180`} />
+                  ))}
                 </g>
 
-                <text x="18" y="392" fontSize="8.5" fill="var(--slate-2)">
-                  NINE CONNECTIONS TO ONE LAYER · NOT THIRTY-SIX TO EACH OTHER
+                {/* the nine, each standing alone */}
+                <g>
+                  {HERO_APPS.map((name, i) => (
+                    <g key={name}>
+                      <rect className="node" x="180" y={56 + i * 38} width="286" height="30" rx="2" />
+                      <text x="194" y={75 + i * 38} fontSize="8">{name}</text>
+                    </g>
+                  ))}
+                </g>
+
+                <text x="14" y="410" fontSize="8.5" fill="var(--slate-2)">
+                  NINE INDEPENDENT APPLICATIONS · NOT ONE SHARED SYSTEM
                 </text>
               </svg>
             </div>
           </div>
 
           <div className="facts rv">
-            <div><div className="facts__n">9</div><div className="facts__l">live systems on one shared data layer</div></div>
-            <div><div className="facts__n">1</div><div className="facts__l">definition of a customer, an item, an entry</div></div>
-            <div><div className="facts__n">0</div><div className="facts__l">exports or re-keying between them</div></div>
+            <div><div className="facts__n">9</div><div className="facts__l">specialised cloud applications</div></div>
+            <div><div className="facts__n">1</div><div className="facts__l">application is enough to start</div></div>
+            <div><div className="facts__n">0</div><div className="facts__l">modules you are forced to buy</div></div>
             <div><div className="facts__n">4</div><div className="facts__l">countries compliant — India and the Gulf</div></div>
           </div>
         </Wrap>
@@ -114,40 +120,39 @@ export default function HomePage() {
           <div className="section-head rv">
             <Eyebrow>The problem</Eyebrow>
             <h2 className="d-l">
-              Your company doesn&apos;t have a<br />data problem. It has eleven<br />databases.
+              You were offered two bad<br />options. A suite too big, or<br />tools too generic.
             </h2>
           </div>
 
           <Cols>
             <div className="c-5 rv">
               <p className="body-l" style={{ marginBottom: 'var(--s5)' }}>
-                Every department bought the best tool for its own job. Each one arrived with its own customer
-                record, its own permission model, and its own definition of revenue. None of that was a
-                mistake — it was the only option available.
+                The large suite arrives as one contract covering everything. You pay for the whole surface,
+                deploy for a year, and still find the part you care about most — the treatment room, the
+                loading bay, the till — treated as a minor module by people who have never run one.
               </p>
               <p className="body-l" style={{ marginBottom: 'var(--s6)' }}>
-                The cost shows up later, in the space between the tools. Integration middleware copies rows
-                from one system to another on a schedule. Someone reconciles what doesn&apos;t match. And the
-                numbers in the board pack are always a few days old.
+                The alternative is a shelf of point tools. Each is cheap and quick, and none of them knows
+                what GST, WPS or GOSI is. Neither option lets you buy exactly the capability you need and
+                nothing else.
               </p>
               <div className="mathline" style={{ borderTop: '1px solid var(--line)', paddingTop: 'var(--s5)' }}>
-                <b className="num">11</b><span>systems</span>
-                <b className="num">55</b><span>possible integration paths</span>
+                <b className="num">1</b><span>suite licence</span>
+                <b className="num">14</b><span>modules, four of them used</span>
               </div>
               <p className="tiny" style={{ marginTop: 'var(--s3)' }}>
-                Connections grow at n(n−1)/2. Every tool you add costs more than the last one.
+                A bundled licence is priced on what it contains, not on what you switch on.
               </p>
               <div
                 className="mathline"
                 style={{ borderTop: '1px solid var(--line)', paddingTop: 'var(--s5)', marginTop: 'var(--s5)' }}
               >
-                <b className="num">9</b><span>Flowza systems</span>
-                <b className="num">0</b><span>integration paths</span>
+                <b className="num">9</b><span>Flowza AI applications</span>
+                <b className="num">1</b><span>is a complete purchase</span>
               </div>
               <p className="tiny" style={{ marginTop: 'var(--s3)' }}>
-                Flowza is nine systems too. The difference is what they connect to — nine lines down to one
-                shared layer, rather than thirty-six lines across to each other. That is the entire
-                architectural argument, and everything below is a consequence of it.
+                Every application here is a finished product on its own. Buying one is not a first instalment
+                towards a suite, and nothing in it waits on a second application to become useful.
               </p>
             </div>
 
@@ -158,53 +163,53 @@ export default function HomePage() {
 
           <ul className="klist klist--2 rv" style={{ marginTop: 'clamp(48px,6vw,var(--s9))' }}>
             <li>
-              <h3>Reconciliation becomes a job</h3>
-              <p className="small">When two systems disagree about what a customer ordered, a person decides who is right. That work has a salary attached to it, and it repeats every month.</p>
+              <h3>You pay for what you do not run</h3>
+              <p className="small">A bundle is priced on its full contents. The modules nobody opens still appear on the invoice, and they still have to be administered, permissioned and upgraded.</p>
             </li>
             <li>
-              <h3>Every number is a lagging number</h3>
-              <p className="small">Sync windows are measured in hours. By the time inventory reaches the finance system, the decision that needed it has already been made.</p>
+              <h3>Generic software fits nobody exactly</h3>
+              <p className="small">A scheduling module written to serve nine industries cannot respect therapist certification, driver hours and tee-time etiquette at once. Something is always bolted on afterwards.</p>
             </li>
             <li>
-              <h3>AI can only see one silo at a time</h3>
-              <p className="small">An assistant bolted onto the CRM can answer questions about the CRM. It cannot tell you that the deal you are about to sign depends on stock you have already committed elsewhere.</p>
+              <h3>One release train slows everything</h3>
+              <p className="small">When every capability ships from one codebase, the fix you need waits behind the parts of the product you never use.</p>
             </li>
           </ul>
         </Wrap>
       </Chapter>
 
-      {/* 3 · THE SHIFT */}
+      {/* 3 · THE APPROACH */}
       <Chapter variant="instrument" net>
         <Wrap>
           <Cols style={{ alignItems: 'end' }}>
             <div className="c-7 rv">
-              <Eyebrow>The shift</Eyebrow>
-              <h2 className="d-l">One layer<br />underneath all nine.</h2>
+              <Eyebrow>The approach</Eyebrow>
+              <h2 className="d-l">Specialised products,<br />under one name.</h2>
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                Flowza is not one application pretending to be nine, and it is not nine applications
-                pretending to be one. It is nine systems, each good at its own job, writing to and reading
-                from the same records.
+                Flowza AI is not one application pretending to be nine, and it is not a suite you buy whole.
+                It is nine independent products, each built around the constraint its own industry actually
+                has, and each sold on its own terms.
               </p>
             </div>
           </Cols>
 
           <Cols style={{ marginTop: 'clamp(48px,6vw,var(--s9))' }}>
             <div className="c-4 rv">
-              <p className="mono" style={{ fontSize: '.6875rem', letterSpacing: '.12em', color: 'var(--sig)', marginBottom: 'var(--s4)' }}>01 — SHARED RECORDS</p>
-              <h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>A customer is one row</h3>
-              <p className="small">The person who buys at the till, holds the membership and books the treatment is one party record. Correct the phone number in any of the three and it is correct in all of them, immediately, because there was never a second copy to update.</p>
+              <p className="mono" style={{ fontSize: '.6875rem', letterSpacing: '.12em', color: 'var(--sig)', marginBottom: 'var(--s4)' }}>01 — PURPOSE-BUILT</p>
+              <h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>Built for one job</h3>
+              <p className="small">Spa Master treats the treatment room as the scarce resource. LogisPro treats the vehicle hour as the scarce resource. Neither is a configuration of the other, which is why each one is worth having on its own.</p>
             </div>
             <div className="c-4 rv rv-d2">
-              <p className="mono" style={{ fontSize: '.6875rem', letterSpacing: '.12em', color: 'var(--sig)', marginBottom: 'var(--s4)' }}>02 — SHARED PERMISSIONS</p>
-              <h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>Access defined once</h3>
-              <p className="small">Roles are declared against the layer, not inside each system. A regional controller sees their region&apos;s ledgers, their region&apos;s stock and their region&apos;s headcount under one rule, across every system they open — including when the AI answers on their behalf.</p>
+              <p className="mono" style={{ fontSize: '.6875rem', letterSpacing: '.12em', color: 'var(--sig)', marginBottom: 'var(--s4)' }}>02 — INDEPENDENT</p>
+              <h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>Bought on its own terms</h3>
+              <p className="small">Each application holds its own data, carries its own subscription and ships on its own release schedule. You can adopt one and never look at the other eight, and nothing about it will feel unfinished.</p>
             </div>
             <div className="c-4 rv rv-d3">
-              <p className="mono" style={{ fontSize: '.6875rem', letterSpacing: '.12em', color: 'var(--sig)', marginBottom: 'var(--s4)' }}>03 — SHARED HISTORY</p>
-              <h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>One audit trail</h3>
-              <p className="small">Every write is versioned and attributable, whether it came from a person, an API call or an agent, and whichever of the nine it came through. Reconstructing what happened is a query, not an investigation across nine log formats.</p>
+              <p className="mono" style={{ fontSize: '.6875rem', letterSpacing: '.12em', color: 'var(--sig)', marginBottom: 'var(--s4)' }}>03 — ONE STANDARD</p>
+              <h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>The same bar in each</h3>
+              <p className="small">Tenant isolation, single sign-on, an audit log and regional statutory rules are built to the same standard in every application. A security review of one tells you what to expect of the next.</p>
             </div>
           </Cols>
         </Wrap>
@@ -215,21 +220,19 @@ export default function HomePage() {
         <Wrap>
           <div className="section-head rv">
             <Eyebrow>The nine</Eyebrow>
-            <h2 className="d-l">Pick a system. See what<br />it shares, and with<br />which of the others.</h2>
+            <h2 className="d-l">Pick an application.<br />See exactly what<br />it does on its own.</h2>
             <p className="lede" style={{ marginTop: 'var(--s5)' }}>
-              Each one runs on its own app, with its own screens and its own release. None of them keeps a
-              private copy of your customer, your stock or your ledger. Select a system to see what it
-              writes into the shared layer, what it reads back out, and which of the other eight that
-              connects it to.
+              Each one runs on its own app, with its own screens, its own database and its own release.
+              Select an application to see who it is built for, what it does, and what businesses usually
+              run before they buy it.
             </p>
           </div>
 
           <SystemExplorer />
 
           <p className="tiny rv" style={{ marginTop: 'var(--s5)', maxWidth: '78ch' }}>
-            Not every system touches every other, and the diagram does not pretend otherwise. RentFlow
-            exchanges one record type with one system; Finance exchanges four with seven. A shared layer
-            means a record is available where it is relevant, not that everything is wired to everything.
+            Nothing on this page depends on you owning more than one. Each application is licensed and
+            deployed separately, and none of them requires another to be present in order to work.
           </p>
         </Wrap>
       </Chapter>
@@ -239,12 +242,13 @@ export default function HomePage() {
         <Wrap>
           <div className="section-head rv">
             <Eyebrow>Intelligence</Eyebrow>
-            <h2 className="d-l">AI that can act, because it<br />reads all nine at once.</h2>
+            <h2 className="d-l">AI built into the work<br />each application does.</h2>
             <p className="lede" style={{ marginTop: 'var(--s5)' }}>
-              An assistant bolted onto one product can only answer for that product. Copilot queries the
-              shared layer, so a question that spans the till, the warehouse and the ledger is one question.
-              It resolves the request against live records, builds the steps, and executes them under the
-              same permissions the requester has. Nothing runs that a person could not have run themselves.
+              The AI in each application is trained on the job that application does, not bolted on as a
+              general assistant. LogisPro sequences a route against real constraints. Fleetza scores driver
+              behaviour into something coachable. Finance reads an invoice and proposes the posting. In every
+              case it works on the records that application holds, under the same permissions as the person
+              who asked, and every action is written to that application&rsquo;s audit log.
             </p>
           </div>
 
@@ -254,8 +258,8 @@ export default function HomePage() {
             <div className="c-5 rv">
               <h3 className="d-m" style={{ marginBottom: 'var(--s4)' }}>A day, with the work removed</h3>
               <p className="small" style={{ marginBottom: 'var(--s5)' }}>
-                Most automation is invisible until it fails. Drag through an ordinary Tuesday to see where Flowza acted
-                on its own, and where it stopped to ask.
+                Most automation is invisible until it fails. Drag through an ordinary Tuesday to see where a
+                Flowza AI application acted on its own, and where it stopped to ask.
               </p>
               <div className="row" style={{ gap: 'var(--s5)' }}>
                 <span className="row" style={{ gap: '7px' }}>
@@ -281,13 +285,13 @@ export default function HomePage() {
           <Cols style={{ alignItems: 'end', marginBottom: 'clamp(40px,5vw,var(--s8))' }}>
             <div className="c-7 rv">
               <Eyebrow>Analytics</Eyebrow>
-              <h2 className="d-l">Reporting that reads the<br />records, not a copy of them.</h2>
+              <h2 className="d-l">Reporting that ships<br />inside the application.</h2>
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                There is no warehouse to load and no nightly job to wait for. A dashboard is a query against the same
-                rows the operators are editing, which is why the number on screen matches the number in the system it
-                came from.
+                Every application reports on its own operation, out of the box. There is no separate BI
+                licence to buy before the numbers appear, and a dashboard is a live query against the records
+                that application is writing rather than last night&rsquo;s extract.
               </p>
             </div>
           </Cols>
@@ -295,7 +299,7 @@ export default function HomePage() {
           <div className="ui rv">
             <div className="ui__chrome">
               <span className="ui__dot" /><span className="ui__dot" /><span className="ui__dot" />
-              <span className="ui__path">flowza · operations / overview</span>
+              <span className="ui__path">flowza finance · overview</span>
               <span className="tag tag--sig" style={{ marginLeft: 'auto' }}>Live</span>
             </div>
             <div className="ui__body">
@@ -368,8 +372,8 @@ export default function HomePage() {
             </div>
           </div>
           <p className="tiny rv" style={{ marginTop: 'var(--s4)', textAlign: 'center' }}>
-            Interface shown is representative. Every figure on it is a query against records the nine
-            systems are writing as you read this, not a nightly extract.
+            Interface shown is representative, and shows Flowza Finance reporting on its own records. Each
+            application reports on the operation it runs.
           </p>
         </Wrap>
       </Chapter>
@@ -381,10 +385,9 @@ export default function HomePage() {
             <Eyebrow>The range</Eyebrow>
             <h2 className="d-l">Nine products.<br />Start with one.</h2>
             <p className="lede" style={{ marginTop: 'var(--s5)' }}>
-              Almost nobody buys nine systems at once, and we do not ask you to. One problem is usually
-              urgent — the close, the routes, the till, the roster. Start there. The rest are available when
-              you want them, and they arrive already knowing your customers, your stock and your ledger,
-              because those never lived inside the first one.
+              Almost nobody needs nine applications, and we do not ask you to buy them. One problem is
+              usually urgent — the close, the routes, the till, the roster. Start there, on its own
+              subscription. The others are there when a second problem becomes urgent, and not before.
             </p>
           </div>
           <ProductExplorer />
@@ -399,9 +402,9 @@ export default function HomePage() {
               <Eyebrow>Enterprise</Eyebrow>
               <h2 className="d-l" style={{ marginBottom: 'var(--s5)' }}>Built to survive<br />procurement.</h2>
               <p className="lede" style={{ marginBottom: 'var(--s6)' }}>
-                Nine systems on one data layer means one security review rather than nine — and it means the
-                layer itself has to be worth trusting. Both of those answers are architectural rather than
-                contractual.
+                Every application is built to the same security and operational standard, so the review you
+                run on the first one tells you what to expect of the next. Those answers are architectural
+                rather than contractual.
               </p>
               <Link className="btn btn--primary" href="/enterprise">
                 Security &amp; compliance <span className="arw">→</span>
@@ -409,8 +412,8 @@ export default function HomePage() {
             </div>
             <div className="c-7 rv rv-d2">
               <ul className="klist klist--2">
-                <li><h3>Isolation by tenant</h3><p className="small">Data is partitioned per organisation with keys scoped to the tenant. Region of residency is chosen at provisioning and does not move.</p></li>
-                <li><h3>Identity you already run</h3><p className="small">SAML and OIDC single sign-on, SCIM provisioning, and enforced MFA. Deprovisioning in your directory removes access here in the same minute.</p></li>
+                <li><h3>Isolation by tenant</h3><p className="small">Within each application, data is partitioned per organisation with keys scoped to the tenant. Region of residency is chosen at provisioning and does not move.</p></li>
+                <li><h3>Identity you already run</h3><p className="small">SAML and OIDC single sign-on, SCIM provisioning, and enforced MFA. Deprovisioning in your directory removes access in the same minute.</p></li>
                 <li><h3>Recovery targets, written down</h3><p className="small">Point-in-time restore, cross-region replicas, and published objectives for recovery point and recovery time — tested, not assumed.</p></li>
                 <li><h3>Every action attributable</h3><p className="small">An immutable log records who did what, from where, and on whose behalf. Agent actions carry the identity of the person who authorised them.</p></li>
               </ul>
@@ -424,11 +427,12 @@ export default function HomePage() {
         <Wrap>
           <div className="section-head rv">
             <Eyebrow>Integrations</Eyebrow>
-            <h2 className="d-l">Fewer connections, because<br />fewer are needed.</h2>
+            <h2 className="d-l">Connected to the services<br />you already run.</h2>
             <p className="lede" style={{ marginTop: 'var(--s5)' }}>
-              There is no integration to build between the nine; that is what the shared layer is for. What
-              remains is the perimeter — the systems you genuinely do not own — and those are first-party
-              connections maintained by Flowza rather than middleware you operate.
+              Each application connects outward to the systems around it — your bank, your tax authority,
+              your carriers, your identity provider. These are first-party connections maintained by Flowza
+              AI rather than middleware you operate, and each application exposes its own API for anything
+              we do not cover.
             </p>
           </div>
           <div className="ig rv">
@@ -437,7 +441,7 @@ export default function HomePage() {
             <div><h3>Carriers &amp; 3PL</h3><p className="tiny">Rating, booking, tracking events and proof of delivery.</p></div>
             <div><h3>Identity providers</h3><p className="tiny">Entra ID, Okta, Google Workspace, and any SAML 2.0 or OIDC issuer.</p></div>
             <div><h3>Email, calendar &amp; docs</h3><p className="tiny">Two-way threading against the record, not a separate inbox.</p></div>
-            <div><h3>Warehouses &amp; lakes</h3><p className="tiny">Change-data streams out for teams who want a copy elsewhere.</p></div>
+            <div><h3>Warehouses &amp; lakes</h3><p className="tiny">Change-data streams out, so your own analytics can hold a copy.</p></div>
           </div>
         </Wrap>
       </Chapter>
@@ -447,18 +451,18 @@ export default function HomePage() {
         <Wrap>
           <div className="section-head rv">
             <Eyebrow>Deployment</Eyebrow>
-            <h2 className="d-l">How a replacement<br />actually happens.</h2>
+            <h2 className="d-l">How one application<br />actually goes live.</h2>
             <p className="lede" style={{ marginTop: 'var(--s5)' }}>
-              Nobody switches an operating system in a weekend. A deployment starts with the one system that
-              solves the urgent problem, runs it alongside what you have until the numbers agree, and only
-              then turns the incumbent off. Adding a second system later repeats the last two steps and
-              skips the first, because the records are already there.
+              Nobody switches an operating system in a weekend. A deployment is scoped to a single
+              application: model it, migrate into it, run it alongside what you have until the numbers agree,
+              then turn the incumbent off. Adopting a second application later is its own project on its own
+              timetable, and it does not disturb the first.
             </p>
           </div>
           <div className="phases rv">
-            <div className="phase"><span className="phase__w">Weeks 1–2</span><h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>Model</h3><p className="small">Your chart of accounts, cost centres, roles and approval thresholds are mapped onto the platform. Nothing is imported yet.</p></div>
+            <div className="phase"><span className="phase__w">Weeks 1–2</span><h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>Model</h3><p className="small">Your accounts, sites, roles and approval thresholds are mapped into the application you are adopting. Nothing is imported yet.</p></div>
             <div className="phase"><span className="phase__w">Weeks 3–5</span><h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>Migrate</h3><p className="small">Master data and open transactions move first, then history. Every import is reversible and produces a reconciliation report.</p></div>
-            <div className="phase"><span className="phase__w">Weeks 6–9</span><h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>Parallel run</h3><p className="small">Both systems process the same period. Variances are investigated until the two closes agree to the cent.</p></div>
+            <div className="phase"><span className="phase__w">Weeks 6–9</span><h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>Parallel run</h3><p className="small">Both systems process the same period. Variances are investigated until the two agree to the cent.</p></div>
             <div className="phase"><span className="phase__w">Week 10</span><h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>Cut over</h3><p className="small">The incumbent becomes read-only for reference. Reporting continuity is preserved across the boundary.</p></div>
           </div>
         </Wrap>
@@ -471,11 +475,11 @@ export default function HomePage() {
             <Eyebrow plain style={{ justifyContent: 'center' }}>Get started</Eyebrow>
             <h2 className="d-l">See it against your<br />own numbers.</h2>
             <p className="lede" style={{ margin: '0 auto var(--s7)' }}>
-              A walkthrough uses a sample of your chart of accounts and one real process end to end. Forty-five minutes, no slides.
+              A walkthrough covers one application and one real process end to end. Forty-five minutes, no slides.
             </p>
             <div className="row" style={{ justifyContent: 'center' }}>
               <Link className="btn btn--primary" href="/pricing">Book a walkthrough <span className="arw">→</span></Link>
-              <Link className="btn btn--ghost" href="/platform">Read the architecture</Link>
+              <Link className="btn btn--ghost" href="/platform">About the platform</Link>
             </div>
           </div>
         </Wrap>

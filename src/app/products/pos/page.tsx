@@ -41,7 +41,7 @@ const continuityItems = [
   },
   {
     heading: 'What happens on reconnect',
-    body: 'The queue drains in one burst and the postings into Flowza Finance catch up. Nothing is re-keyed and nothing needs a manager to press anything — the sales were complete when they were taken.',
+    body: 'The queue drains in one burst and every site comes back into line. Nothing is retyped and nothing needs a manager to press anything — the sales were complete when they were taken.',
   },
   {
     heading: 'What is never merged silently',
@@ -90,17 +90,17 @@ const faqItems = [
   {
     question: 'What exactly stops working during an outage?',
     answer:
-      'Nothing at the counter. You take payments, apply discounts and manage stock with no internet, and everything syncs when connectivity returns. What pauses is the writing into Flowza Finance — those postings catch up in a burst on reconnect, with each sale carrying the time it actually happened. Anything that genuinely conflicts, such as the same serialised unit sold at two sites during the same outage, is held for a person rather than merged quietly.',
+      'Nothing at the counter. You take payments, apply discounts and manage stock with no internet, and everything syncs when connectivity returns. What pauses is the sync to head office — those transactions catch up in a burst on reconnect, with each sale carrying the time it actually happened. Anything that genuinely conflicts, such as the same serialised unit sold at two sites during the same outage, is held for a person rather than merged quietly.',
   },
   {
     question: 'Do we have to buy your hardware?',
     answer:
-      'No. iPad, Android tablet, Windows terminal or a browser — one licence covers every device, and there is no proprietary hardware in the product. If you already have terminals on the counter, start with those.',
+      'No. iPad, Android tablet, Windows terminal or a browser — your Flowza POS subscription covers every device, and there is no proprietary hardware in the product. If you already have terminals on the counter, start with those.',
   },
   {
     question: 'How does a sale reach our accounts?',
     answer:
-      'Flowza POS posts straight into Flowza Finance across the shared data layer. They remain two systems — POS owns the sale, Finance owns the ledger — but a record created in one is available in the other without re-entry, so there is no export file and no overnight batch. Delivery platforms, eCommerce channels and your CRM connect natively in the same way.',
+      'Flowza POS records the full accounting detail of every sale — revenue by line, tax, tender and cost of goods — and makes it available as a scheduled export or over its API. That feeds whichever accounting system you keep, including Flowza Finance, which is a separate application on a separate subscription. Delivery platforms, eCommerce channels and your CRM connect through the same API.',
   },
   {
     question: 'We run several sites. Is that one dashboard or several?',
@@ -147,10 +147,10 @@ export default function POSPage() {
                 not — and nothing is lost while it is down.
               </p>
               <p className="small" style={{ marginBottom: 'var(--s7)', maxWidth: '58ch' }}>
-                Flowza POS is its own system, not a screen bolted onto an accounting package. What it
-                does not do is hand you an export file: it writes into Flowza Finance across the
-                shared data layer, so revenue, stock and tax are in the books without an overnight
-                batch. Two systems, one set of records.
+                Flowza POS is its own application, not a screen bolted onto an accounting package. It
+                is bought on its own subscription and it is complete on its own — every sale is
+                recorded with the stock movement, the revenue split, the tax and the tender behind
+                it, so the accounting detail is ready for whichever books you keep.
               </p>
               <div className="row" style={{ marginBottom: 'var(--s5)' }}>
                 <Link className="btn btn--primary" href="/pricing">
@@ -211,14 +211,15 @@ export default function POSPage() {
             <Reveal className="c-7">
               <Eyebrow>At the counter</Eyebrow>
               <h2 className="d-l">
-                One sale. Two systems.<br />No export file.
+                One sale. Every<br />consequence recorded.
               </h2>
             </Reveal>
             <Reveal className="c-5" delay={2}>
               <p className="lede">
-                Flowza POS holds the sale. Flowza Finance holds the books. They are separate systems
-                on the same data layer, which is why the consequences of a sale appear in the ledger
-                without anybody exporting a file, importing a file, or waiting for a nightly job.
+                A sale is never just a total. Flowza POS records the stock that moved, the revenue
+                line it belongs to, the tax due on it, the tender that settled it and the customer who
+                bought it — at the moment the sale clears, not in a nightly job that rebuilds it from
+                a total afterwards.
               </p>
             </Reveal>
           </Cols>
@@ -306,9 +307,9 @@ export default function POSPage() {
                 Whatever you already own
               </h2>
               <p className="small" style={{ marginBottom: 'var(--s5)' }}>
-                One licence covers every device, and none of them have to be bought from us. A tablet
-                at a market stall and a Windows terminal in a flagship run the same software and the
-                same price list.
+                Your Flowza POS subscription covers every device, and none of them have to be bought
+                from us. A tablet at a market stall and a Windows terminal in a flagship run the same
+                software and the same price list.
               </p>
               <div className="row" style={{ gap: 'var(--s2)' }}>
                 <Tag>iPad</Tag>

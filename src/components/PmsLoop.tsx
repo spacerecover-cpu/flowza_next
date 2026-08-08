@@ -73,7 +73,7 @@ export function PmsLoop() {
             <text x="128" y="190" textAnchor="end">PERSON RECORD</text>
           </g>
           <text className="pmsl__mid" x="440" y="168" textAnchor="middle">ONE LOOP</text>
-          <text className="pmsl__mid" x="440" y="188" textAnchor="middle">NO RE-ENTRY BETWEEN STAGES</text>
+          <text className="pmsl__mid" x="440" y="188" textAnchor="middle">ONE CONTINUOUS RECORD</text>
 
           {BOXES.map((box) => (
             <g

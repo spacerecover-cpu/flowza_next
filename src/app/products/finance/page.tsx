@@ -92,7 +92,7 @@ const faqItems = [
 const relatedLinks = [
   { href: '/products/pos', title: 'Flowza POS', subtitle: 'Retail and F&B transactions at source' },
   { href: '/products/pms', title: 'Flowza PMS', subtitle: 'Rate, calibrate and pay on one system' },
-  { href: '/platform', title: 'Platform', subtitle: 'The shared data layer, and what it does not claim' },
+  { href: '/platform', title: 'Platform', subtitle: 'Nine independent applications, and what that means' },
 ];
 
 export default function FinancePage() {
@@ -121,8 +121,8 @@ export default function FinancePage() {
               </h1>
               <p className="lede" style={{ marginBottom: 'var(--s5)' }}>
                 Accounting, ERP and payroll on one ledger. Sales, purchases, inventory, banking,
-                payroll and HR all post to the same double-entry books, so there is no export, no
-                re-keying and no five-tool patchwork to reconcile at the end of the month.
+                payroll and HR all post to the same double-entry books inside this one application, so
+                month end is one set of books rather than a five-tool patchwork to reconcile.
               </p>
               <p className="small" style={{ marginBottom: 'var(--s7)', maxWidth: '56ch' }}>
                 Flowza reads the document, proposes the entry and cites the line it came from. You
