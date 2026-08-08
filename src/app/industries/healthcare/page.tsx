@@ -10,7 +10,7 @@ import { KeylineList } from '@/components/KeylineList';
 import { PathwayRibbon } from '@/components/PathwayRibbon';
 
 export const metadata: Metadata = {
-  title: 'Healthcare — Flowza',
+  title: 'Healthcare — Flowza AI',
   description:
     'Three per cent of an elective pathway is clinical contact. Measure cost per episode from what actually happened rather than allocating a budget.',
 };

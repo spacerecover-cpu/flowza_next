@@ -11,7 +11,7 @@ import { BudgetConsumption } from '@/components/BudgetConsumption';
 import { CaseAgeing } from '@/components/CaseAgeing';
 
 export const metadata: Metadata = {
-  title: 'Public sector — Flowza',
+  title: 'Public sector — Flowza AI',
   description:
     'Commitment accounting at the requisition, case ageing against the statutory window, and a platform designed to be audited.',
 };

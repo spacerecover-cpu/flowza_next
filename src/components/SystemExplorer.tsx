@@ -2,17 +2,19 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { SYSTEMS, FlowzaSystem, RecordUse } from '@/lib/data/systems';
+import { SYSTEMS, FlowzaSystem, Capability } from '@/lib/data/systems';
 import { AppLink } from '@/components/ProductChrome';
 
-/** "Writes into the layer" and "Reads back out" share one row treatment. */
-function ShareList({ items }: { items: RecordUse[] }) {
+/** The capability list inside the detail panel. */
+function CapabilityList({ items }: { items: Capability[] }) {
   return (
     <ul className="mx__shares">
-      {items.map((use) => (
-        <li key={`${use.type}-${use.detail}`}>
-          <span className="k">{use.type}</span>
-          <span>{use.detail}</span>
+      {items.map((capability) => (
+        <li key={capability.title}>
+          <span className="k">·</span>
+          <span>
+            <b>{capability.title}</b> — {capability.detail}
+          </span>
         </li>
       ))}
     </ul>
@@ -20,7 +22,7 @@ function ShareList({ items }: { items: RecordUse[] }) {
 }
 
 export interface SystemExplorerProps {
-  /** Which of the nine opens selected. Finance by default, as on the site. */
+  /** Which of the nine opens selected. Finance by default. */
   initialIndex?: number;
 }
 
@@ -28,23 +30,18 @@ export function SystemExplorer({ initialIndex = 0 }: SystemExplorerProps) {
   const [selected, setSelected] = useState(initialIndex);
 
   const y: FlowzaSystem = SYSTEMS[selected];
-  const related = new Set(y.exchanges.map((x) => x.system));
 
   return (
     <div className="mx rv">
-      <div className="mx__board" id="mxBoard" role="group" aria-label="The nine Flowza systems">
+      <div className="mx__board" id="mxBoard" role="group" aria-label="The nine Flowza AI applications">
         {SYSTEMS.map((system, i) => {
           const isSelected = i === selected;
-          const isRelated = related.has(system.key) && !isSelected;
-          const isDimmed = !isRelated && !isSelected;
 
           return (
             <button
               key={system.key}
               type="button"
-              className={['mod', isSelected ? 'is-sel' : '', isRelated ? 'is-rel' : '', isDimmed ? 'is-dim' : '']
-                .filter(Boolean)
-                .join(' ')}
+              className={`mod${isSelected ? ' is-sel' : ''}`}
               aria-pressed={isSelected}
               onClick={() => setSelected(i)}
             >
@@ -58,33 +55,21 @@ export function SystemExplorer({ initialIndex = 0 }: SystemExplorerProps) {
 
       <aside className="mx__panel" id="mxPanel" aria-live="polite">
         <p className="mono" style={{ fontSize: '.625rem', letterSpacing: '.12em', color: 'var(--fg-3)' }}>
-          SYSTEM {String(selected + 1).padStart(2, '0')} OF NINE
+          APPLICATION {String(selected + 1).padStart(2, '0')} OF NINE
         </p>
         <h3 className="d-s" style={{ margin: 'var(--s3) 0 6px' }}>{y.name}</h3>
         <p className="tiny" style={{ marginBottom: '2px' }}>{y.tagline}</p>
         <AppLink host={y.app} />
         <p className="small" style={{ marginTop: 'var(--s4)' }}>{y.description}</p>
 
-        <span className="mx__cap">Writes into the layer</span>
-        <ShareList items={y.writes} />
+        <span className="mx__cap">Built for</span>
+        <p className="small">{y.builtFor}.</p>
 
-        <span className="mx__cap">Reads back out</span>
-        <ShareList items={y.reads} />
+        <span className="mx__cap">What it does</span>
+        <CapabilityList items={y.capabilities} />
 
-        <span className="mx__cap">
-          Which connects it to{' '}
-          {y.exchanges.length === 1 ? 'one system' : `${y.exchanges.length} of the other eight`}
-        </span>
-        <ul className="mx__flow">
-          {y.exchanges.map((x) => (
-            <li key={x.system}>
-              <span className="k">{x.record}</span>
-              <span>
-                <b>Flowza {x.system}</b> — {x.why}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <span className="mx__cap">Usually replaces</span>
+        <p className="small">{y.replaces}.</p>
 
         <Link className="btn btn--text" href={y.href} style={{ marginTop: 'var(--s5)' }}>
           {y.name} <span className="arw">→</span>

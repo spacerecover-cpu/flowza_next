@@ -7,25 +7,39 @@ This repo is a port. The source of truth is the single-file site at `../flowza/`
 (`index.html`, assembled from `parts/*.html`); when the two disagree, the single-file site
 is right and this repo is behind.
 
-## What Flowza is, and the one claim the site makes
+## What Flowza AI is, and the claim the site makes
 
-Flowza is **nine purpose-built AI business operating systems** for the Middle East, Africa
-and India. Each runs as its own application on its own subdomain, each has its own release
-train, and each is licensed independently. What they share is a single data layer holding
-six record types — party, item, ledger entry, location, person, document — so a record
-created in one system is already present in the others.
+Flowza AI is **nine specialised AI cloud applications** for the Middle East, Africa and
+India. Each runs as its own application on its own subdomain, **holds its own data in its
+own database**, has its own release train, and carries its own subscription and its own
+pricing. They belong to one ecosystem and are built to a common security and compliance
+standard. That is the whole of what they have in common.
 
-> **Nine systems. One operating fabric.**
+> **Nine cloud applications. One trusted platform.**
+>
+> Choose only the applications your business needs.
 
-The claim is deliberately narrow and deliberately checkable: the nine write to and read
-from the same records, so nothing is exported, re-keyed or reconciled between them. Nine
-systems connect to one shared layer rather than to each other.
+**Never** write copy that claims, or implies, any of the following. All of them are false:
 
-**Never** write copy that says the nine are one application, one deployment, or modules of
-a platform. They are not, and an earlier version of this repo said so — the reposition that
-removed that language is what most of the current content exists to carry. If you find a
-surviving reference to "eighteen modules", "one platform with N views" or a sector edition,
-it is a bug.
+- a shared data layer, shared records, or a shared/unified database
+- an "operating fabric", or the nine being one system, one application or one deployment
+- one definition of a customer, one copy of the data, or one row across applications
+- data flowing between applications automatically — no re-entry, zero exports, no re-keying
+- one licence covering the nine, or pricing per person rather than per application
+- "all nine included", "everything in Growth", or any bundle price
+
+An earlier version of this repo said all of those things, and removing them is what most of
+the current content exists to carry. If you find a surviving reference to a shared data
+layer, an operating fabric, one licence, or eighteen modules, it is a bug.
+
+**What is true and safe to write:** each application is complete on its own; a business can
+buy one and never buy another; applications expose their own APIs, so a customer can build
+a deliberate integration between two of them if they want one; the same security model and
+the same India/Gulf statutory expertise are applied in each.
+
+Within a single application, "the same records" is fine and often the point — Finance
+really does post sales, purchases, payroll and inventory to one ledger. The rule is about
+claims that cross an application boundary.
 
 ### The nine
 
@@ -49,13 +63,13 @@ nav, the order in the sitemap, and the order the `systemIndexes` in
 
 | Route | What it is |
 |-------|-----------|
-| `/` | Home — fragmentation, the nine, the exchange graph, a day on one record |
-| `/platform` | The shared layer: six record types, who writes which, the services above them |
+| `/` | Home — the two bad options, the nine applications, AI per application, a day |
+| `/platform` | The four pillars, what is common and what is not, per-application APIs, coverage |
 | `/solutions` | By function — what finance, operations, revenue and IT each cannot answer |
 | `/industries` | By sector — unit of work, binding constraint, and which of the nine to start with |
 | `/industries/{retail,logistics,manufacturing,services,construction,healthcare,wellness,public}` | Eight sector deep pages |
 | `/enterprise` | Access, encryption, residency, recovery objectives, assurance status |
-| `/pricing` | Four tiers and the consolidation calculator |
+| `/pricing` | Three deployment shapes, then per-application pricing links |
 | `/company` | How the team works, support coverage, partners, offices |
 
 Twenty-four routes in total, all in the sitemap.

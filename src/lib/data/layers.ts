@@ -1,13 +1,14 @@
 /**
- * The four layers of the Flowza stack, ported from `LAYERS` in
- * `parts/99-scripts.html`.
+ * What the Flowza AI platform is, stated as four pillars.
  *
- * Only the top layer comes in nine. The three below it exist once, and that
- * asymmetry is the point of the stack rather than an implementation detail —
- * if the record layer came in nine there would be nine copies of your customer,
- * and Flowza would be a suite like any other.
+ * This file previously described a four-layer stack in which nine applications
+ * sat on top of one shared record layer. That is not the architecture: the nine
+ * are independent cloud applications, each with its own database. What they
+ * genuinely have in common is a vendor, a set of engineering and security
+ * standards, and regional compliance expertise — so that is what this describes.
+ * Nothing here should imply a shared database or a single licence.
  */
-export interface ArchLayer {
+export interface PlatformPillar {
   number: string;
   name: string;
   subtitle: string;
@@ -15,61 +16,61 @@ export interface ArchLayer {
   footer: string;
 }
 
-export const LAYERS: ArchLayer[] = [
+export const PILLARS: PlatformPillar[] = [
   {
-    number: '04',
-    name: 'The nine systems',
-    subtitle: 'Nine apps, nine subdomains, nine release trains',
+    number: '01',
+    name: 'Nine specialised applications',
+    subtitle: 'Each built for one job, not one suite stretched over nine',
     bullets: [
       'Finance, LogisPro, Spa Master, Fleetza, QRForge',
       'POS, Club, RentFlow, PMS',
       'Each on its own app and its own subdomain',
-      'Each with its own release train',
-      'Licensed independently — take one or take nine',
+      'Each designed around the constraint its industry actually has',
+      'Take one, take three, take all nine',
     ],
     footer:
-      'This is the only layer where there are nine of anything. A system owns its screens, its workflow and its release; it does not own a copy of your data.',
-  },
-  {
-    number: '03',
-    name: 'Intelligence & automation',
-    subtitle: 'Copilot, agents, forecasting, rules — shared',
-    bullets: [
-      'Copilot answering across all nine at once',
-      'Agents that execute multi-step work',
-      'Forecasting on demand, cash and churn',
-      'Deterministic rules, approvals and SLAs',
-      'Anomaly detection on posted transactions',
-    ],
-    footer:
-      'This layer has no private datastore. It reads and writes through the same record layer as everything else, under the caller’s own permissions — never above them.',
+      'A general-purpose suite has to be adequate at everything. A specialised application only has to be right about one thing, which is why these are separate products rather than modules of one.',
   },
   {
     number: '02',
-    name: 'Shared services',
-    subtitle: 'Identity, permissions, tax engines, audit — shared',
+    name: 'Independent by design',
+    subtitle: 'Own database, own subscription, own release train',
     bullets: [
-      'Identity, single sign-on and directory lifecycle',
-      'Permissions evaluated at query time, not in each app',
-      'Tax and statutory engines for India and the Gulf',
-      'Documents, templates and notification channels',
-      'Search across every object in every system',
+      'Each application holds its own data, in its own database',
+      'Each is bought and priced on its own terms',
+      'Each ships on its own release schedule',
+      'An application can be adopted, or dropped, without touching the others',
+      'No application depends on another being present',
     ],
     footer:
-      'Written once and used by all nine. A tax rule fixed here is fixed for the till, the club and the ledger at once, without waiting for nine releases.',
+      'Independence is the trade. Your fleet system does not go down because the booking system is deploying, and you are never asked to buy a ninth product to make the first one work.',
   },
   {
-    number: '01',
-    name: 'The record layer',
-    subtitle: 'Six object types, one row each — shared',
+    number: '03',
+    name: 'Common engineering standards',
+    subtitle: 'The same security and operational bar in every application',
     bullets: [
-      'Six object types: party, item, entry, location, person, document',
-      'One physical row per record — no synchronised copies',
-      'Immutable, attributable audit log across all nine',
-      'Tenant isolation enforced below every application',
-      'Region of residency fixed at provisioning',
+      'Tenant isolation enforced inside every application',
+      'SAML and OIDC single sign-on, SCIM provisioning',
+      'An immutable, attributable audit log per application',
+      'Encryption in transit and at rest, keys scoped per tenant',
+      'Published recovery point and recovery time objectives',
     ],
     footer:
-      'This is the layer that makes the rest possible, and it is the whole of what the nine systems have in common. Nothing above it holds a second copy.',
+      'These are standards each application is built to, not a shared service the nine plug into. The benefit is that a security review of one tells you what to expect of the next.',
+  },
+  {
+    number: '04',
+    name: 'Built for India and the Gulf',
+    subtitle: 'Regional compliance where the application needs it',
+    bullets: [
+      'India: GST, e-way bills, TDS and statutory payroll',
+      'UAE: VAT at 5 per cent, corporate tax at 9 per cent, WPS files',
+      'Oman: VAT, social insurance payroll and a country chart of accounts',
+      'Saudi Arabia: GOSI payroll and Arabic right-to-left documents',
+      'Data residency chosen at provisioning',
+    ],
+    footer:
+      'Compliance sits in the applications it applies to — Finance and PMS carry the statutory engines. A QR code product does not need a VAT engine and does not pretend to have one.',
   },
 ];

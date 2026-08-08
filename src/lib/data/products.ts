@@ -6,7 +6,7 @@
 export type ProductTag = 'back' | 'trade' | 'move' | 'market';
 
 export interface ProductCard {
-  /** The app subdomain this product runs on. Nine systems, nine subdomains. */
+  /** The app subdomain this product runs on. Nine applications, nine subdomains. */
   kind: string;
   name: string;
   description: string;

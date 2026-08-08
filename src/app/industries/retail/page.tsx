@@ -11,7 +11,7 @@ import { FootfallChart } from '@/components/FootfallChart';
 import { SpaceExplorer, SpaceTreemap, SpacePanel } from '@/components/SpaceTreemap';
 
 export const metadata: Metadata = {
-  title: 'Retail and hospitality — Flowza',
+  title: 'Retail and hospitality — Flowza AI',
   description:
     'Trading space is inventory you cannot reorder. Measure what each square metre earns, forecast labour against real footfall, and run one stock pool across every channel.',
 };

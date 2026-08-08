@@ -11,23 +11,35 @@ interface Tile {
   r: string;
   gx: string;
   gy: string;
+  /** True for the handful this business actually needs — the rest fade out. */
+  keep?: boolean;
 }
 
+/**
+ * Fourteen tools today, wired to one another. On Flowza AI the tangle goes and
+ * so does most of the shelf: four applications, chosen deliberately, each
+ * standing on its own.
+ *
+ * The tiles that are kept move to the middle row so they read as a set; the
+ * rest stay where they are and fade to ghosts. There is deliberately no
+ * connecting wire in the settled state — the applications are independent, and
+ * a line between them would say otherwise.
+ */
 const TILES: Tile[] = [
   { label: 'CRM', x: '14%', y: '22%', r: '-7deg', gx: '10%', gy: '18%' },
-  { label: 'Accounting', x: '38%', y: '12%', r: '5deg', gx: '30%', gy: '18%' },
+  { label: 'Accounting', x: '38%', y: '12%', r: '5deg', gx: '20%', gy: '50%', keep: true },
   { label: 'Payroll', x: '63%', y: '19%', r: '-4deg', gx: '50%', gy: '18%' },
-  { label: 'Inventory', x: '86%', y: '14%', r: '8deg', gx: '70%', gy: '18%' },
+  { label: 'Inventory', x: '86%', y: '14%', r: '8deg', gx: '40%', gy: '50%', keep: true },
   { label: 'Helpdesk', x: '22%', y: '41%', r: '6deg', gx: '90%', gy: '18%' },
-  { label: 'E-signature', x: '47%', y: '36%', r: '-9deg', gx: '10%', gy: '50%' },
-  { label: 'BI tool', x: '74%', y: '44%', r: '3deg', gx: '30%', gy: '50%' },
-  { label: 'Procurement', x: '12%', y: '62%', r: '-5deg', gx: '50%', gy: '50%' },
-  { label: 'Projects', x: '34%', y: '73%', r: '7deg', gx: '70%', gy: '50%' },
-  { label: 'Expenses', x: '58%', y: '66%', r: '-6deg', gx: '90%', gy: '50%' },
-  { label: 'Scheduling', x: '82%', y: '76%', r: '4deg', gx: '10%', gy: '82%' },
-  { label: 'Warehouse', x: '26%', y: '88%', r: '-3deg', gx: '30%', gy: '82%' },
-  { label: 'Payments', x: '52%', y: '92%', r: '6deg', gx: '50%', gy: '82%' },
-  { label: 'Spreadsheets', x: '70%', y: '88%', r: '-8deg', gx: '70%', gy: '82%' },
+  { label: 'E-signature', x: '47%', y: '36%', r: '-9deg', gx: '10%', gy: '82%' },
+  { label: 'BI tool', x: '74%', y: '44%', r: '3deg', gx: '30%', gy: '18%' },
+  { label: 'Procurement', x: '12%', y: '62%', r: '-5deg', gx: '70%', gy: '18%' },
+  { label: 'Projects', x: '34%', y: '73%', r: '7deg', gx: '30%', gy: '82%' },
+  { label: 'Expenses', x: '58%', y: '66%', r: '-6deg', gx: '90%', gy: '82%' },
+  { label: 'Scheduling', x: '82%', y: '76%', r: '4deg', gx: '60%', gy: '50%', keep: true },
+  { label: 'Warehouse', x: '26%', y: '88%', r: '-3deg', gx: '70%', gy: '82%' },
+  { label: 'Payments', x: '52%', y: '92%', r: '6deg', gx: '80%', gy: '50%', keep: true },
+  { label: 'Spreadsheets', x: '70%', y: '88%', r: '-8deg', gx: '50%', gy: '82%' },
 ];
 
 export interface FragmentationDiagramProps {
@@ -35,7 +47,7 @@ export interface FragmentationDiagramProps {
 }
 
 export function FragmentationDiagram({ className }: FragmentationDiagramProps) {
-  const [unified, setUnified] = useState(false);
+  const [chosen, setChosen] = useState(false);
   const fragRef = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
 
@@ -48,7 +60,7 @@ export function FragmentationDiagram({ className }: FragmentationDiagramProps) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const delay = reduced ? 0 : 900;
-            setTimeout(() => setUnified(true), delay);
+            setTimeout(() => setChosen(true), delay);
             io.disconnect();
           }
         });
@@ -64,17 +76,17 @@ export function FragmentationDiagram({ className }: FragmentationDiagramProps) {
     <div>
       <div
         ref={fragRef}
-        className={`frag${unified ? ' is-unified' : ''}${className ? ` ${className}` : ''}`}
+        className={`frag${chosen ? ' is-unified' : ''}${className ? ` ${className}` : ''}`}
         id="frag"
       >
         <div className="frag__net" aria-hidden="true" />
         <div className="frag__badge">
-          <Tag variant={unified ? 'sig' : 'default'} id="fragTag">
-            {unified ? 'One layer underneath' : 'Fourteen tools, no common ground'}
+          <Tag variant={chosen ? 'sig' : 'default'} id="fragTag">
+            {chosen ? 'Four applications, chosen' : 'Fourteen tools, wired to each other'}
           </Tag>
         </div>
 
-        {/* messy wires */}
+        {/* the wiring you maintain today */}
         <svg className="frag__wires frag__wires--mess" viewBox="0 0 500 312" preserveAspectRatio="none" aria-hidden="true">
           <g stroke="rgba(154,86,11,.42)" strokeWidth="1" fill="none" strokeDasharray="3 3">
             <path d="M70 60 C170 20 240 150 330 70" />
@@ -86,25 +98,10 @@ export function FragmentationDiagram({ className }: FragmentationDiagramProps) {
           </g>
         </svg>
 
-        {/* clean wires */}
-        <svg className="frag__wires frag__wires--clean" viewBox="0 0 500 312" preserveAspectRatio="none" aria-hidden="true">
-          <g stroke="rgba(10,95,66,.5)" strokeWidth="1" fill="none">
-            <path d="M50 56 V156 H450" />
-            <path d="M145 56 V156" />
-            <path d="M250 56 V156" />
-            <path d="M355 56 V156" />
-            <path d="M50 250 V156" />
-            <path d="M145 250 V156" />
-            <path d="M250 250 V156" />
-            <path d="M355 250 V156" />
-            <path d="M450 250 V156" />
-          </g>
-        </svg>
-
         {TILES.map((tile) => (
           <div
             key={tile.label}
-            className="tile"
+            className={`tile${tile.keep ? ' tile--keep' : ' tile--drop'}`}
             style={
               {
                 '--x': tile.x,
@@ -122,20 +119,20 @@ export function FragmentationDiagram({ className }: FragmentationDiagramProps) {
 
       <div className="frag__ctrl">
         <button
-          className={`chip${!unified ? ' is-on' : ''}`}
-          aria-pressed={!unified}
-          onClick={() => setUnified(false)}
+          className={`chip${!chosen ? ' is-on' : ''}`}
+          aria-pressed={!chosen}
+          onClick={() => setChosen(false)}
         >
           Today
         </button>
         <button
-          className={`chip${unified ? ' is-on' : ''}`}
-          aria-pressed={unified}
-          onClick={() => setUnified(true)}
+          className={`chip${chosen ? ' is-on' : ''}`}
+          aria-pressed={chosen}
+          onClick={() => setChosen(true)}
         >
-          On Flowza
+          On Flowza AI
         </button>
-        <span className="tiny" style={{ marginLeft: 'auto' }}>14 tools · 1 business</span>
+        <span className="tiny" style={{ marginLeft: 'auto' }}>Buy four · not fourteen</span>
       </div>
     </div>
   );

@@ -42,8 +42,9 @@ export interface PostingLine {
 }
 
 /**
- * What one till sale writes into Flowza Finance. Two systems on one data layer,
- * so these are consequences of the sale rather than a copy of it.
+ * What one till sale records inside Flowza POS. Every consequence of the sale —
+ * stock, revenue, tax, tender and customer history — is written at the moment
+ * it clears, so the accounting detail is ready for whichever books you keep.
  */
 export const POSTING_LINES: PostingLine[] = [
   { kind: 'STOCK', label: 'Beans 250g −1', value: 'SITE 04' },

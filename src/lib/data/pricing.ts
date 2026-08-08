@@ -1,7 +1,17 @@
+/**
+ * Pricing philosophy, not a price list.
+ *
+ * Every Flowza AI application is priced on its own — by product, by the
+ * features you switch on and by the scale of the deployment. There is no
+ * universal licence and no per-person price that covers the nine, so this file
+ * deliberately holds no headline figure. It previously described tiers such as
+ * "All nine systems" at a per-user rate; that described a commercial model the
+ * platform does not have.
+ */
 export interface PricingTier {
   name: string;
-  price: string;
-  unit?: string;
+  /** Who the shape of the deployment suits, shown where a price used to sit. */
+  shape: string;
   description: string;
   features: string[];
   cta: { label: string; href: string };
@@ -11,78 +21,42 @@ export interface PricingTier {
 
 export const TIERS: PricingTier[] = [
   {
-    name: 'Core',
-    price: '$19',
-    unit: '/ user / month',
-    description: 'For a single entity getting off spreadsheets and disconnected tools.',
+    name: 'Starter',
+    shape: 'One application',
+    description: 'For a small team solving the one problem that is urgent right now.',
     features: [
-      'Any two of the nine systems',
-      'Standard workflows',
-      'One legal entity, one country',
-      'Email support',
+      'A single application, priced on its own',
+      'One entity, one country',
+      'Standard workflows and reports',
+      'Guided setup and email support',
     ],
-    cta: { label: 'Start', href: '/pricing' },
+    cta: { label: 'Browse the applications', href: '/#systems' },
   },
   {
     name: 'Growth',
-    price: '$39',
-    unit: '/ user / month',
-    description: 'The full operational surface with AI assistance across it.',
+    shape: 'Several applications',
+    description: 'For businesses running more than one part of the operation on Flowza AI.',
     features: [
-      'All nine systems',
-      'Copilot across all nine',
-      'Multi-entity, multi-currency, four countries',
-      'API and custom objects',
-      'SSO',
+      'Each application priced separately',
+      'Multi-entity and multi-currency where the application supports it',
+      'Single sign-on',
+      'Priority support across the applications you hold',
     ],
     cta: { label: 'Book a walkthrough', href: '/pricing' },
     highlighted: true,
     flagLabel: 'MOST COMMON',
   },
   {
-    name: 'Scale',
-    price: '$69',
-    unit: '/ user / month',
-    description: 'For organisations running autonomous work and tighter controls.',
-    features: [
-      'Everything in Growth',
-      'Agents and scheduled automation',
-      'Sandboxes and tenant branching',
-      'Advanced approvals and SoD',
-      'SCIM provisioning',
-    ],
-    cta: { label: 'Talk to sales', href: '/pricing' },
-  },
-  {
     name: 'Enterprise',
-    price: 'Custom',
-    description: 'Committed capacity, contractual guarantees and a named team.',
+    shape: 'Custom deployment',
+    description: 'For committed capacity, contractual guarantees and a named team.',
     features: [
       'Customer-managed keys',
-      'Chosen residency and release windows',
+      'Chosen data residency and release windows',
       'Contractual availability terms',
-      '24×7 escalation and named CSM',
+      '24×7 escalation and a named contact',
       'Migration engineering',
     ],
     cta: { label: 'Contact us', href: '/enterprise' },
   },
-];
-
-export interface CalculatorTool {
-  name: string;
-  costPerUserPerMonth: number;
-  defaultChecked: boolean;
-}
-
-export const CALCULATOR_TOOLS: CalculatorTool[] = [
-  { name: 'CRM', costPerUserPerMonth: 75, defaultChecked: true },
-  { name: 'Finance / ERP', costPerUserPerMonth: 90, defaultChecked: true },
-  { name: 'HR & payroll', costPerUserPerMonth: 12, defaultChecked: true },
-  { name: 'Inventory / WMS', costPerUserPerMonth: 45, defaultChecked: true },
-  { name: 'Helpdesk', costPerUserPerMonth: 29, defaultChecked: true },
-  { name: 'BI & reporting', costPerUserPerMonth: 24, defaultChecked: true },
-  { name: 'Procurement', costPerUserPerMonth: 18, defaultChecked: false },
-  { name: 'E-signature', costPerUserPerMonth: 15, defaultChecked: false },
-  { name: 'Projects', costPerUserPerMonth: 13, defaultChecked: false },
-  { name: 'Expenses', costPerUserPerMonth: 9, defaultChecked: false },
 ];

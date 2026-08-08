@@ -97,12 +97,12 @@ const faqItems = [
   {
     question: 'Do we need LogisPro as well?',
     answer:
-      'Only if you need the work planned. Fleetza is complete on its own for an operator who wants to know what their vehicles and drivers are doing and what they cost. If you are also sequencing drops, tracking shipments against delivery windows or running a warehouse, that is LogisPro, and the two share the vehicle and driver records.',
+      'Only if you need the work planned. Fleetza is complete on its own for an operator who wants to know what their vehicles and drivers are doing and what they cost. If you are also sequencing drops, tracking shipments against delivery windows or running a warehouse, that is LogisPro — a separate application, bought separately, which you may or may not need.',
   },
   {
     question: 'Where does the cost per kilometre come from?',
     answer:
-      'From posted records rather than an assumed rate. Acquisition finance, workshop invoices, fuel transactions, insurance premiums and depreciation attach to the registration they belong to and are divided by the distance that vehicle actually ran. Because the same records carry the depreciation, a group figure and a statutory set of accounts do not disagree.',
+      'From recorded costs rather than an assumed rate. Acquisition finance, workshop invoices, fuel transactions, insurance premiums and depreciation attach to the registration they belong to and are divided by the distance that vehicle actually ran. Every component of the figure is traceable to the entry it came from, so an operational number and the one your accountant produces can be reconciled line by line.',
   },
 ];
 

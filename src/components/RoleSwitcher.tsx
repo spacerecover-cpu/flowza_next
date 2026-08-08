@@ -34,7 +34,7 @@ function RoleSwitcherInner() {
           </button>
         ))}
         <p className="role__hint tiny">
-          All four read the same records. Nothing below is a different product — it is a different question asked of one system.
+          Four teams, four questions, four different applications. Pick a role to see which Flowza AI application answers it.
         </p>
       </div>
       <div className="brief" aria-live="polite">

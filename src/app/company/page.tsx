@@ -9,7 +9,7 @@ import { CoverageBand } from '@/components/CoverageBand';
 import { WORKING_AGREEMENTS, TEAM_SPLIT, PARTNER_TYPES, CONTACT_ROUTES, OFFICES } from '@/lib/data/company';
 
 export const metadata: Metadata = {
-  title: 'Company — Flowza',
+  title: 'Company — Flowza AI',
   description:
     'Flowza is a product company, not a consultancy. How the team works, who our partners are, where our support hours actually fall, and how to reach the right person.',
 };

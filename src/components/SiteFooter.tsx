@@ -22,8 +22,8 @@ export function SiteFooter() {
               <span className="brand__word">Flowza</span>
             </Link>
             <p className="tiny" style={{ maxWidth: '34ch' }}>
-              Nine systems. One operating fabric. Purpose-built business operating systems for MEA and India,
-              sharing one data layer.
+              Nine cloud applications. One trusted platform. Specialised business software for MEA and India,
+              each application independent and priced on its own.
             </p>
             <span className="status" style={{ marginTop: 'var(--s5)' }}>
               <i></i> All systems operational
@@ -31,7 +31,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h4>The nine systems</h4>
+            <h4>The nine applications</h4>
             <ul>
               <li><Link href="/products/finance">Flowza Finance</Link></li>
               <li><Link href="/products/logispro">Flowza LogisPro</Link></li>
@@ -60,8 +60,8 @@ export function SiteFooter() {
           <div>
             <h4>Platform</h4>
             <ul>
-              <li><Link href="/platform">How the nine connect</Link></li>
-              <li><Link href="/platform#schema">The shared records</Link></li>
+              <li><Link href="/platform">About the platform</Link></li>
+              <li><Link href="/platform#schema">Independent by design</Link></li>
               <li><Link href="/platform#api">Developer API</Link></li>
               <li><Link href="/#ai">AI and agents</Link></li>
               <li><Link href="/#integrations">Integrations</Link></li>

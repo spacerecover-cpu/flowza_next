@@ -1,24 +1,17 @@
 /**
- * The nine Flowza systems, and what each one puts into — and takes out of — the
- * shared data layer.
+ * The nine Flowza AI applications.
  *
- * Ported verbatim from the `SYSTEMS` array in the site source
- * (`parts/99-scripts.html`). This is the data behind the claim the whole site
- * makes: nine separate applications, on nine separate subdomains, connected to
- * one layer rather than to each other.
- *
- * INVARIANT — the exchange graph is symmetric, and was checked by hand.
- * If A lists B in `exchanges`, B lists A, with the same record type. There are
- * sixteen pairs and therefore thirty-two entries. Nothing derives this at
- * runtime, so an edit that adds an exchange on one side only will silently
- * produce a board where selecting A highlights B but selecting B does not
- * highlight A. Add and remove exchanges in pairs.
+ * Each entry describes one application on its own terms: who it is built for,
+ * what it does, and what it replaces. There is deliberately no exchange graph
+ * and no record-sharing model here — the nine are independent cloud
+ * applications, each with its own database, its own subscription and its own
+ * release train. An earlier version of this file encoded a shared record layer
+ * with a symmetric exchange graph between the nine; that described an
+ * architecture Flowza AI does not have, and it has been removed rather than
+ * softened.
  */
 
-/** The six object types the record layer holds. Nothing else is shared. */
-export type RecordType = 'PARTY' | 'ITEM' | 'ENTRY' | 'LOCATION' | 'PERSON' | 'DOCUMENT';
-
-/** The short name of a system, used as its key throughout the exchange graph. */
+/** The short name of an application, used as its key throughout the site. */
 export type SystemKey =
   | 'Finance'
   | 'LogisPro'
@@ -30,32 +23,27 @@ export type SystemKey =
   | 'RentFlow'
   | 'PMS';
 
-/** One record type a system writes into the layer, or reads back out of it. */
-export interface RecordUse {
-  type: RecordType;
+/** One headline capability of an application, with a sentence of detail. */
+export interface Capability {
+  title: string;
   detail: string;
-}
-
-/** A record type that crosses between two systems, and why it does. */
-export interface Exchange {
-  system: SystemKey;
-  record: RecordType;
-  why: string;
 }
 
 export interface FlowzaSystem {
   key: SystemKey;
   /** Full product name, as it is written everywhere else. */
   name: string;
-  /** The app subdomain this system actually runs on. */
+  /** The app subdomain this application actually runs on. */
   app: string;
   /** The marketing route for the product. */
   href: string;
   tagline: string;
   description: string;
-  writes: RecordUse[];
-  reads: RecordUse[];
-  exchanges: Exchange[];
+  /** The kind of business this application is built for. */
+  builtFor: string;
+  /** What a business typically runs before it buys this one. */
+  replaces: string;
+  capabilities: Capability[];
 }
 
 export const SYSTEMS: FlowzaSystem[] = [
@@ -67,24 +55,13 @@ export const SYSTEMS: FlowzaSystem[] = [
     tagline: 'Accounting, ERP and payroll on one ledger',
     description:
       'Sales, purchases, inventory, double-entry accounting, payroll and HR posting to one connected ledger, with GST and Gulf VAT engines built in.',
-    writes: [
-      { type: 'ENTRY', detail: 'Every posting, wherever it originated' },
-      { type: 'PARTY', detail: 'Customers and suppliers' },
-      { type: 'ITEM', detail: 'Cost, valuation and COGS' },
-      { type: 'PERSON', detail: 'Employment, payroll and statutory filings' },
-    ],
-    reads: [
-      { type: 'ENTRY', detail: 'Sales and charges raised in other systems' },
-      { type: 'PERSON', detail: 'The compensation PMS resolved' },
-    ],
-    exchanges: [
-      { system: 'POS', record: 'ENTRY', why: 'every sale posts here as it happens, with no overnight export' },
-      { system: 'Club', record: 'ENTRY', why: 'dues, tabs and signed chits settle into the same ledger' },
-      { system: 'Spa Master', record: 'ENTRY', why: 'treatment revenue and reception retail' },
-      { system: 'PMS', record: 'PERSON', why: 'the pay PMS resolved is what payroll runs' },
-      { system: 'LogisPro', record: 'ITEM', why: 'landed cost lands on the goods received' },
-      { system: 'Fleetza', record: 'ITEM', why: 'whole-life vehicle cost and depreciation' },
-      { system: 'RentFlow', record: 'PARTY', why: 'an approved applicant is already a billable party' },
+    builtFor: 'Finance teams running a business that has outgrown its accounting package',
+    replaces: 'An entry-level accounting package plus a separate payroll bureau',
+    capabilities: [
+      { title: 'Double-entry ledger', detail: 'Sales, purchases and inventory movements post to a ledger that balances by construction.' },
+      { title: 'Statutory tax engines', detail: 'GST for India, VAT and corporate tax for the Gulf, maintained as the rules change.' },
+      { title: 'Payroll and HR', detail: 'EPF, ESI, professional tax, gratuity, WPS bank files and GOSI, by country.' },
+      { title: 'Multi-entity and multi-currency', detail: 'Consolidation across entities and currencies, with translation handled at close.' },
     ],
   },
 
@@ -96,20 +73,13 @@ export const SYSTEMS: FlowzaSystem[] = [
     tagline: 'Routes, shipments and warehouses, optimised',
     description:
       'AI route optimisation, live shipment tracking and a full warehouse management system on one operations picture.',
-    writes: [
-      { type: 'LOCATION', detail: 'Depots, stops, routes and warehouse bins' },
-      { type: 'ITEM', detail: 'Warehouse stock position and movement' },
-      { type: 'PERSON', detail: 'Driver hours, assignment and compliance' },
-    ],
-    reads: [
-      { type: 'PARTY', detail: 'Consignees, carriers and last-mile partners' },
-      { type: 'ITEM', detail: 'What is being moved, and from where' },
-    ],
-    exchanges: [
-      { system: 'Fleetza', record: 'PERSON', why: 'the same driver and the same vehicle, scored there and scheduled here' },
-      { system: 'POS', record: 'ITEM', why: 'replenishment arriving at a trading site' },
-      { system: 'Finance', record: 'ITEM', why: 'freight cost and carrier settlement' },
-      { system: 'QRForge', record: 'DOCUMENT', why: 'carton and pallet labels scanned at every hop' },
+    builtFor: 'Freight, distribution and third-party logistics operators',
+    replaces: 'A routing tool, a tracking portal and a warehouse spreadsheet',
+    capabilities: [
+      { title: 'Route optimisation', detail: 'Sequences drops against time windows, vehicle capacity and driver hours.' },
+      { title: 'Live shipment tracking', detail: 'Status, exceptions and proof of delivery on one board, visible to the customer.' },
+      { title: 'Warehouse management', detail: 'Bins, picking, putaway and cycle counts across sites.' },
+      { title: 'Lane economics', detail: 'Cost and margin per lane, so the unprofitable ones are visible before renewal.' },
     ],
   },
 
@@ -121,20 +91,13 @@ export const SYSTEMS: FlowzaSystem[] = [
     tagline: 'Bookings, rosters and loyalty for wellness',
     description:
       'A branded booking portal, a roster engine that respects certifications, retail stock and loyalty, around the treatment room as the constrained resource.',
-    writes: [
-      { type: 'PARTY', detail: 'Client profile, visit and treatment history' },
-      { type: 'ITEM', detail: 'Treatment consumables and retail stock' },
-      { type: 'PERSON', detail: 'Therapist roster, availability and certification' },
-    ],
-    reads: [
-      { type: 'PARTY', detail: 'A client already known to another system' },
-      { type: 'ENTRY', detail: 'Revenue and cost of goods posted' },
-    ],
-    exchanges: [
-      { system: 'Finance', record: 'ENTRY', why: 'treatment revenue, retail margin and COGS' },
-      { system: 'Club', record: 'PARTY', why: 'a member of the club booking a treatment is one person' },
-      { system: 'POS', record: 'ITEM', why: 'the same retail line sold at reception' },
-      { system: 'QRForge', record: 'DOCUMENT', why: 'booking links on printed material' },
+    builtFor: 'Spas, salons and wellness studios',
+    replaces: 'A booking widget, a paper rota and a loyalty card',
+    capabilities: [
+      { title: 'Branded online booking', detail: 'Clients book real availability, not a request form somebody answers later.' },
+      { title: 'Certification-aware rosters', detail: 'A therapist is only offered for treatments they are currently certified to deliver.' },
+      { title: 'Retail and consumables', detail: 'Reception retail and treatment consumables tracked against each visit.' },
+      { title: 'Loyalty and retention', detail: 'Visit history, packages and lapse alerts for clients who have stopped rebooking.' },
     ],
   },
 
@@ -146,19 +109,13 @@ export const SYSTEMS: FlowzaSystem[] = [
     tagline: 'Live tracking, driver scores and maintenance',
     description:
       'Live GPS, AI driver behaviour scoring, predictive maintenance and fuel analytics, giving a true cost per kilometre.',
-    writes: [
-      { type: 'LOCATION', detail: 'Vehicle position, replay and geofence events' },
-      { type: 'PERSON', detail: 'Driver behaviour score and coaching history' },
-      { type: 'ITEM', detail: 'Parts consumed in service' },
-    ],
-    reads: [
-      { type: 'PERSON', detail: 'The driver, as the rest of the business knows them' },
-      { type: 'LOCATION', detail: 'Sites, zones and customer premises' },
-    ],
-    exchanges: [
-      { system: 'LogisPro', record: 'PERSON', why: 'a vehicle held for service is visible to the planner without re-entry' },
-      { system: 'Finance', record: 'ITEM', why: 'acquisition, maintenance, fuel, insurance and depreciation' },
-      { system: 'QRForge', record: 'DOCUMENT', why: 'asset tags on vehicles and serviceable parts' },
+    builtFor: 'Any business running a fleet of vehicles it owns or leases',
+    replaces: 'A tracker subscription and a maintenance diary',
+    capabilities: [
+      { title: 'Live GPS and trip replay', detail: 'Position, route history and geofence events for every vehicle.' },
+      { title: 'Driver behaviour scoring', detail: 'Harsh braking, speed and cornering scored into a coachable number.' },
+      { title: 'Predictive maintenance', detail: 'Service intervals driven by actual use rather than a calendar.' },
+      { title: 'True cost per kilometre', detail: 'Fuel, parts, servicing and downtime resolved to a per-kilometre figure.' },
     ],
   },
 
@@ -170,17 +127,13 @@ export const SYSTEMS: FlowzaSystem[] = [
     tagline: 'Dynamic QR codes with live analytics',
     description:
       'Destinations you can change after printing, every scan logged with location, device and time, and thousands of codes minted from one CSV.',
-    writes: [{ type: 'DOCUMENT', detail: 'Codes, campaigns, routing rules and every scan' }],
-    reads: [
-      { type: 'ITEM', detail: 'What the code was printed on' },
-      { type: 'LOCATION', detail: 'Where it was scanned' },
-      { type: 'PARTY', detail: 'Who owns the campaign' },
-    ],
-    exchanges: [
-      { system: 'POS', record: 'ITEM', why: 'product and promotion codes bound to real stock lines' },
-      { system: 'Fleetza', record: 'DOCUMENT', why: 'asset tags that resolve to a vehicle file' },
-      { system: 'LogisPro', record: 'DOCUMENT', why: 'carton and pallet labels' },
-      { system: 'Spa Master', record: 'DOCUMENT', why: 'booking links printed on cards and menus' },
+    builtFor: 'Marketing, packaging and operations teams that print codes',
+    replaces: 'A free QR generator and no analytics at all',
+    capabilities: [
+      { title: 'Re-pointable codes', detail: 'Change where a printed code goes without reprinting a single label.' },
+      { title: 'Scan analytics', detail: 'Every scan logged with time, device and approximate location.' },
+      { title: 'Bulk minting', detail: 'Thousands of unique codes generated from one CSV, print-ready.' },
+      { title: 'Routing rules', detail: 'Send a scan to a different destination by time, country or device.' },
     ],
   },
 
@@ -192,21 +145,13 @@ export const SYSTEMS: FlowzaSystem[] = [
     tagline: 'Point of sale that survives the internet',
     description:
       'Sub-second transactions, true offline mode, multi-location inventory and customer analytics, on hardware you already own.',
-    writes: [
-      { type: 'ENTRY', detail: 'Sale, tender and tax at the line' },
-      { type: 'ITEM', detail: 'Stock movement at the trading site' },
-      { type: 'PARTY', detail: 'What this customer actually bought' },
-    ],
-    reads: [
-      { type: 'ITEM', detail: 'Price and live availability, including units reserved elsewhere' },
-      { type: 'PARTY', detail: 'The customer, or the member' },
-    ],
-    exchanges: [
-      { system: 'Finance', record: 'ENTRY', why: 'the sale is a ledger entry the moment it clears' },
-      { system: 'Club', record: 'PARTY', why: 'charge to a member account at any outlet' },
-      { system: 'Spa Master', record: 'ITEM', why: 'one stock position across shop floor and reception' },
-      { system: 'LogisPro', record: 'ITEM', why: 'replenishment and inter-site transfer' },
-      { system: 'QRForge', record: 'ITEM', why: 'codes printed on the products being sold' },
+    builtFor: 'Retail and hospitality operators, single site or many',
+    replaces: 'A till that stops working when the line drops',
+    capabilities: [
+      { title: 'True offline mode', detail: 'Sales continue through an outage and reconcile when the connection returns.' },
+      { title: 'Sub-second transactions', detail: 'The queue moves at the speed of the card reader, not the network.' },
+      { title: 'Multi-location inventory', detail: 'Stock position per site, with transfers between them.' },
+      { title: 'Customer analytics', detail: 'Basket composition, repeat rate and per-outlet performance.' },
     ],
   },
 
@@ -217,20 +162,14 @@ export const SYSTEMS: FlowzaSystem[] = [
     href: '/products/club',
     tagline: 'Membership, booking and billing for clubs',
     description:
-      'Membership and household billing, a double-entry ledger that ties out, charge-to-account POS, and a booking engine that cannot double-book.',
-    writes: [
-      { type: 'PARTY', detail: 'Member, household and membership tier' },
-      { type: 'ENTRY', detail: 'Dues, tabs, chits and payments' },
-      { type: 'LOCATION', detail: 'Facilities and every bookable resource' },
-    ],
-    reads: [
-      { type: 'ITEM', detail: 'Pro shop and food and beverage stock' },
-      { type: 'PARTY', detail: 'A person already known to another system' },
-    ],
-    exchanges: [
-      { system: 'Finance', record: 'ENTRY', why: 'one balanced ledger, reconciled A/R to GL' },
-      { system: 'POS', record: 'PARTY', why: 'the outlet till can charge the member, not just the card' },
-      { system: 'Spa Master', record: 'PARTY', why: 'the member and the spa client are the same record' },
+      'Membership and household billing, a double-entry ledger that ties out, charge-to-account outlets, and a booking engine that cannot double-book.',
+    builtFor: 'Golf, sports, leisure and social clubs',
+    replaces: 'A membership database, a booking sheet and a billing spreadsheet',
+    capabilities: [
+      { title: 'Household billing', detail: 'Dues, joining fees and levies billed to the household, not to nine separate people.' },
+      { title: 'A ledger that ties out', detail: 'Member accounts receivable reconciles to the general ledger without a monthly hunt.' },
+      { title: 'Charge to account', detail: 'Outlets across the club post to the member account at the point of sale.' },
+      { title: 'Booking without collisions', detail: 'Tee times, courts and rooms allocated so a double-booking cannot be recorded.' },
     ],
   },
 
@@ -242,13 +181,13 @@ export const SYSTEMS: FlowzaSystem[] = [
     tagline: 'Tenant applications, screened and decided',
     description:
       'Every application in one pipeline — collected, screened against five checks, and decided with the reason recorded.',
-    writes: [
-      { type: 'PARTY', detail: 'The applicant' },
-      { type: 'DOCUMENT', detail: 'Application, screening results, decision and reason' },
-    ],
-    reads: [{ type: 'PARTY', detail: 'An applicant you already deal with elsewhere' }],
-    exchanges: [
-      { system: 'Finance', record: 'PARTY', why: 'an approved applicant becomes a known, billable party without re-entry' },
+    builtFor: 'Letting agents and residential landlords',
+    replaces: 'An inbox full of applications and a screening service used ad hoc',
+    capabilities: [
+      { title: 'One application pipeline', detail: 'Every enquiry in one queue with its stage and its owner visible.' },
+      { title: 'Five screening checks', detail: 'Credit, background, eviction history, income and references, run consistently.' },
+      { title: 'Recorded decisions', detail: 'The reason for every accept and decline is stored against the application.' },
+      { title: 'Applicant communication', detail: 'Requests for documents and outcome notices sent from the record itself.' },
     ],
   },
 
@@ -260,13 +199,13 @@ export const SYSTEMS: FlowzaSystem[] = [
     tagline: 'Rate, calibrate and pay on one system',
     description:
       'KRA and KPI cycles, bell-curve calibration and a compensation engine that knows your country’s statutory rules, closing with a letter anyone can verify.',
-    writes: [
-      { type: 'PERSON', detail: 'Rating, calibration outcome and resolved compensation' },
-      { type: 'DOCUMENT', detail: 'Approved letters, signed and publicly verifiable' },
-    ],
-    reads: [{ type: 'PERSON', detail: 'The employee record the HR suite already holds' }],
-    exchanges: [
-      { system: 'Finance', record: 'PERSON', why: 'PMS decides what the pay should be; Finance pays it, on the same person' },
+    builtFor: 'HR teams running formal appraisal and increment cycles',
+    replaces: 'An appraisal spreadsheet and a separate increment workbook',
+    capabilities: [
+      { title: 'KRA and KPI cycles', detail: 'Goals set, reviewed and rated on a cycle the whole organisation runs together.' },
+      { title: 'Bell-curve calibration', detail: 'Ratings calibrated across managers before anything is communicated.' },
+      { title: 'Statutory compensation', detail: 'Increments resolved against India and Gulf statutory rules.' },
+      { title: 'Verifiable letters', detail: 'Approved letters carry a reference a third party can check on a public page.' },
     ],
   },
 ];

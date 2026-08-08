@@ -6,12 +6,19 @@ The single-file site at `/agent/workspace/flowza/` has just been repositioned on
 product catalogue, and **it is now the source of truth**. This repo is behind it. Your job is
 to bring the repo back into parity for the slice you have been given.
 
-The old positioning — "one platform, eighteen modules, one application with eighteen views into
-the same records" — was wrong and is gone. The real positioning:
+> **SUPERSEDED — read `README.md` for the current positioning.** This brief describes a port that
+> has since been repositioned again. Both the "eighteen modules" positioning *and* the "nine
+> systems sharing one data layer" positioning below are wrong and have been removed from the site.
+> Flowza AI is nine **independent** cloud applications: each has its own database, its own
+> subscription and its own pricing, and none of them shares data with another automatically. The
+> conventions further down this file are still accurate; the positioning is not.
 
-> **Nine systems. One operating fabric.** Purpose-built AI business operating systems for MEA and
+The old positioning — "one platform, eighteen modules, one application with eighteen views into
+the same records" — was wrong and is gone. The positioning that replaced it, also now retired:
+
+> ~~**Nine systems. One operating fabric.** Purpose-built AI business operating systems for MEA and
 > India, sharing one data layer — customers, inventory and ledger entries flow between systems
-> without re-entry.
+> without re-entry.~~
 
 The nine, in order, with the app each actually runs on:
 
@@ -28,7 +35,7 @@ The nine, in order, with the app each actually runs on:
 | 9 | Flowza PMS | pms.flowza.ai | Rate, calibrate and pay on one system |
 
 **Never** claim the nine are one application, one deployment, or modules of a platform. Nine
-separate apps that share a data layer — that is the whole claim, and it is checkable.
+separate apps — and, per the correction at the top of this file, nine separate **databases** too.
 
 ## Where the truth lives
 

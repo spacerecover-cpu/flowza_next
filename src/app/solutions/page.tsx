@@ -9,9 +9,9 @@ import { RoleSwitcher } from '@/components/RoleSwitcher';
 import { HandoffDiagram } from '@/components/HandoffDiagram';
 
 export const metadata: Metadata = {
-  title: 'Solutions by function — Flowza',
+  title: 'Solutions by function — Flowza AI',
   description:
-    'What finance, operations, revenue and IT each cannot answer today, and what changes when all of them read the same records.',
+    'What finance, operations, revenue and IT each cannot answer today, and which Flowza AI cloud application answers it.',
 };
 
 export default function SolutionsPage() {
@@ -84,8 +84,8 @@ export default function SolutionsPage() {
                 body: 'When something breaks it appears once, in one queue, attributed to the step that failed — rather than as three unrelated alerts in three tools.',
               },
               {
-                heading: 'Nobody re-keys anything',
-                body: 'The largest hidden cost of a fragmented stack is people retyping data that already exists elsewhere in the building. Consolidation removes the job, not just the latency.',
+                heading: 'Software that fits the work',
+                body: 'A generic module asks the team to work the way it was written. An application built for the job follows the process the team already runs, which is why adoption stops being a change programme.',
               },
             ]}
           />
@@ -107,7 +107,7 @@ export default function SolutionsPage() {
               <span className="path__w">From a legacy ERP</span>
               <h3 className="d-s">Replace the core, keep the calendar</h3>
               <p className="small">
-                The incumbent holds your ledger, so the sequence is finance-first. Model the chart of accounts, migrate open items and history, then run both systems through one or two full closes until they agree to the cent. The operational systems — the till, the routes, the roster — follow once the ledger is trusted, and they arrive already holding your parties and items.
+                The incumbent holds your ledger, so the sequence is finance-first. Model the chart of accounts, migrate open items and history, then run both systems through one or two full closes until they agree to the cent. The operational applications — the till, the routes, the roster — are separate decisions, taken once the ledger is trusted and not before.
               </p>
               <p className="tiny">Typical: 10–16 weeks to cutover.</p>
             </div>
@@ -115,7 +115,7 @@ export default function SolutionsPage() {
               <span className="path__w">From a stack of point tools</span>
               <h3 className="d-s">Consolidate in the order that hurts</h3>
               <p className="small">
-                There is no single system of record to replace, so start where the reconciliation cost is highest — usually stock against invoicing. Each system you switch on removes integrations rather than adding them, because it joins the layer instead of connecting to what is already there. The work gets easier as it goes.
+                There is no single system of record to replace, so start where the reconciliation cost is highest — usually stock against invoicing. Adopt one application, prove it, retire what it replaces, and only then look at the next. Each step is a complete piece of work rather than an instalment towards a suite you have already paid for.
               </p>
               <p className="tiny">Typical: 6–10 weeks to first retirement.</p>
             </div>

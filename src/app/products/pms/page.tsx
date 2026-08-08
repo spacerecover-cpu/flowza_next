@@ -136,8 +136,8 @@ export default function PmsPage() {
               <p className="lede">
                 Most organisations already do all four of these. They do them in four places: a review
                 form, a spreadsheet of ratings, a payroll instruction, and a letter someone types in a
-                word processor. Every join is a re-entry, and every re-entry is where the evidence
-                trail breaks. Select a stage to see what enters it, what leaves it, and what it writes
+                word processor. Every join is a retype, and every retype is where the evidence trail
+                breaks. Select a stage to see what enters it, what leaves it, and what it writes
                 down.
               </p>
             </div>
@@ -485,14 +485,14 @@ export default function PmsPage() {
           <Cols style={{ alignItems: 'end', marginBottom: 'clamp(40px,5vw,var(--s8))' }}>
             <div className="c-7 rv">
               <Eyebrow>Where PMS sits in the nine</Eyebrow>
-              <h2 className="d-l">Finance runs payroll.<br />PMS decides what<br />payroll should pay.</h2>
+              <h2 className="d-l">Payroll pays it.<br />PMS decides what<br />payroll should pay.</h2>
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                Two systems touching salary looks like duplication until you separate the decision from
-                the disbursement. PMS owns the review, the calibration and the compensation decision.
-                Flowza Finance owns the payroll run, the statutory filings and the postings to the
-                ledger. The resolved figure crosses the shared data layer once, and no-one retypes it.
+                Separating the decision from the disbursement is the point. PMS owns the review, the
+                calibration and the compensation decision, and issues the result as a structured payroll
+                instruction. Your payroll system owns the run, the statutory filings and the postings —
+                whether that is Flowza Finance on its own subscription, or the system you already have.
               </p>
             </div>
           </Cols>

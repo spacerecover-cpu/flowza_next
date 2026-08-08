@@ -86,7 +86,7 @@ const faqItems = [
   {
     question: 'Can we keep our existing telematics?',
     answer:
-      'Yes. LogisPro consumes position and hours-of-service events from a provider you already have and uses them to drive estimates and compliance. If you would rather not run a separate telematics contract, Fleetza supplies the tracker and feeds the same records.',
+      'Yes. LogisPro consumes position and hours-of-service events from a provider you already have and uses them to drive estimates and compliance. Flowza Fleetza is one such provider — a separate application on a separate subscription, connected to LogisPro over its API like any other telematics feed.',
   },
   {
     question: 'How many drops can it sequence at once?',

@@ -11,7 +11,7 @@ import { CohortGrid } from '@/components/CohortGrid';
 import { LtvLadder } from '@/components/LtvLadder';
 
 export const metadata: Metadata = {
-  title: 'Wellness and beauty — Flowza',
+  title: 'Wellness and beauty — Flowza AI',
   description:
     'The second visit decides the lifetime. Cohort retention, contribution per guest and one guest record across every site.',
 };

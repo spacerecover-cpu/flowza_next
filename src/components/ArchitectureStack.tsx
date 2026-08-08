@@ -1,29 +1,29 @@
 'use client';
 
 import React, { useState } from 'react';
-import { LAYERS } from '@/lib/data/layers';
+import { PILLARS } from '@/lib/data/layers';
 
 export function ArchitectureStack() {
   const [selected, setSelected] = useState(0);
 
-  const L = LAYERS[selected];
+  const P = PILLARS[selected];
 
   return (
     <div className="arch rv">
       <div id="archStack">
-        {LAYERS.map((layer, i) => (
+        {PILLARS.map((pillar, i) => (
           <button
-            key={i}
+            key={pillar.number}
             type="button"
             className={`layer${selected === i ? ' is-on' : ''}`}
             data-layer={i}
             aria-pressed={selected === i}
             onClick={() => setSelected(i)}
           >
-            <span className="layer__i">{layer.number}</span>
+            <span className="layer__i">{pillar.number}</span>
             <span>
-              <span className="layer__n">{layer.name}</span>
-              <span className="layer__s">{layer.subtitle}</span>
+              <span className="layer__n">{pillar.name}</span>
+              <span className="layer__s">{pillar.subtitle}</span>
             </span>
             <span className="layer__b" />
           </button>
@@ -32,20 +32,20 @@ export function ArchitectureStack() {
 
       <aside className="arch__detail" id="archDetail" aria-live="polite">
         <p className="mono" style={{ fontSize: '.625rem', letterSpacing: '.12em', color: 'var(--fg-3)' }}>
-          LAYER 0{4 - selected}
+          PILLAR {P.number}
         </p>
         <h3 className="d-s" style={{ margin: 'var(--s3) 0 var(--s4)' }}>
-          {L.name}
+          {P.name}
         </h3>
         <ul className="klist" style={{ borderTop: 0 }}>
-          {L.bullets.map((bullet, i) => (
+          {P.bullets.map((bullet, i) => (
             <li key={i} style={{ padding: '9px 0' }}>
               <p className="small" style={{ color: 'var(--fg)' }}>{bullet}</p>
             </li>
           ))}
         </ul>
         <p className="tiny" style={{ marginTop: 'var(--s4)' }}>
-          {L.footer}
+          {P.footer}
         </p>
       </aside>
     </div>

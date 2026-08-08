@@ -194,19 +194,20 @@ export default function RentFlowPage() {
 
           <Cols style={{ marginTop: 'clamp(48px,6vw,var(--s9))' }}>
             <div className="c-12 rv">
-              <h3 className="d-s" style={{ marginBottom: 'var(--s5)' }}>Where it does connect</h3>
+              <h3 className="d-s" style={{ marginBottom: 'var(--s5)' }}>Where it hands over</h3>
               <p className="body-l" style={{ maxWidth: '78ch', marginBottom: 'var(--s5)' }}>
-                RentFlow shares the party record with the rest of Flowza. An approved applicant becomes
-                a known party — one identity, entered once — so whichever system next needs to invoice
-                them, contact them or reference them is not starting from a blank form and a copied
-                email address. That is the extent of the claim: no re-entry, not a tenancy.
+                RentFlow ends at the decision. An approved applicant, with their screening results and
+                the recorded reason, is available over the RentFlow API and as an export, so whatever
+                you use to run the tenancy afterwards can pick the file up without anybody retyping it.
+                What RentFlow does not do is become that system: it is a screening and decision
+                application, and it is priced as one.
               </p>
               <div className="row">
-                <Link className="btn btn--ghost" href="/platform">
-                  How records are shared <span className="arw">→</span>
+                <Link className="btn btn--ghost" href="/platform#api">
+                  The RentFlow API <span className="arw">→</span>
                 </Link>
-                <Link className="btn btn--text" href="/products/finance">
-                  Flowza Finance <span className="arw">→</span>
+                <Link className="btn btn--text" href="/pricing">
+                  Pricing <span className="arw">→</span>
                 </Link>
               </div>
             </div>

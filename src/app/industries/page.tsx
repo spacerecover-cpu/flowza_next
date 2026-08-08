@@ -8,9 +8,9 @@ import { IndustryConfigurator } from '@/components/IndustryConfigurator';
 import { INDUSTRIES } from '@/lib/data/industries';
 
 export const metadata: Metadata = {
-  title: 'Solutions by industry — Flowza',
+  title: 'Solutions by industry — Flowza AI',
   description:
-    'How the nine Flowza systems are configured for retail, logistics, manufacturing, services, construction, healthcare, wellness and the public sector.',
+    'Which of the nine Flowza AI cloud applications to start with in retail, logistics, manufacturing, services, construction, healthcare, wellness and the public sector — and how each is configured.',
 };
 
 const INDUSTRY_NUMBERS = ['01', '02', '03', '04', '05', '06', '07', '08'];
@@ -19,7 +19,7 @@ export default function IndustriesPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Industries served by Flowza',
+    name: 'Industries served by Flowza AI',
     itemListElement: INDUSTRIES.map((ind, i) => ({
       '@type': 'ListItem',
       position: i + 1,
@@ -42,7 +42,7 @@ export default function IndustriesPage() {
             <div className="c-7 rv">
               <Eyebrow>Solutions · by industry</Eyebrow>
               <h1 className="d-xl">
-                Same records.<br />Different unit<br />of work.
+                Different sector.<br />Different unit<br />of work.
               </h1>
             </div>
             <div className="c-5 rv rv-d2">
@@ -72,7 +72,7 @@ export default function IndustriesPage() {
             <Eyebrow>Configuration</Eyebrow>
             <h2 className="d-l">How each sector is<br />set up.</h2>
             <p className="lede" style={{ marginTop: 'var(--s5)' }}>
-              There is no sector edition of anything. Selecting a sector changes which of the nine systems you run, what the shared records are called on screen, and which constraint the scheduler optimises against. The records themselves never change shape.
+              There is no sector edition of anything. Selecting a sector changes which of the nine applications you buy, what the records are called on screen inside them, and which constraint the scheduler optimises against.
             </p>
           </div>
           <IndustryConfigurator />
@@ -89,18 +89,18 @@ export default function IndustriesPage() {
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                Industry software usually means a sector edition with its own release train, and a vendor who quietly stops investing in the smaller vertical. There is no sector edition of a Flowza system, so there is nothing to fall behind.
+                Industry software usually means a sector edition with its own release train, and a vendor who quietly stops investing in the smaller vertical. There is no sector edition of a Flowza AI application, so there is nothing to fall behind.
               </p>
             </div>
           </Cols>
           <Cols>
             <div className="c-4 rv">
               <p className="mono" style={{ fontSize: '.6875rem', letterSpacing: '.12em', color: 'var(--sig)', marginBottom: 'var(--s4)' }}>
-                01 — ONE SCHEMA
+                01 — NO SECTOR EDITION
               </p>
-              <h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>A party is a party</h3>
+              <h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>Configured, not forked</h3>
               <p className="small">
-                A patient, a guest, a consignee and a subcontractor are the same underlying object with different labels and different required fields. Reporting across a mixed group works because the primitives never diverged.
+                A patient, a guest, a consignee and a subcontractor are the same kind of thing wearing different labels, so a sector is a configuration of an application rather than a separate build of it. You get the release everyone else gets.
               </p>
             </div>
             <div className="c-4 rv rv-d2">
@@ -114,11 +114,11 @@ export default function IndustriesPage() {
             </div>
             <div className="c-4 rv rv-d3">
               <p className="mono" style={{ fontSize: '.6875rem', letterSpacing: '.12em', color: 'var(--sig)', marginBottom: 'var(--s4)' }}>
-                03 — ONE SECURITY MODEL
+                03 — ONE SECURITY STANDARD
               </p>
-              <h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>Reviewed once</h3>
+              <h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>A familiar review</h3>
               <p className="small">
-                Identity, permissions, residency and audit sit in the shared layer, below all nine. A conglomerate running four of these sectors on five Flowza systems still runs one security review, because there is one place where access is decided.
+                Identity, permissions, residency and audit are built to the same standard in every application and enforced inside each one. A conglomerate running four of these sectors on five Flowza AI applications reviews the same controls five times, not five different security models.
               </p>
             </div>
           </Cols>
@@ -135,7 +135,7 @@ export default function IndustriesPage() {
           <div className="cmp-scroll rv">
             <table className="cmp">
               <caption className="sr">
-                Comparison of eight industries by unit of work, binding constraint, deciding metric, and which of the nine Flowza systems to deploy first
+                Comparison of eight industries by unit of work, binding constraint, deciding metric, and which of the nine Flowza AI applications to deploy first
               </caption>
               <thead>
                 <tr>
