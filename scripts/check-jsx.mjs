@@ -98,7 +98,12 @@ for (const file of files.filter((f) => f.endsWith('page.tsx'))) {
     if (prev && lvl > prev + 1) add(file, 1, `heading level skips h${prev} -> h${lvl}`);
     prev = lvl;
   });
-  if (!/export const metadata/.test(text)) add(file, 1, 'no exported metadata');
+  // A dynamic route builds its title per param, so it exports the
+  // `generateMetadata` function rather than a static `metadata` const. Both
+  // satisfy the rule; only a page with neither is missing its metadata.
+  if (!/export const metadata|export async function generateMetadata|export function generateMetadata/.test(text)) {
+    add(file, 1, 'no exported metadata');
+  }
 }
 
 if (problems.length) {
