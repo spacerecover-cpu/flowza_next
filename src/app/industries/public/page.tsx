@@ -7,6 +7,7 @@ import { Eyebrow } from '@/components/Eyebrow';
 import { FAQ } from '@/components/FAQ';
 import { RelatedLinks } from '@/components/RelatedLinks';
 import { KeylineList } from '@/components/KeylineList';
+import { DecisionRecord } from '@/components/DecisionRecord';
 
 /**
  * Rewritten to what the nine actually do for a public body.
@@ -54,6 +55,18 @@ export default function PublicSectorPage() {
               </div>
             </div>
           </Cols>
+
+          <div className="rv">
+            <p className="mono" style={{ fontSize: '.625rem', letterSpacing: '.12em', color: 'var(--fg-3)', marginBottom: 'var(--s4)' }}>
+              ONE APPLICATION, DECIDED · FLOWZA RENTFLOW
+            </p>
+            <DecisionRecord />
+            <p className="tiny" style={{ marginTop: 'var(--s4)', maxWidth: '78ch' }}>
+              Illustrative, and the reference and figures are invented — what is real is the shape of the
+              record. Five checks run in the same order on every application, and the reason sits with the
+              decision rather than in the head of whoever made it.
+            </p>
+          </div>
         </Wrap>
       </Chapter>
 

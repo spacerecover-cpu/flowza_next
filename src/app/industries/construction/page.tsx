@@ -7,6 +7,7 @@ import { Eyebrow } from '@/components/Eyebrow';
 import { FAQ } from '@/components/FAQ';
 import { RelatedLinks } from '@/components/RelatedLinks';
 import { KeylineList } from '@/components/KeylineList';
+import { StatutoryPayrollMatrix } from '@/components/StatutoryPayrollMatrix';
 
 /**
  * Rewritten to what the nine actually do for a contractor.
@@ -88,6 +89,26 @@ export default function ConstructionPage() {
               },
             ]}
           />
+        </Wrap>
+      </Chapter>
+
+      {/* STATUTORY PAYROLL */}
+      <Chapter>
+        <Wrap>
+          <Cols style={{ alignItems: 'end', marginBottom: 'clamp(40px,5vw,var(--s8))' }}>
+            <div className="c-7 rv">
+              <Eyebrow>Payroll</Eyebrow>
+              <h2 className="d-l">A workforce spread<br />across four countries.</h2>
+            </div>
+            <div className="c-5 rv rv-d2">
+              <p className="lede">
+                Getting this wrong is the expensive kind of wrong. Each country carries its own statutory
+                obligations, and FlowZa Finance maintains them as the rules change rather than leaving a
+                payroll manager to notice.
+              </p>
+            </div>
+          </Cols>
+          <StatutoryPayrollMatrix />
         </Wrap>
       </Chapter>
 

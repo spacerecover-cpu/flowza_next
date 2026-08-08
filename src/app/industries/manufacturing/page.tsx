@@ -7,6 +7,7 @@ import { Eyebrow } from '@/components/Eyebrow';
 import { FAQ } from '@/components/FAQ';
 import { RelatedLinks } from '@/components/RelatedLinks';
 import { KeylineList } from '@/components/KeylineList';
+import { StoresBoard } from '@/components/StoresBoard';
 
 /**
  * Rewritten to what the nine actually do for a manufacturer.
@@ -55,6 +56,18 @@ export default function ManufacturingPage() {
               </div>
             </div>
           </Cols>
+
+          <div className="rv">
+            <p className="mono" style={{ fontSize: '.625rem', letterSpacing: '.12em', color: 'var(--fg-3)', marginBottom: 'var(--s4)' }}>
+              A DAY IN THE STORES · FLOWZA LOGISPRO
+            </p>
+            <StoresBoard />
+            <p className="tiny" style={{ marginTop: 'var(--s4)', maxWidth: '78ch' }}>
+              Illustrative. Every row is a movement type the product records — goods in, putaway, pick,
+              inter-site transfer, cycle count. What no row says is which line consumed the material,
+              because there is no work order in the product to attach it to.
+            </p>
+          </div>
         </Wrap>
       </Chapter>
 

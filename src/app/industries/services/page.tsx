@@ -7,6 +7,7 @@ import { Eyebrow } from '@/components/Eyebrow';
 import { FAQ } from '@/components/FAQ';
 import { RelatedLinks } from '@/components/RelatedLinks';
 import { KeylineList } from '@/components/KeylineList';
+import { EntityCloseBoard } from '@/components/EntityCloseBoard';
 
 /**
  * Rewritten to what the nine actually do for a services firm.
@@ -54,6 +55,18 @@ export default function ServicesPage() {
               </div>
             </div>
           </Cols>
+
+          <div className="rv">
+            <p className="mono" style={{ fontSize: '.625rem', letterSpacing: '.12em', color: 'var(--fg-3)', marginBottom: 'var(--s4)' }}>
+              THREE ENTITIES AT CLOSE · FLOWZA FINANCE
+            </p>
+            <EntityCloseBoard />
+            <p className="tiny" style={{ marginTop: 'var(--s4)', maxWidth: '78ch' }}>
+              Illustrative. Each entity keeps its own functional currency, tax registration and
+              chart-of-accounts pack, and the period lock is per entity — so one company can close while
+              another is still in review.
+            </p>
+          </div>
         </Wrap>
       </Chapter>
 
