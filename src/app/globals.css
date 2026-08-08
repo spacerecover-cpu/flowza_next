@@ -645,7 +645,9 @@ p:last-child { margin-bottom: 0 }
 }
 .in .dgm .wire-live { animation: draw 1.5s var(--ease) forwards }
 .dgm .node { fill: var(--paper); stroke: var(--line); stroke-width: 1 }
-.dgm .node-core { fill: var(--graphite); stroke: var(--graphite) }
+/* The root node carries the same green as the wires that leave it, so the
+   umbrella and its branches read as one signal rather than two marks. */
+.dgm .node-core { fill: var(--ledger); stroke: var(--ledger) }
 @keyframes draw { to { stroke-dashoffset: 0 } }
 @media (prefers-reduced-motion: reduce) { .dgm .wire-live { stroke-dashoffset: 0; animation: none } }
 
