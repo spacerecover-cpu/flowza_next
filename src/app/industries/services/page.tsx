@@ -11,7 +11,7 @@ import { UtilisationHeatGrid } from '@/components/UtilisationHeatGrid';
 import { RealisationFunnel } from '@/components/RealisationFunnel';
 
 export const metadata: Metadata = {
-  title: 'Professional services — Flowza AI',
+  title: 'Professional services — FlowZa AI',
   description:
     'Utilisation by person rather than an average, and the leak between hours worked and cash collected — time, billing and the ledger in one application.',
 };
@@ -89,7 +89,7 @@ export default function ServicesPage() {
               <RealisationFunnel />
             </div>
             <p className="tiny" style={{ marginTop: 'var(--s4)' }}>
-              Each stage is a different team&apos;s problem, which is why nobody owns the total. When time, billing and the ledger all sit in Flowza Finance, the leak is one report rather than four reconciliations.
+              Each stage is a different team&apos;s problem, which is why nobody owns the total. When time, billing and the ledger all sit in FlowZa Finance, the leak is one report rather than four reconciliations.
             </p>
           </div>
         </Wrap>
@@ -160,7 +160,7 @@ export default function ServicesPage() {
           <RelatedLinks
             className="rv"
             links={[
-              { href: '/products/finance', title: 'Flowza Finance', subtitle: 'Revenue recognition and WIP' },
+              { href: '/products/finance', title: 'FlowZa Finance', subtitle: 'Revenue recognition and WIP' },
               { href: '/solutions', title: 'Office of the CFO', subtitle: 'The close, and what it hides' },
               { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
             ]}

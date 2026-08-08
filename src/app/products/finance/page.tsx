@@ -19,7 +19,7 @@ import { ComplianceMatrix } from '@/components/ComplianceMatrix';
 import { FINANCE_INTEGRATIONS, FINANCE_SECURITY } from '@/lib/data/finance';
 
 export const metadata: Metadata = {
-  title: 'Flowza Finance — accounting, ERP and payroll on one ledger',
+  title: 'FlowZa Finance — accounting, ERP and payroll on one ledger',
   description:
     'Sales, purchases, inventory, double-entry accounting, payroll and HR posting to one connected ledger, with GST for India and VAT and corporate tax for the Gulf built in rather than bolted on.',
 };
@@ -90,15 +90,15 @@ const faqItems = [
 ];
 
 const relatedLinks = [
-  { href: '/products/pos', title: 'Flowza POS', subtitle: 'Retail and F&B transactions at source' },
-  { href: '/products/pms', title: 'Flowza PMS', subtitle: 'Rate, calibrate and pay on one system' },
+  { href: '/products/pos', title: 'FlowZa POS', subtitle: 'Retail and F&B transactions at source' },
+  { href: '/products/pms', title: 'FlowZa PMS', subtitle: 'Rate, calibrate and pay on one system' },
   { href: '/platform', title: 'Platform', subtitle: 'Nine independent applications, and what that means' },
 ];
 
 export default function FinancePage() {
   return (
     <>
-      {/* HERO — the document, and what Flowza read off it */}
+      {/* HERO — the document, and what FlowZa read off it */}
       <Chapter style={{ paddingTop: 'clamp(48px,6vw,var(--s9))' }} net>
         <Wrap>
           <Cols style={{ alignItems: 'center' }}>
@@ -113,7 +113,7 @@ export default function FinancePage() {
                     />
                   </svg>
                 </span>
-                <span className="pbadge__t">Flowza Finance</span>
+                <span className="pbadge__t">FlowZa Finance</span>
               </div>
               <ProductBadges badges={['Accounting + inventory', 'Payroll & HR', 'India + Gulf tax']} />
               <h1 className="d-xl" style={{ marginBottom: 'var(--s5)' }}>
@@ -125,7 +125,7 @@ export default function FinancePage() {
                 month end is one set of books rather than a five-tool patchwork to reconcile.
               </p>
               <p className="small" style={{ marginBottom: 'var(--s7)', maxWidth: '56ch' }}>
-                Flowza reads the document, proposes the entry and cites the line it came from. You
+                FlowZa reads the document, proposes the entry and cites the line it came from. You
                 approve or correct it, and the correction becomes a rule — so the same invoice never
                 asks the same question twice.
               </p>
@@ -170,7 +170,7 @@ export default function FinancePage() {
                 <Tag variant="ai" style={{ marginRight: '8px' }}>
                   AI
                 </Tag>
-                Highlighted rows were proposed by Flowza, with the source line on the document
+                Highlighted rows were proposed by FlowZa, with the source line on the document
                 attached to each one. Categorisation runs at 99.8% accuracy across posted
                 transactions; rejecting a row teaches the rule rather than just fixing the entry.
                 Once it posts, the bracket cost moves the item&rsquo;s Weighted Average Cost, so the
@@ -288,7 +288,7 @@ export default function FinancePage() {
               <p className="small" style={{ marginBottom: 'var(--s5)' }}>
                 Drift between a sub-ledger and the general ledger is the ordinary way books go wrong:
                 a stock adjustment, a voided receipt, a payroll correction posted one side only.
-                Flowza reconciles every sub-ledger against its control account nightly and tells you
+                FlowZa reconciles every sub-ledger against its control account nightly and tells you
                 which document caused the difference, in the days when it is still cheap to fix.
               </p>
               <KeylineList items={controlItems} style={{ borderTopColor: 'var(--edge)' }} />

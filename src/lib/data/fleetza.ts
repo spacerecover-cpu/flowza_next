@@ -1,5 +1,5 @@
 /**
- * Flowza Fleetza — /products/fleetza
+ * FlowZa Fleetza — /products/fleetza
  *
  * Telematics, not rental. The tracker in the diagnostic port reports position
  * every ten seconds and reads the engine continuously; everything below is a

@@ -1,5 +1,5 @@
 /**
- * Flowza RentFlow — /products/rentflow
+ * FlowZa RentFlow — /products/rentflow
  *
  * Ported from `parts/46-rentflow.html` and `parts/js/rentflow.js`. Two things
  * carry the page: the five-status pipeline with a count and an ageing figure
@@ -222,7 +222,7 @@ export const RENTFLOW_SCOPE: readonly { heading: string; body: string }[] = [
   },
   {
     heading: 'Rent collection',
-    body: 'No rent runs, no arrears ledger, no payment schedule. Money owed under a signed tenancy is a finance problem and belongs in Flowza Finance.',
+    body: 'No rent runs, no arrears ledger, no payment schedule. Money owed under a signed tenancy is a finance problem and belongs in FlowZa Finance.',
   },
   {
     heading: 'Maintenance and works orders',
@@ -281,7 +281,7 @@ export const RENT_FAQ: readonly { question: string; answer: string }[] = [
 ];
 
 export const RENT_RELATED: readonly { href: string; title: string; subtitle: string }[] = [
-  { href: '/products/finance', title: 'Flowza Finance', subtitle: 'Where money owed is handled' },
+  { href: '/products/finance', title: 'FlowZa Finance', subtitle: 'Where money owed is handled' },
   { href: '/platform',         title: 'Platform',       subtitle: 'The shared party record' },
-  { href: '/products/pms',     title: 'Flowza PMS',     subtitle: 'Rate, calibrate and pay' },
+  { href: '/products/pms',     title: 'FlowZa PMS',     subtitle: 'Rate, calibrate and pay' },
 ];

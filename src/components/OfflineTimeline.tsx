@@ -2,7 +2,7 @@ import React from 'react';
 import { OFFLINE_DAY } from '@/lib/data/pos';
 
 /**
- * The signature set piece for Flowza POS: one trading day with two and a half
+ * The signature set piece for FlowZa POS: one trading day with two and a half
  * hours of no connection in the middle of it, drawn in four lanes.
  *
  * The argument is that an outage changes *when* the books are updated, not
@@ -62,7 +62,7 @@ export function OfflineTimeline({ className }: OfflineTimelineProps) {
         <svg
           viewBox="0 0 1160 400"
           role="img"
-          aria-label="Timeline of one trading day, in four lanes. Connectivity is up until 13:40 and returns at 16:10. Through those two and a half hours sales keep landing at the till and queue on the device, reaching a peak of 148 held sales, while nothing posts to Flowza Finance. When the link returns the queue clears in a burst of catch-up postings and the ledger is level again, with one conflicting sale held for a person to decide rather than merged automatically. The conclusion: the outage changes when the books are updated, not whether the shop can trade."
+          aria-label="Timeline of one trading day, in four lanes. Connectivity is up until 13:40 and returns at 16:10. Through those two and a half hours sales keep landing at the till and queue on the device, reaching a peak of 148 held sales, while nothing posts to FlowZa Finance. When the link returns the queue clears in a burst of catch-up postings and the ledger is level again, with one conflicting sale held for a person to decide rather than merged automatically. The conclusion: the outage changes when the books are updated, not whether the shop can trade."
         >
           <defs>
             <pattern

@@ -16,7 +16,7 @@ import { ShipmentBoard } from '@/components/ShipmentBoard';
 import { WarehouseRail } from '@/components/WarehouseRail';
 
 export const metadata: Metadata = {
-  title: 'Flowza LogisPro — routes, shipments and warehouses, optimised',
+  title: 'FlowZa LogisPro — routes, shipments and warehouses, optimised',
   description:
     'AI route optimisation, live shipment tracking and a full warehouse management system on one operations picture, with delays flagged before they happen.',
 };
@@ -86,7 +86,7 @@ const faqItems = [
   {
     question: 'Can we keep our existing telematics?',
     answer:
-      'Yes. LogisPro consumes position and hours-of-service events from a provider you already have and uses them to drive estimates and compliance. Flowza Fleetza is one such provider — a separate application on a separate subscription, connected to LogisPro over its API like any other telematics feed.',
+      'Yes. LogisPro consumes position and hours-of-service events from a provider you already have and uses them to drive estimates and compliance. FlowZa Fleetza is one such provider — a separate application on a separate subscription, connected to LogisPro over its API like any other telematics feed.',
   },
   {
     question: 'How many drops can it sequence at once?',
@@ -106,9 +106,9 @@ const faqItems = [
 ];
 
 const relatedLinks = [
-  { href: '/products/fleetza', title: 'Flowza Fleetza', subtitle: 'The vehicle and the driver' },
+  { href: '/products/fleetza', title: 'FlowZa Fleetza', subtitle: 'The vehicle and the driver' },
   { href: '/industries/logistics', title: 'Logistics & freight', subtitle: 'Lanes as a portfolio' },
-  { href: '/products/finance', title: 'Flowza Finance', subtitle: 'Settlement and invoicing' },
+  { href: '/products/finance', title: 'FlowZa Finance', subtitle: 'Settlement and invoicing' },
 ];
 
 export default function LogisProPage() {
@@ -128,7 +128,7 @@ export default function LogisProPage() {
                   />
                 </svg>
               </span>
-              <span className="pbadge__t">Flowza LogisPro</span>
+              <span className="pbadge__t">FlowZa LogisPro</span>
             </div>
             <h1 className="d-xl" style={{ marginBottom: 'var(--s5)' }}>
               Hundreds of drops,<br />sequenced in<br />seconds.

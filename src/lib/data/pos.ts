@@ -1,5 +1,5 @@
 /**
- * Flowza POS — the repeated and tabular content of /products/pos.
+ * FlowZa POS — the repeated and tabular content of /products/pos.
  * Ported from the `products/pos` route in `parts/30-products-a.html`.
  */
 
@@ -42,7 +42,7 @@ export interface PostingLine {
 }
 
 /**
- * What one till sale records inside Flowza POS. Every consequence of the sale —
+ * What one till sale records inside FlowZa POS. Every consequence of the sale —
  * stock, revenue, tax, tender and customer history — is written at the moment
  * it clears, so the accounting detail is ready for whichever books you keep.
  */

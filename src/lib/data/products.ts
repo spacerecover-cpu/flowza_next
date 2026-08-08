@@ -17,7 +17,7 @@ export interface ProductCard {
 export const PRODUCT_CARDS: ProductCard[] = [
   {
     kind: 'finance.flowza.ai',
-    name: 'Flowza Finance',
+    name: 'FlowZa Finance',
     description:
       'Sales, purchases, inventory, double-entry accounting, payroll and HR on one connected ledger, with multi-currency and multi-country compliance from day one.',
     href: '/products/finance',
@@ -25,7 +25,7 @@ export const PRODUCT_CARDS: ProductCard[] = [
   },
   {
     kind: 'logispro.flowza.ai',
-    name: 'Flowza LogisPro',
+    name: 'FlowZa LogisPro',
     description:
       'AI-optimised routes, live shipment tracking and a full warehouse management system — one map, one operations picture.',
     href: '/products/logispro',
@@ -33,7 +33,7 @@ export const PRODUCT_CARDS: ProductCard[] = [
   },
   {
     kind: 'spamaster.flowza.ai',
-    name: 'Flowza Spa Master',
+    name: 'FlowZa Spa Master',
     description:
       'Online booking, staff scheduling, retail inventory and loyalty — every client touchpoint from the first booking to the returning guest.',
     href: '/products/spamaster',
@@ -41,7 +41,7 @@ export const PRODUCT_CARDS: ProductCard[] = [
   },
   {
     kind: 'fleetza.flowza.ai',
-    name: 'Flowza Fleetza',
+    name: 'FlowZa Fleetza',
     description:
       'Live GPS, AI driver scoring, predictive maintenance and fuel analytics — the full picture of every vehicle, every trip and every cost.',
     href: '/products/fleetza',
@@ -49,7 +49,7 @@ export const PRODUCT_CARDS: ProductCard[] = [
   },
   {
     kind: 'qr.flowza.ai',
-    name: 'Flowza QRForge',
+    name: 'FlowZa QRForge',
     description:
       'QR codes that stay useful after the ink dries. Re-point printed codes at any time, watch every scan live, and mint thousands from one CSV.',
     href: '/products/qrforge',
@@ -57,7 +57,7 @@ export const PRODUCT_CARDS: ProductCard[] = [
   },
   {
     kind: 'pos.flowza.ai',
-    name: 'Flowza POS',
+    name: 'FlowZa POS',
     description:
       'Sub-second transactions, true offline mode, multi-location inventory and customer analytics — on whatever hardware you already own.',
     href: '/products/pos',
@@ -65,7 +65,7 @@ export const PRODUCT_CARDS: ProductCard[] = [
   },
   {
     kind: 'club.flowza.ai',
-    name: 'Flowza Club',
+    name: 'FlowZa Club',
     description:
       'Membership and household billing, a ledger that ties out, charge-to-account outlets, and a booking engine that cannot double-book.',
     href: '/products/club',
@@ -73,7 +73,7 @@ export const PRODUCT_CARDS: ProductCard[] = [
   },
   {
     kind: 'rentflow.flowza.ai',
-    name: 'Flowza RentFlow',
+    name: 'FlowZa RentFlow',
     description:
       'Every rental application in one pipeline — collected, screened against five checks, and decided with the reason recorded.',
     href: '/products/rentflow',
@@ -81,7 +81,7 @@ export const PRODUCT_CARDS: ProductCard[] = [
   },
   {
     kind: 'pms.flowza.ai',
-    name: 'Flowza PMS',
+    name: 'FlowZa PMS',
     description:
       "Review cycles and bell-curve calibration feeding a compensation engine that knows your country's statutory rules, closing with a letter anyone can verify.",
     href: '/products/pms',

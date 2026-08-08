@@ -2,7 +2,7 @@ import React from 'react';
 
 /**
  * A terminal fourteen minutes into an outage, reading out its own state. The
- * hero artefact for Flowza POS: the catalogue, prices and tax rules are on the
+ * hero artefact for FlowZa POS: the catalogue, prices and tax rules are on the
  * device, so the till is still selling and still counting what it owes the
  * ledger.
  */

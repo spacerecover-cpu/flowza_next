@@ -12,7 +12,7 @@ import { ScrapPareto } from '@/components/ScrapPareto';
 import { CapacityExplorer, CapacityProfile, CapacityPanel } from '@/components/CapacityProfile';
 
 export const metadata: Metadata = {
-  title: 'Manufacturing — Flowza AI',
+  title: 'Manufacturing — FlowZa AI',
   description:
     'One station sets the pace of the line. Find the constraint from real work order data, explode bills of material against live stock, and attribute scrap to a cause.',
 };
@@ -36,7 +36,7 @@ export default function ManufacturingPage() {
                   One station<br />sets the pace<br />of the whole<br />line.
                 </h1>
                 <p className="lede" style={{ marginBottom: 'var(--s7)' }}>
-                  Adding capacity anywhere except the constraint adds cost and nothing else. Flowza measures capacity, queue and setup at every work centre from real work order data, so the constraint is a fact rather than an opinion — and so you notice when it moves.
+                  Adding capacity anywhere except the constraint adds cost and nothing else. FlowZa measures capacity, queue and setup at every work centre from real work order data, so the constraint is a fact rather than an opinion — and so you notice when it moves.
                 </p>
                 <div className="row">
                   <Link className="btn btn--primary" href="/pricing">
@@ -87,7 +87,7 @@ export default function ManufacturingPage() {
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                Bills of material are only useful exploded against real stock. Flowza checks every level against the same item records the warehouse counts, so a promise date reflects what is actually available rather than what the top level suggests.
+                Bills of material are only useful exploded against real stock. FlowZa checks every level against the same item records the warehouse counts, so a promise date reflects what is actually available rather than what the top level suggests.
               </p>
             </div>
           </Cols>
@@ -159,7 +159,7 @@ export default function ManufacturingPage() {
                   },
                   {
                     heading: 'Standard costs that get revisited',
-                    body: 'Actuals are compared to standards continuously, and Flowza flags when a standard has drifted far enough to be misleading rather than waiting for an annual review.',
+                    body: 'Actuals are compared to standards continuously, and FlowZa flags when a standard has drifted far enough to be misleading rather than waiting for an annual review.',
                   },
                   {
                     heading: 'Serialised to the unit',
@@ -201,7 +201,7 @@ export default function ManufacturingPage() {
           <RelatedLinks
             className="rv"
             links={[
-              { href: '/products/qrforge', title: 'Flowza QRForge', subtitle: 'Serialisation and recall' },
+              { href: '/products/qrforge', title: 'FlowZa QRForge', subtitle: 'Serialisation and recall' },
               { href: '/industries/logistics', title: 'Logistics and Freight', subtitle: 'Moving what you build' },
               { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
             ]}

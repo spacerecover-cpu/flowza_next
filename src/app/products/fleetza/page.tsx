@@ -17,7 +17,7 @@ import { FuelAnalytics } from '@/components/FuelAnalytics';
 import { CostPerKilometre } from '@/components/CostPerKilometre';
 
 export const metadata: Metadata = {
-  title: 'Flowza Fleetza — live tracking, driver scores and maintenance',
+  title: 'FlowZa Fleetza — live tracking, driver scores and maintenance',
   description:
     'Live GPS tracking, AI driver behaviour scoring, predictive maintenance and fuel analytics, giving a true cost per kilometre for every vehicle in the fleet.',
 };
@@ -107,7 +107,7 @@ const faqItems = [
 ];
 
 const relatedLinks = [
-  { href: '/products/logispro', title: 'Flowza LogisPro', subtitle: 'Routes, shipments, warehouses' },
+  { href: '/products/logispro', title: 'FlowZa LogisPro', subtitle: 'Routes, shipments, warehouses' },
   { href: '/industries/logistics', title: 'Logistics & freight', subtitle: 'Lanes as a portfolio' },
   { href: '/platform', title: 'Platform', subtitle: 'How the records are shared' },
 ];
@@ -128,7 +128,7 @@ export default function FleetZaPage() {
                     <circle cx="12.5" cy="15" r="1.2" stroke="#F6F6F3" strokeWidth="1.4" />
                   </svg>
                 </span>
-                <span className="pbadge__t">Flowza Fleetza</span>
+                <span className="pbadge__t">FlowZa Fleetza</span>
               </div>
               <h1 className="d-xl">
                 Every trip is<br />a measurement.
@@ -418,7 +418,7 @@ export default function FleetZaPage() {
                 </p>
                 <p style={{ marginTop: 'var(--s5)' }}>
                   <Link className="btn btn--text" href="/products/logispro">
-                    Flowza LogisPro <span className="arw">→</span>
+                    FlowZa LogisPro <span className="arw">→</span>
                   </Link>
                 </p>
               </Card>

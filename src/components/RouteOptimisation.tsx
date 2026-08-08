@@ -12,7 +12,7 @@ import {
 } from '@/lib/data/logispro';
 
 /**
- * The signature set piece for Flowza LogisPro: the same twelve drops plotted
+ * The signature set piece for FlowZa LogisPro: the same twelve drops plotted
  * twice. On the left the order the work arrived in, three vans crossing each
  * other; on the right the identical drops sequenced against traffic, delivery
  * windows, vehicle capacity and driver hours.

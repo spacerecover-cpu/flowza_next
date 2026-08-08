@@ -67,7 +67,7 @@ export function ComplianceMatrix({ className }: ComplianceMatrixProps) {
       </div>
       <p className="tiny" style={{ marginTop: 'var(--s5)', maxWidth: '82ch' }}>
         <sup>1</sup> An em-dash means we do not ship it and do not claim it. Saudi Arabia runs on
-        Flowza Finance today for payroll statutory filings and Arabic documents; the Gulf tax
+        FlowZa Finance today for payroll statutory filings and Arabic documents; the Gulf tax
         engines cover the UAE and Oman, and further GCC coverage is on the roadmap rather than in
         the product. Oman has no corporate tax engine. Where a cell is filled, the rule is in the
         engine — not in a spreadsheet your accountant maintains beside it.

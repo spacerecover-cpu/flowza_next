@@ -12,9 +12,9 @@ import { ProductExplorer } from '@/components/ProductExplorer';
 import { CountUp } from '@/components/CountUp';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Flowza AI — nine cloud applications for business operations' },
+  title: { absolute: 'FlowZa AI — nine cloud applications for business operations' },
   description:
-    'Flowza AI is a platform of nine specialised cloud applications for business management — finance, logistics, wellness, fleet, retail, clubs, rentals, QR codes and performance. Each application is independent, priced on its own, and can be deployed on its own. Choose only the applications your business needs.',
+    'FlowZa AI is a platform of nine specialised cloud applications for business management — finance, logistics, wellness, fleet, retail, clubs, rentals, QR codes and performance. Each application is independent, priced on its own, and can be deployed on its own. Choose only the applications your business needs.',
 };
 
 /** The nine, in catalogue order, as the hero diagram lists them. */
@@ -43,7 +43,7 @@ export default function HomePage() {
                 Nine cloud<br />applications.<br />One trusted<br />platform.
               </h1>
               <p className="lede">
-                Flowza AI delivers specialised cloud software for finance, logistics, wellness, fleet,
+                FlowZa AI delivers specialised cloud software for finance, logistics, wellness, fleet,
                 clubs, rentals, retail, codes and performance. Each application is purpose-built for the
                 job it does and can be deployed on its own, with its own subscription — so you start with
                 the one that solves the problem in front of you, and add others only when your business
@@ -67,7 +67,7 @@ export default function HomePage() {
                 className="dgm"
                 viewBox="0 0 480 420"
                 role="img"
-                aria-label="Diagram of the Flowza AI platform. One box at the top is labelled Flowza AI. Beneath it, nine separate boxes are listed — Flowza Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS. A single line runs down from Flowza AI and branches once to each application. The nine applications are not connected to one another, and there is no shared data store between them."
+                aria-label="Diagram of the FlowZa AI platform. One box at the top is labelled FlowZa AI. Beneath it, nine separate boxes are listed — FlowZa Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS. A single line runs down from FlowZa AI and branches once to each application. The nine applications are not connected to one another, and there is no shared data store between them."
               >
                 {/* the umbrella */}
                 <rect className="node-core" x="14" y="12" width="150" height="34" rx="3" />
@@ -147,7 +147,7 @@ export default function HomePage() {
                 className="mathline"
                 style={{ borderTop: '1px solid var(--line)', paddingTop: 'var(--s5)', marginTop: 'var(--s5)' }}
               >
-                <b className="num">9</b><span>Flowza AI applications</span>
+                <b className="num">9</b><span>FlowZa AI applications</span>
                 <b className="num">1</b><span>is a complete purchase</span>
               </div>
               <p className="tiny" style={{ marginTop: 'var(--s3)' }}>
@@ -188,7 +188,7 @@ export default function HomePage() {
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                Flowza AI is not one application pretending to be nine, and it is not a suite you buy whole.
+                FlowZa AI is not one application pretending to be nine, and it is not a suite you buy whole.
                 It is nine independent products, each built around the constraint its own industry actually
                 has, and each sold on its own terms.
               </p>
@@ -259,7 +259,7 @@ export default function HomePage() {
               <h3 className="d-m" style={{ marginBottom: 'var(--s4)' }}>A day, with the work removed</h3>
               <p className="small" style={{ marginBottom: 'var(--s5)' }}>
                 Most automation is invisible until it fails. Drag through an ordinary Tuesday to see where a
-                Flowza AI application acted on its own, and where it stopped to ask.
+                FlowZa AI application acted on its own, and where it stopped to ask.
               </p>
               <div className="row" style={{ gap: 'var(--s5)' }}>
                 <span className="row" style={{ gap: '7px' }}>
@@ -372,7 +372,7 @@ export default function HomePage() {
             </div>
           </div>
           <p className="tiny rv" style={{ marginTop: 'var(--s4)', textAlign: 'center' }}>
-            Interface shown is representative, and shows Flowza Finance reporting on its own records. Each
+            Interface shown is representative, and shows FlowZa Finance reporting on its own records. Each
             application reports on the operation it runs.
           </p>
         </Wrap>
@@ -430,7 +430,7 @@ export default function HomePage() {
             <h2 className="d-l">Connected to the services<br />you already run.</h2>
             <p className="lede" style={{ marginTop: 'var(--s5)' }}>
               Each application connects outward to the systems around it — your bank, your tax authority,
-              your carriers, your identity provider. These are first-party connections maintained by Flowza
+              your carriers, your identity provider. These are first-party connections maintained by FlowZa
               AI rather than middleware you operate, and each application exposes its own API for anything
               we do not cover.
             </p>

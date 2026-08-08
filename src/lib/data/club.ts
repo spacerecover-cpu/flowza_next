@@ -1,5 +1,5 @@
 /**
- * Flowza Club — /products/club
+ * FlowZa Club — /products/club
  *
  * Ported from `parts/45-club.html` and `parts/js/club.js`. The shapes are the
  * site's own: the booking grid is a list of resources each carrying its own
@@ -497,7 +497,7 @@ export const CLUB_FAQ: readonly { question: string; answer: string }[] = [
 ];
 
 export const CLUB_RELATED: readonly { href: string; title: string; subtitle: string }[] = [
-  { href: '/products/spamaster', title: 'Flowza Spa Master', subtitle: 'Treatment rooms and clients' },
-  { href: '/products/pos',       title: 'Flowza POS',        subtitle: 'Outlet tills and retail' },
-  { href: '/products/finance',   title: 'Flowza Finance',    subtitle: 'Where the ledger closes' },
+  { href: '/products/spamaster', title: 'FlowZa Spa Master', subtitle: 'Treatment rooms and clients' },
+  { href: '/products/pos',       title: 'FlowZa POS',        subtitle: 'Outlet tills and retail' },
+  { href: '/products/finance',   title: 'FlowZa Finance',    subtitle: 'Where the ledger closes' },
 ];

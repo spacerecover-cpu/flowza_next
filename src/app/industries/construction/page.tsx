@@ -11,7 +11,7 @@ import { SCurve } from '@/components/SCurve';
 import { CostBreakdown } from '@/components/CostBreakdown';
 
 export const metadata: Metadata = {
-  title: 'Construction — Flowza AI',
+  title: 'Construction — FlowZa AI',
   description:
     'Cost lands as incurred, revenue when certified. See the unbilled wedge weekly, and report commitment rather than spend.',
 };
@@ -41,7 +41,7 @@ export default function ConstructionPage() {
                 <Link className="btn btn--primary" href="/pricing">
                   Book a walkthrough <span className="arw">→</span>
                 </Link>
-                <Link className="btn btn--ghost" href="/products/finance">Flowza Finance</Link>
+                <Link className="btn btn--ghost" href="/products/finance">FlowZa Finance</Link>
               </div>
             </div>
           </Cols>
@@ -139,7 +139,7 @@ export default function ConstructionPage() {
               },
               {
                 question: 'Can it replace our estimating software?',
-                answer: 'It is not an estimating tool and we would not pretend otherwise. The estimate imports as the budget structure, and from that point on Flowza owns commitment, actual and forecast. Keeping a specialist estimating package is the normal arrangement.',
+                answer: 'It is not an estimating tool and we would not pretend otherwise. The estimate imports as the budget structure, and from that point on FlowZa owns commitment, actual and forecast. Keeping a specialist estimating package is the normal arrangement.',
               },
               {
                 question: 'How does this work with site teams who are not at a desk?',
@@ -151,7 +151,7 @@ export default function ConstructionPage() {
           <RelatedLinks
             className="rv"
             links={[
-              { href: '/products/finance', title: 'Flowza Finance', subtitle: 'Retention, WIP and certificates' },
+              { href: '/products/finance', title: 'FlowZa Finance', subtitle: 'Retention, WIP and certificates' },
               { href: '/industries/manufacturing', title: 'Manufacturing', subtitle: 'If you fabricate as well as build' },
               { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
             ]}

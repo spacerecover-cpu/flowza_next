@@ -19,7 +19,7 @@ export function SiteFooter() {
           <div>
             <Link className="brand" href="/" style={{ marginBottom: 'var(--s4)' }}>
               <BrandMark />
-              <span className="brand__word">Flowza</span>
+              <span className="brand__word">FlowZa</span>
             </Link>
             <p className="tiny" style={{ maxWidth: '34ch' }}>
               Nine cloud applications. One trusted platform. Specialised business software for MEA and India,
@@ -33,15 +33,15 @@ export function SiteFooter() {
           <div>
             <h4>The nine applications</h4>
             <ul>
-              <li><Link href="/products/finance">Flowza Finance</Link></li>
-              <li><Link href="/products/logispro">Flowza LogisPro</Link></li>
-              <li><Link href="/products/spamaster">Flowza Spa Master</Link></li>
-              <li><Link href="/products/fleetza">Flowza Fleetza</Link></li>
-              <li><Link href="/products/qrforge">Flowza QRForge</Link></li>
-              <li><Link href="/products/pos">Flowza POS</Link></li>
-              <li><Link href="/products/club">Flowza Club</Link></li>
-              <li><Link href="/products/rentflow">Flowza RentFlow</Link></li>
-              <li><Link href="/products/pms">Flowza PMS</Link></li>
+              <li><Link href="/products/finance">FlowZa Finance</Link></li>
+              <li><Link href="/products/logispro">FlowZa LogisPro</Link></li>
+              <li><Link href="/products/spamaster">FlowZa Spa Master</Link></li>
+              <li><Link href="/products/fleetza">FlowZa Fleetza</Link></li>
+              <li><Link href="/products/qrforge">FlowZa QRForge</Link></li>
+              <li><Link href="/products/pos">FlowZa POS</Link></li>
+              <li><Link href="/products/club">FlowZa Club</Link></li>
+              <li><Link href="/products/rentflow">FlowZa RentFlow</Link></li>
+              <li><Link href="/products/pms">FlowZa PMS</Link></li>
             </ul>
           </div>
 
@@ -73,7 +73,7 @@ export function SiteFooter() {
           <div>
             <h4>Company</h4>
             <ul>
-              <li><Link href="/company">About Flowza</Link></li>
+              <li><Link href="/company">About FlowZa</Link></li>
               <li><Link href="/company#howwework">How the team works</Link></li>
               <li><Link href="/company#partners">Partners</Link></li>
               <li><Link href="/company#contact">Contact</Link></li>
@@ -92,7 +92,7 @@ export function SiteFooter() {
         </div>
 
         <div className="foot__bar">
-          <span className="foot__legal">© 2026 Flowza. All rights reserved.</span>
+          <span className="foot__legal">© 2026 FlowZa. All rights reserved.</span>
           <span className="foot__legal" style={{ marginLeft: 'auto' }}>
             Concept build — scenario figures and status indicators are illustrative. Published product
             statistics are as supplied.

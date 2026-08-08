@@ -9,9 +9,9 @@ import { CoverageBand } from '@/components/CoverageBand';
 import { WORKING_AGREEMENTS, TEAM_SPLIT, PARTNER_TYPES, CONTACT_ROUTES, OFFICES } from '@/lib/data/company';
 
 export const metadata: Metadata = {
-  title: 'Company — Flowza AI',
+  title: 'Company — FlowZa AI',
   description:
-    'Flowza is a product company, not a consultancy. How the team works, who our partners are, where our support hours actually fall, and how to reach the right person.',
+    'FlowZa is a product company, not a consultancy. How the team works, who our partners are, where our support hours actually fall, and how to reach the right person.',
 };
 
 const coverageItems = [
@@ -34,7 +34,7 @@ export default function CompanyPage() {
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                Flowza is not a consultancy with a software arm. The people who design the platform operate it, carry the
+                FlowZa is not a consultancy with a software arm. The people who design the platform operate it, carry the
                 pager when it breaks, and sit alongside the people implementing it for you. That is a deliberate constraint,
                 and it is why there is only one product.
               </p>

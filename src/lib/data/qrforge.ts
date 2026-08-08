@@ -1,5 +1,5 @@
 /**
- * Flowza QRForge — /products/qrforge
+ * FlowZa QRForge — /products/qrforge
  *
  * A marketing and operations QR platform. The printed symbol carries a short
  * identifier and nothing else; the destination is a record that can be edited

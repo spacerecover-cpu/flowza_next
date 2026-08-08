@@ -1,5 +1,5 @@
 /**
- * Flowza PMS — /products/pms
+ * FlowZa PMS — /products/pms
  *
  * Ported from `parts/47-pms.html` and `parts/js/pms.js`.
  *
@@ -468,11 +468,11 @@ export const PMS_ENGINE_NOTES: readonly { heading: string; body: string }[] = [
   },
   {
     heading: 'It resolves pay; it does not pay',
-    body: 'PMS decides what the figure should be and issues it as a structured payroll instruction. Your payroll system runs the payroll, produces the statutory files and posts to the ledger — Flowza Finance if you hold it, or whatever you already use.',
+    body: 'PMS decides what the figure should be and issues it as a structured payroll instruction. Your payroll system runs the payroll, produces the statutory files and posts to the ledger — FlowZa Finance if you hold it, or whatever you already use.',
   },
   {
     heading: 'Wage protection, stated plainly',
-    body: 'The Gulf wage-protection figures are computed in PMS today. The bank file that a wage-protection system ingests — the WPS export — is on the roadmap. If that file is what you need this quarter, it is produced in Flowza Finance, a separate application on a separate subscription, and we would rather say so here than let you find out in an implementation.',
+    body: 'The Gulf wage-protection figures are computed in PMS today. The bank file that a wage-protection system ingests — the WPS export — is on the roadmap. If that file is what you need this quarter, it is produced in FlowZa Finance, a separate application on a separate subscription, and we would rather say so here than let you find out in an implementation.',
   },
 ];
 
@@ -626,7 +626,7 @@ export const PMS_STEPS: readonly PmsStep[] = [
     n: '03',
     heading: 'Pay',
     leavesWith: 'Leaves with: a resolved figure',
-    body: 'The compensation engine resolves the salary structure and the statutory deductions for the country the employee is employed in, in that country’s currency, and applies the increment strategy without flattening the component structure. Gulf wage-protection figures are computed today; the bank-file (WPS) export is on the roadmap and is not in the product. The resolved figure goes to Flowza Finance to be paid.',
+    body: 'The compensation engine resolves the salary structure and the statutory deductions for the country the employee is employed in, in that country’s currency, and applies the increment strategy without flattening the component structure. Gulf wage-protection figures are computed today; the bank-file (WPS) export is on the roadmap and is not in the product. The resolved figure goes to FlowZa Finance to be paid.',
   },
   {
     n: '04',
@@ -713,7 +713,7 @@ export const PMS_METRICS: readonly { value: string; label: string }[] = [
 export const PMS_FAQ: readonly { question: string; answer: string }[] = [
   {
     question: 'Does PMS run our payroll?',
-    answer: 'No, and that is deliberate — deciding pay and paying it are different jobs with different evidence behind them. PMS resolves what someone should be paid from a rating that has been calibrated, against the statutory rules of their country, preserving the component structure of their salary. It then issues that as a structured payroll instruction your payroll system reads. That can be Flowza Finance, which is a separate application on a separate subscription, or the payroll system you already run.',
+    answer: 'No, and that is deliberate — deciding pay and paying it are different jobs with different evidence behind them. PMS resolves what someone should be paid from a rating that has been calibrated, against the statutory rules of their country, preserving the component structure of their salary. It then issues that as a structured payroll instruction your payroll system reads. That can be FlowZa Finance, which is a separate application on a separate subscription, or the payroll system you already run.',
   },
   {
     question: 'Is bell-curve calibration a forced ranking?',
@@ -725,7 +725,7 @@ export const PMS_FAQ: readonly { question: string; answer: string }[] = [
   },
   {
     question: 'Can PMS produce our WPS bank file?',
-    answer: 'Not today. PMS computes the Gulf wage-protection figures; the bank-file export is on the roadmap. If that file is what you need this quarter, it is produced in Flowza Finance, which is where the payroll actually runs. We would rather answer this here than in your second week of implementation.',
+    answer: 'Not today. PMS computes the Gulf wage-protection figures; the bank-file export is on the roadmap. If that file is what you need this quarter, it is produced in FlowZa Finance, which is where the payroll actually runs. We would rather answer this here than in your second week of implementation.',
   },
   {
     question: 'How do we add a fifth country?',
@@ -742,7 +742,7 @@ export const PMS_FAQ: readonly { question: string; answer: string }[] = [
 ];
 
 export const PMS_RELATED: readonly { href: string; title: string; subtitle: string }[] = [
-  { href: '/products/finance', title: 'Flowza Finance', subtitle: 'Where the resolved figure is paid' },
+  { href: '/products/finance', title: 'FlowZa Finance', subtitle: 'Where the resolved figure is paid' },
   { href: '/enterprise',       title: 'Enterprise',     subtitle: 'Isolation, residency and access control' },
   { href: '/platform',         title: 'Platform',       subtitle: 'The shared person record' },
 ];

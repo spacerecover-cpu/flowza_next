@@ -9,16 +9,16 @@ import { TIERS } from '@/lib/data/pricing';
 import { SYSTEMS } from '@/lib/data/systems';
 
 export const metadata: Metadata = {
-  title: 'Pricing — Flowza AI',
+  title: 'Pricing — FlowZa AI',
   description:
-    'Every Flowza AI application is priced independently, by product, features and scale of deployment. Start with a single cloud application and add others only when your business needs them.',
+    'Every FlowZa AI application is priced independently, by product, features and scale of deployment. Start with a single cloud application and add others only when your business needs them.',
 };
 
 const faqItems = [
   {
     question: 'How is each application priced?',
     answer:
-      'On its own. Every Flowza AI application has its own pricing model, set by what the product is, which features you switch on, and the scale you deploy it at. A point-of-sale rollout across forty tills and a QR code programme for one marketing team are not the same shape of purchase, and they are not quoted from the same table. Ask about the application you want and you will get a price for that application.',
+      'On its own. Every FlowZa AI application has its own pricing model, set by what the product is, which features you switch on, and the scale you deploy it at. A point-of-sale rollout across forty tills and a QR code programme for one marketing team are not the same shape of purchase, and they are not quoted from the same table. Ask about the application you want and you will get a price for that application.',
   },
   {
     question: 'Do I have to buy more than one?',
@@ -50,7 +50,7 @@ export default function PricingPage() {
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                Every Flowza AI application has its own pricing model, based on the product, the features you
+                Every FlowZa AI application has its own pricing model, based on the product, the features you
                 switch on and the scale of the deployment. Start with a single application and expand
                 whenever your business needs additional capabilities.
               </p>

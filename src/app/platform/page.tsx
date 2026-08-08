@@ -10,9 +10,9 @@ import { ArchitectureStack } from '@/components/ArchitectureStack';
 import { RecordMatrix } from '@/components/RecordMatrix';
 
 export const metadata: Metadata = {
-  title: 'The platform — Flowza AI',
+  title: 'The platform — FlowZa AI',
   description:
-    'Flowza AI is an ecosystem of nine independent cloud applications. Each holds its own data, carries its own subscription and ships on its own release train, built to a common security and compliance standard.',
+    'FlowZa AI is an ecosystem of nine independent cloud applications. Each holds its own data, carries its own subscription and ships on its own release train, built to a common security and compliance standard.',
 };
 
 export default function PlatformPage() {
@@ -24,14 +24,16 @@ export default function PlatformPage() {
           <Cols style={{ alignItems: 'end' }}>
             <div className="c-7 rv">
               <Eyebrow>The platform</Eyebrow>
-              <h1 className="d-xl">One ecosystem.<br />Nine independent<br />applications.</h1>
+              {/* the last line is left to wrap: two words fit on one line on a
+                  phone and break after "Endless" on a wide screen. */}
+              <h1 className="d-xl">One platform.<br />Nine specialised<br />applications.<br />Endless possibilities.</h1>
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                Flowza AI is a platform in the ordinary sense of the word: one company, one standard, and
-                nine specialised cloud applications built to it. It is not one database wearing nine faces.
-                Each application holds its own data and is bought on its own terms. Select a pillar to see
-                what that means in practice.
+                FlowZa AI brings together independently built cloud applications, each with its own data,
+                capabilities, and pricing. Connected by a common technology foundation and vision, every
+                product is designed to solve a specific business challenge&mdash;without compromising its
+                independence.
               </p>
             </div>
           </Cols>
@@ -66,7 +68,7 @@ export default function PlatformPage() {
             </div>
             <div className="c-7 rv rv-d2">
               <Table
-                caption="What the nine Flowza AI applications have in common and what each one holds independently"
+                caption="What the nine FlowZa AI applications have in common and what each one holds independently"
                 headers={['Aspect', 'Common to all nine', 'Held by each application']}
                 rows={[
                   ['Data', '—', 'Its own database and its own records'],
@@ -101,12 +103,12 @@ export default function PlatformPage() {
               <ul className="klist" style={{ borderTopColor: 'var(--edge)' }}>
                 <li><h3>Custom objects</h3><p className="small">Extend an application&apos;s schema with your own entities. They inherit its permissions, audit, search and API access automatically.</p></li>
                 <li><h3>Functions</h3><p className="small">Run server-side logic on any record event within the application, with the same execution guarantees as first-party logic.</p></li>
-                <li><h3>Webhooks</h3><p className="small">Subscribe to events from an application and drive whatever you like downstream — including another Flowza AI application, if that is what you want.</p></li>
+                <li><h3>Webhooks</h3><p className="small">Subscribe to events from an application and drive whatever you like downstream — including another FlowZa AI application, if that is what you want.</p></li>
               </ul>
             </div>
             <div className="c-6 rv rv-d2">
               <CodeBlock>
-                <span className="c"># Flowza POS. Its own host, its own credentials, its own records.</span>{'\n'}
+                <span className="c"># FlowZa POS. Its own host, its own credentials, its own records.</span>{'\n'}
                 <span className="k">GET</span> <b>https://pos.flowza.ai/v1/customers/cus_8f21</b>{'\n\n'}
                 {'{'}{'\n'}
                 {'  '}<span className="s">&quot;id&quot;</span>: <span className="s">&quot;cus_8f21&quot;</span>,{'\n'}
@@ -117,7 +119,7 @@ export default function PlatformPage() {
                 {'}'}
               </CodeBlock>
               <p className="tiny" style={{ marginTop: 'var(--s4)' }}>
-                A customer in Flowza POS is a Flowza POS record. If you also run Flowza Club and want the two
+                A customer in FlowZa POS is a FlowZa POS record. If you also run FlowZa Club and want the two
                 to know about each other, that is an integration you build against both APIs — deliberately,
                 and on your terms.
               </p>

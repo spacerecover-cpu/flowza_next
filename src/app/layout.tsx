@@ -30,18 +30,18 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://flowza.ai'),
   // No `template`. Every route copies its title verbatim from the META table in
   // `parts/99-scripts.html`, and those titles already carry the brand — eleven
-  // end in "— Flowza" and the nine product titles are "Flowza X — tagline". A
-  // "%s — Flowza" template appended a second brand to twenty of twenty-four
-  // routes ("Company — Flowza — Flowza"). A bare string is the default title for
+  // end in "— FlowZa" and the nine product titles are "FlowZa X — tagline". A
+  // "%s — FlowZa" template appended a second brand to twenty of twenty-four
+  // routes ("Company — FlowZa — FlowZa"). A bare string is the default title for
   // any route that ships without one of its own; the object form is not usable
   // here because Next's type pairs `default` with a required `template`.
-  title: 'Flowza AI — nine cloud applications for business operations',
+  title: 'FlowZa AI — nine cloud applications for business operations',
   description:
-    'Flowza AI is a platform of nine specialised cloud applications for business management and workflow automation — Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS. Each application is independent, priced on its own and deployed on its own. Choose only the applications your business needs.',
+    'FlowZa AI is a platform of nine specialised cloud applications for business management and workflow automation — Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS. Each application is independent, priced on its own and deployed on its own. Choose only the applications your business needs.',
   openGraph: {
     type: 'website',
-    siteName: 'Flowza AI',
-    title: 'Flowza AI — Nine cloud applications. One trusted platform.',
+    siteName: 'FlowZa AI',
+    title: 'FlowZa AI — Nine cloud applications. One trusted platform.',
     description:
       'Specialised business software for finance, logistics, wellness, fleet, retail, clubs, rentals and operations. Each application is purpose-built for its industry and can be deployed independently as your business grows.',
   },
@@ -63,63 +63,63 @@ export const viewport: Viewport = {
  */
 const NINE: { name: string; slug: string; app: string; description: string }[] = [
   {
-    name: 'Flowza Finance',
+    name: 'FlowZa Finance',
     slug: 'finance',
     app: 'finance.flowza.ai',
     description:
       'Accounting, ERP and payroll on one ledger. Sales, purchases, inventory, double-entry accounting, payroll and HR post to a single connected ledger, with GST for India and VAT and corporate tax for the Gulf built in.',
   },
   {
-    name: 'Flowza LogisPro',
+    name: 'FlowZa LogisPro',
     slug: 'logispro',
     app: 'logispro.flowza.ai',
     description:
       'Routes, shipments and warehouses, optimised. AI route optimisation, live shipment tracking and a full warehouse management system on one operations picture.',
   },
   {
-    name: 'Flowza Spa Master',
+    name: 'FlowZa Spa Master',
     slug: 'spamaster',
     app: 'spamaster.flowza.ai',
     description:
       'Bookings, rosters and loyalty for wellness. Online booking, certification-aware staff scheduling, retail inventory and loyalty for spas and wellness studios.',
   },
   {
-    name: 'Flowza Fleetza',
+    name: 'FlowZa Fleetza',
     slug: 'fleetza',
     app: 'fleetza.flowza.ai',
     description:
       'Live tracking, driver scores and maintenance. Live GPS, AI driver behaviour scoring, predictive maintenance and fuel analytics giving a true cost per kilometre.',
   },
   {
-    name: 'Flowza QRForge',
+    name: 'FlowZa QRForge',
     slug: 'qrforge',
     app: 'qr.flowza.ai',
     description:
       "Dynamic QR codes with live analytics. Change a printed code's destination at any time, log every scan with location, device and time, and mint thousands of codes from one CSV.",
   },
   {
-    name: 'Flowza POS',
+    name: 'FlowZa POS',
     slug: 'pos',
     app: 'pos.flowza.ai',
     description:
       'Point of sale that survives the internet. Sub-second transactions, true offline mode with no lost sales, multi-location inventory and customer analytics.',
   },
   {
-    name: 'Flowza Club',
+    name: 'FlowZa Club',
     slug: 'club',
     app: 'club.flowza.ai',
     description:
       'Membership, booking and billing for clubs. Household billing, a double-entry ledger that ties out, charge-to-account registers, and a booking engine where double-bookings are impossible by construction.',
   },
   {
-    name: 'Flowza RentFlow',
+    name: 'FlowZa RentFlow',
     slug: 'rentflow',
     app: 'rentflow.flowza.ai',
     description:
       'Tenant applications, screened and decided. Every rental application in one pipeline, screened against credit, background, eviction-history, income and reference checks, with the decision reason recorded.',
   },
   {
-    name: 'Flowza PMS',
+    name: 'FlowZa PMS',
     slug: 'pms',
     app: 'pms.flowza.ai',
     description:
@@ -140,27 +140,27 @@ const INDUSTRIES = [
 
 const FAQ_ENTRIES: { question: string; answer: string }[] = [
   {
-    question: 'What is Flowza AI?',
+    question: 'What is FlowZa AI?',
     answer:
-      'Flowza AI is a platform of nine specialised cloud applications for business management in the Middle East, Africa and India: Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS. Each runs as its own application on its own subdomain, holds its own data, and is bought and priced on its own. They belong to one ecosystem and are built to a common security and compliance standard, but they are independent products rather than modules of one system.',
+      'FlowZa AI is a platform of nine specialised cloud applications for business management in the Middle East, Africa and India: Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS. Each runs as its own application on its own subdomain, holds its own data, and is bought and priced on its own. They belong to one ecosystem and are built to a common security and compliance standard, but they are independent products rather than modules of one system.',
   },
   {
-    question: 'Is Flowza AI one product or nine?',
+    question: 'Is FlowZa AI one product or nine?',
     answer:
-      'Nine. Flowza AI is not a single application and does not claim to be one. Each of the nine has its own screens, its own database, its own release train, its own app subdomain and its own subscription. Most customers run one. Buying a second is a separate decision on separate terms, and no application requires another to be present in order to work.',
+      'Nine. FlowZa AI is not a single application and does not claim to be one. Each of the nine has its own screens, its own database, its own release train, its own app subdomain and its own subscription. Most customers run one. Buying a second is a separate decision on separate terms, and no application requires another to be present in order to work.',
   },
   {
-    question: 'How is Flowza AI different from an all-in-one ERP suite?',
+    question: 'How is FlowZa AI different from an all-in-one ERP suite?',
     answer:
-      'A suite is sold whole and priced on everything it contains, which is why businesses pay for modules nobody opens and accept a generic version of the one thing they care most about. Flowza AI sells specialised applications separately. Each is built around the constraint its own industry actually has — the treatment room, the vehicle hour, the trading minute — and each is a finished product on its own. You choose only the applications your business needs.',
+      'A suite is sold whole and priced on everything it contains, which is why businesses pay for modules nobody opens and accept a generic version of the one thing they care most about. FlowZa AI sells specialised applications separately. Each is built around the constraint its own industry actually has — the treatment room, the vehicle hour, the trading minute — and each is a finished product on its own. You choose only the applications your business needs.',
   },
   {
-    question: 'Which countries is Flowza AI compliant in?',
+    question: 'Which countries is FlowZa AI compliant in?',
     answer:
       'Four. India covers GST including CGST, SGST, IGST and reverse charge, e-way bills and GST returns, TDS and input tax credit tracking, and statutory payroll including EPF, ESI, Professional Tax, gratuity and POSH. The UAE covers VAT at 5 per cent, corporate tax at 9 per cent and WPS payroll bank files. Oman covers VAT at 5 per cent, social insurance payroll and a country chart-of-accounts pack. Saudi Arabia covers GOSI payroll and Arabic right-to-left documents. Further GCC coverage is on the roadmap rather than in the product.',
   },
   {
-    question: 'Where does AI fit into Flowza AI?',
+    question: 'Where does AI fit into FlowZa AI?',
     answer:
       'Inside each application, on the job that application does. LogisPro sequences a route against real constraints, Fleetza scores driver behaviour into something coachable, Finance reads an invoice and proposes the posting, PMS calibrates ratings across managers. In every case the AI works on the records that application holds, executes under the same role-based permissions as the person who asked, never above them, and writes every action to that application audit log attributed to the person who authorised it.',
   },
@@ -177,10 +177,12 @@ const jsonLd = {
     {
       '@type': 'Organization',
       '@id': 'https://flowza.ai/#org',
-      name: 'Flowza AI',
-      alternateName: ['Flowza', 'FlowZa'],
+      name: 'FlowZa AI',
+      // The brand is written FlowZa; the lower-case variants are how people
+      // actually type it into a search box, so they stay as alternates.
+      alternateName: ['FlowZa', 'Flowza', 'Flowza AI'],
       description:
-        'Flowza AI builds nine specialised AI cloud applications for business management and workflow automation in the Middle East, Africa and India. Each application runs on its own subdomain, holds its own data and carries its own subscription, so a business can buy only the applications it needs.',
+        'FlowZa AI builds nine specialised AI cloud applications for business management and workflow automation in the Middle East, Africa and India. Each application runs on its own subdomain, holds its own data and carries its own subscription, so a business can buy only the applications it needs.',
       url: 'https://flowza.ai/',
       slogan: 'Nine cloud applications. One trusted platform.',
       areaServed: [
@@ -194,12 +196,12 @@ const jsonLd = {
       '@type': 'WebSite',
       '@id': 'https://flowza.ai/#site',
       url: 'https://flowza.ai/',
-      name: 'Flowza AI',
+      name: 'FlowZa AI',
       publisher: { '@id': 'https://flowza.ai/#org' },
     },
     {
       '@type': 'ItemList',
-      name: 'The nine Flowza AI applications',
+      name: 'The nine FlowZa AI applications',
       description:
         'Nine specialised cloud applications for business operations. Each runs as its own application on its own subdomain, holds its own data, and is priced and licensed independently.',
       numberOfItems: 9,
@@ -220,9 +222,9 @@ const jsonLd = {
     },
     {
       '@type': 'ItemList',
-      name: 'Flowza solutions by industry',
+      name: 'FlowZa solutions by industry',
       description:
-        'Sectors Flowza is configured for, each defined by its unit of work and its binding constraint.',
+        'Sectors FlowZa is configured for, each defined by its unit of work and its binding constraint.',
       itemListElement: INDUSTRIES.map((name, i) => ({
         '@type': 'ListItem',
         position: i + 1,

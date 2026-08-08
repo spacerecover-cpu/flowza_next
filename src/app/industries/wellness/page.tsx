@@ -11,7 +11,7 @@ import { CohortGrid } from '@/components/CohortGrid';
 import { LtvLadder } from '@/components/LtvLadder';
 
 export const metadata: Metadata = {
-  title: 'Wellness and beauty — Flowza AI',
+  title: 'Wellness and beauty — FlowZa AI',
   description:
     'The second visit decides the lifetime. Cohort retention, contribution per guest and one guest record across every site.',
 };
@@ -41,7 +41,7 @@ export default function WellnessPage() {
                 <Link className="btn btn--primary" href="/pricing">
                   Book a walkthrough <span className="arw">→</span>
                 </Link>
-                <Link className="btn btn--ghost" href="/products/spamaster">Flowza Spa Master</Link>
+                <Link className="btn btn--ghost" href="/products/spamaster">FlowZa Spa Master</Link>
               </div>
             </div>
           </Cols>
@@ -155,7 +155,7 @@ export default function WellnessPage() {
           <RelatedLinks
             className="rv"
             links={[
-              { href: '/products/spamaster', title: 'Flowza Spa Master', subtitle: 'The day board and the loop' },
+              { href: '/products/spamaster', title: 'FlowZa Spa Master', subtitle: 'The day board and the loop' },
               { href: '/industries/retail', title: 'Retail & Hospitality', subtitle: 'Retail attach and space' },
               { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
             ]}

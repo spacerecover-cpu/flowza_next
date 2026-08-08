@@ -21,13 +21,13 @@ import {
 } from '@/lib/data/rentflow';
 
 export const metadata: Metadata = {
-  title: 'Flowza RentFlow — tenant applications, screened and decided',
+  title: 'FlowZa RentFlow — tenant applications, screened and decided',
   description:
     'Every rental application in one pipeline: collected, screened against credit, background, eviction-history, income and reference checks, and decided with the reason recorded.',
 };
 
 /**
- * Flowza RentFlow.
+ * FlowZa RentFlow.
  *
  * A deliberately small product, and the page is built to read as focused rather
  * than thin: two set pieces done properly and an explicit scope boundary. There
@@ -48,7 +48,7 @@ export default function RentFlowPage() {
                   <path d="M6.6 11.4l1.8 1.8 3.4-3.6" stroke="#F6F6F3" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </span>
-              <span className="pbadge__t">Flowza RentFlow</span>
+              <span className="pbadge__t">FlowZa RentFlow</span>
             </div>
             <h1 className="d-xl" style={{ marginBottom: 'var(--s5)' }}>
               The inbox is not<br />a pipeline.

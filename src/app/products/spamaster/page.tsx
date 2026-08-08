@@ -16,7 +16,7 @@ import { CertificationMatrix } from '@/components/CertificationMatrix';
 import { SPA_COMBINATIONS, SPA_PACKAGES, SPA_MEASURES } from '@/lib/data/spa';
 
 export const metadata: Metadata = {
-  title: 'Flowza Spa Master — bookings, rosters and loyalty for wellness',
+  title: 'FlowZa Spa Master — bookings, rosters and loyalty for wellness',
   description:
     'Online booking, certification-aware staff scheduling, retail inventory and loyalty for spas and wellness studios, built around the treatment room as the resource that actually runs out.',
 };
@@ -72,9 +72,9 @@ const faqItems = [
 ];
 
 const relatedLinks = [
-  { href: '/products/club', title: 'Flowza Club', subtitle: 'Membership, booking and billing' },
+  { href: '/products/club', title: 'FlowZa Club', subtitle: 'Membership, booking and billing' },
   { href: '/industries/wellness', title: 'Wellness & beauty', subtitle: 'Why the second visit decides' },
-  { href: '/products/finance', title: 'Flowza Finance', subtitle: 'Where the revenue posts' },
+  { href: '/products/finance', title: 'FlowZa Finance', subtitle: 'Where the revenue posts' },
 ];
 
 export default function SpaMasterPage() {
@@ -95,7 +95,7 @@ export default function SpaMasterPage() {
                     />
                   </svg>
                 </span>
-                <span className="pbadge__t">Flowza Spa Master</span>
+                <span className="pbadge__t">FlowZa Spa Master</span>
               </div>
               <h1 className="d-xl" style={{ marginBottom: 'var(--s5)' }}>
                 The room is<br />the constraint.

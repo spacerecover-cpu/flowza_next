@@ -1,5 +1,5 @@
 /**
- * What the Flowza AI platform is, stated as four pillars.
+ * What the FlowZa AI platform is, stated as four pillars.
  *
  * This file previously described a four-layer stack in which nine applications
  * sat on top of one shared record layer. That is not the architecture: the nine

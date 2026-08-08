@@ -2,7 +2,7 @@ import React from 'react';
 import { BACK_OFFICE_MODULES } from '@/lib/data/finance';
 
 /**
- * The whole argument for Flowza Finance, drawn as plumbing: eight back-office
+ * The whole argument for FlowZa Finance, drawn as plumbing: eight back-office
  * modules branch onto one horizontal double-entry ledger line, which runs on
  * into the trial balance. Odd-numbered modules sit above the line, even-numbered
  * below it, so every coordinate derives from the array index in

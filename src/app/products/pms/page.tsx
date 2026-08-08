@@ -39,13 +39,13 @@ import {
 } from '@/lib/data/pms';
 
 export const metadata: Metadata = {
-  title: 'Flowza PMS — rate, calibrate and pay on one system',
+  title: 'FlowZa PMS — rate, calibrate and pay on one system',
   description:
     'KRA and KPI review cycles, bell-curve calibration, a compensation engine that knows India and Gulf statutory rules, and approved letters a third party can verify on a public page.',
 };
 
 /**
- * Flowza PMS.
+ * FlowZa PMS.
  *
  * There is no testimonial on this page, by decision. What sits in that slot is
  * PMS_NO_QUOTE, which states the absence and why — on a page whose argument is
@@ -73,7 +73,7 @@ export default function PmsPage() {
                     <path d="M2.5 15.5h13" stroke="#F6F6F3" strokeWidth="1.6" />
                   </svg>
                 </span>
-                <span className="pbadge__t">Flowza PMS</span>
+                <span className="pbadge__t">FlowZa PMS</span>
               </div>
               <ProductBadges badges={PMS_BADGES} />
               <h1 className="d-xl" style={{ marginBottom: 'var(--s5)' }}>
@@ -258,7 +258,7 @@ export default function PmsPage() {
               equivalent UAE dataset today, so the cell is empty rather than filled with something
               plausible. <sup>2</sup> Wage-protection filing is a Gulf obligation. PMS computes the
               figures for the three Gulf markets; the bank-file export is on the roadmap and is not in
-              the product today. India&rsquo;s statutory payroll files are produced in Flowza Finance,
+              the product today. India&rsquo;s statutory payroll files are produced in FlowZa Finance,
               which is where the money actually leaves.
             </p>
           </Panel>
@@ -492,7 +492,7 @@ export default function PmsPage() {
                 Separating the decision from the disbursement is the point. PMS owns the review, the
                 calibration and the compensation decision, and issues the result as a structured payroll
                 instruction. Your payroll system owns the run, the statutory filings and the postings —
-                whether that is Flowza Finance on its own subscription, or the system you already have.
+                whether that is FlowZa Finance on its own subscription, or the system you already have.
               </p>
             </div>
           </Cols>
