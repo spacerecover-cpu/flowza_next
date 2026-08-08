@@ -133,7 +133,6 @@ const INDUSTRIES = [
   'Manufacturing',
   'Professional Services',
   'Construction',
-  'Healthcare',
   'Wellness and Beauty',
   'Public Sector',
 ];

@@ -278,7 +278,7 @@ export default function LogisticsPage() {
             links={[
               { href: '/products/logispro', title: 'FlowZa LogisPro', subtitle: 'The operational product' },
               { href: '/industries/manufacturing', title: 'Manufacturing', subtitle: 'Where the freight originates' },
-              { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
+              { href: '/industries', title: 'All industries', subtitle: 'Compare all seven sectors' },
             ]}
           />
         </Wrap>

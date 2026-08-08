@@ -68,6 +68,7 @@ export function SiteFooter() {
               <li><Link href="/company#howwework">How the team works</Link></li>
               <li><Link href="/company#partners">Partners</Link></li>
               <li><Link href="/company#contact">Contact</Link></li>
+              <li><a href="mailto:sales@flowza.ai">sales@flowza.ai</a></li>
             </ul>
           </div>
 

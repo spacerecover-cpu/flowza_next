@@ -246,7 +246,7 @@ export default function RetailPage() {
             links={[
               { href: '/products/pos', title: 'FlowZa POS', subtitle: 'The till and the ledger' },
               { href: '/industries/logistics', title: 'Logistics and Freight', subtitle: 'Getting stock to the site' },
-              { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
+              { href: '/industries', title: 'All industries', subtitle: 'Compare all seven sectors' },
             ]}
           />
         </Wrap>

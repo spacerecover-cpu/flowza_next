@@ -10,10 +10,10 @@ import { INDUSTRIES } from '@/lib/data/industries';
 export const metadata: Metadata = {
   title: 'Solutions by industry — FlowZa AI',
   description:
-    'Which of the nine FlowZa AI cloud applications to start with in retail, logistics, manufacturing, services, construction, healthcare, wellness and the public sector — and how each is configured.',
+    'Which of the nine FlowZa AI cloud applications to start with in retail, logistics, manufacturing, services, construction, wellness and the public sector — and how each is configured.',
 };
 
-const INDUSTRY_NUMBERS = ['01', '02', '03', '04', '05', '06', '07', '08'];
+const INDUSTRY_NUMBERS = ['01', '02', '03', '04', '05', '06', '07'];
 
 export default function IndustriesPage() {
   const jsonLd = {
@@ -109,7 +109,7 @@ export default function IndustriesPage() {
               </p>
               <h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>Nine products, not seventy-two</h3>
               <p className="small">
-                The nine each have their own release train, which is honest. What they do not have is a healthcare edition, a construction edition and a public-sector edition each running a version behind. There is one Finance, and every sector runs it.
+                The nine each have their own release train, which is honest. What they do not have is a construction edition and a public-sector edition each running a version behind. There is one Finance, and every sector runs it.
               </p>
             </div>
             <div className="c-4 rv rv-d3">
@@ -130,12 +130,12 @@ export default function IndustriesPage() {
         <Wrap>
           <div className="section-head rv">
             <Eyebrow>Side by side</Eyebrow>
-            <h2 className="d-l">Eight sectors, and<br />where to start.</h2>
+            <h2 className="d-l">Seven sectors, and<br />where to start.</h2>
           </div>
           <div className="cmp-scroll rv">
             <table className="cmp">
               <caption className="sr">
-                Comparison of eight industries by unit of work, binding constraint, deciding metric, and which of the nine FlowZa AI applications to deploy first
+                Comparison of seven industries by unit of work, binding constraint, deciding metric, and which of the nine FlowZa AI applications to deploy first
               </caption>
               <thead>
                 <tr>

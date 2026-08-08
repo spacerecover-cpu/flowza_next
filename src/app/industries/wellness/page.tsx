@@ -157,7 +157,7 @@ export default function WellnessPage() {
             links={[
               { href: '/products/spamaster', title: 'FlowZa Spa Master', subtitle: 'The day board and the loop' },
               { href: '/industries/retail', title: 'Retail & Hospitality', subtitle: 'Retail attach and space' },
-              { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
+              { href: '/industries', title: 'All industries', subtitle: 'Compare all seven sectors' },
             ]}
           />
         </Wrap>

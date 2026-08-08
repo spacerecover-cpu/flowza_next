@@ -21,7 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/industries/manufacturing',
     '/industries/services',
     '/industries/construction',
-    '/industries/healthcare',
     '/industries/wellness',
     '/industries/public',
     // the nine, in catalogue order
