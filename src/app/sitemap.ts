@@ -10,6 +10,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/platform',
     '/solutions',
+    // one route per function, so each is indexable on its own
+    '/solutions/finance',
+    '/solutions/operations',
+    '/solutions/revenue',
+    '/solutions/it-security',
     '/industries',
     '/industries/retail',
     '/industries/logistics',
