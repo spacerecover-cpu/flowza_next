@@ -26,6 +26,34 @@ function Caret() {
 
 /* ------------------------------------------------------------------ MEGA MENUS */
 /**
+ * The panel shell. `.mega` is `display:none` in the stylesheet and only
+ * `.mega.is-open` is shown, so the class is the whole open/closed mechanism —
+ * a panel rendered without it is in the DOM at zero height.
+ *
+ * All four panels stay mounted and hidden rather than mounting on demand, so
+ * the `aria-controls` on each nav button always resolves to a real element.
+ * `display:none` keeps a closed panel out of the tab order and the
+ * accessibility tree, and restarts the `megaIn` animation on each open.
+ */
+function MegaPanel({
+  id,
+  label,
+  open,
+  children,
+}: {
+  id: string;
+  label: string;
+  open: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className={`mega${open ? ' is-open' : ''}`} id={id} role="region" aria-label={label}>
+      {children}
+    </div>
+  );
+}
+
+/**
  * Nine products in one wide 3x3 column, plus the Copilot card. The old
  * "platform modules" column is gone: there are no modules, and the nine are not
  * views of one application.
@@ -138,9 +166,9 @@ const PRODUCT_LINKS: { href: string; name: string; tagline: string; icon: React.
   },
 ];
 
-function MegaProducts({ onClose }: { onClose: () => void }) {
+function MegaProducts({ open, onClose }: { open: boolean; onClose: () => void }) {
   return (
-    <div className="mega" id="m-products" role="region" aria-label="Products">
+    <MegaPanel id="m-products" label="Products" open={open}>
       <div className="mega__inner">
         <div className="mega__col mega__col--nine">
           <p className="mega__title">Nine systems — one data layer</p>
@@ -187,13 +215,13 @@ function MegaProducts({ onClose }: { onClose: () => void }) {
           </Link>
         </div>
       </div>
-    </div>
+    </MegaPanel>
   );
 }
 
-function MegaSolutions({ onClose }: { onClose: () => void }) {
+function MegaSolutions({ open, onClose }: { open: boolean; onClose: () => void }) {
   return (
-    <div className="mega" id="m-solutions" role="region" aria-label="Solutions">
+    <MegaPanel id="m-solutions" label="Solutions" open={open}>
       <div className="mega__inner">
         <div className="mega__col mega__col--wide">
           <p className="mega__title">By industry</p>
@@ -228,13 +256,13 @@ function MegaSolutions({ onClose }: { onClose: () => void }) {
           <Link className="mlink" href="/solutions" onClick={onClose}><span><span className="mlink__t">Spreadsheets</span><span className="mlink__d">Import and structure</span></span></Link>
         </div>
       </div>
-    </div>
+    </MegaPanel>
   );
 }
 
-function MegaPlatform({ onClose }: { onClose: () => void }) {
+function MegaPlatform({ open, onClose }: { open: boolean; onClose: () => void }) {
   return (
-    <div className="mega" id="m-platform" role="region" aria-label="Platform">
+    <MegaPanel id="m-platform" label="Platform" open={open}>
       <div className="mega__inner">
         <div className="mega__col">
           <p className="mega__title">The data layer</p>
@@ -261,13 +289,13 @@ function MegaPlatform({ onClose }: { onClose: () => void }) {
           <Link className="mlink" href="/platform#api" onClick={onClose}><span><span className="mlink__t">Events and webhooks</span><span className="mlink__d">Streams out of the platform</span></span></Link>
         </div>
       </div>
-    </div>
+    </MegaPanel>
   );
 }
 
-function MegaDevs({ onClose }: { onClose: () => void }) {
+function MegaDevs({ open, onClose }: { open: boolean; onClose: () => void }) {
   return (
-    <div className="mega" id="m-devs" role="region" aria-label="Developers">
+    <MegaPanel id="m-devs" label="Developers" open={open}>
       <div className="mega__inner">
         <div className="mega__col mega__col--wide">
           <p className="mega__title">Build on the data layer</p>
@@ -288,7 +316,7 @@ function MegaDevs({ onClose }: { onClose: () => void }) {
           </div>
         </div>
       </div>
-    </div>
+    </MegaPanel>
   );
 }
 
@@ -381,8 +409,16 @@ export function SiteHeader() {
 
   const isCurrentPage = (path: string) => pathname === path;
 
+  // Tabbing out of an open panel closes it. `relatedTarget` is null when focus
+  // leaves the document entirely (browser chrome, another window) — leave the
+  // panel alone in that case, so returning to the tab finds it as it was.
+  function handleBlur(e: React.FocusEvent<HTMLElement>) {
+    const next = e.relatedTarget as Node | null;
+    if (next && !e.currentTarget.contains(next)) setOpenMega(null);
+  }
+
   return (
-    <header className={`nav${openMega ? ' is-open' : ''}`} id="nav" ref={navRef}>
+    <header className={`nav${openMega ? ' is-open' : ''}`} id="nav" ref={navRef} onBlur={handleBlur}>
       <div className="nav__bar">
         <Link className="brand" href="/" aria-label="Flowza home">
           <BrandMark />
@@ -401,6 +437,7 @@ export function SiteHeader() {
           ).map(({ id, label }) => (
             <button
               key={id}
+              type="button"
               className="nav__btn"
               data-mega={id}
               aria-expanded={openMega === id}
@@ -459,10 +496,10 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {openMega === 'm-products' && <MegaProducts onClose={closeAll} />}
-      {openMega === 'm-solutions' && <MegaSolutions onClose={closeAll} />}
-      {openMega === 'm-platform' && <MegaPlatform onClose={closeAll} />}
-      {openMega === 'm-devs' && <MegaDevs onClose={closeAll} />}
+      <MegaProducts open={openMega === 'm-products'} onClose={closeAll} />
+      <MegaSolutions open={openMega === 'm-solutions'} onClose={closeAll} />
+      <MegaPlatform open={openMega === 'm-platform'} onClose={closeAll} />
+      <MegaDevs open={openMega === 'm-devs'} onClose={closeAll} />
 
       <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} />
     </header>
