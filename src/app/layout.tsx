@@ -32,11 +32,10 @@ export const metadata: Metadata = {
   // `parts/99-scripts.html`, and those titles already carry the brand — eleven
   // end in "— Flowza" and the nine product titles are "Flowza X — tagline". A
   // "%s — Flowza" template appended a second brand to twenty of twenty-four
-  // routes ("Company — Flowza — Flowza"). Only `default` is kept, for a route
-  // that ships without a title of its own.
-  title: {
-    default: 'Flowza — nine business systems, one operating fabric',
-  },
+  // routes ("Company — Flowza — Flowza"). A bare string is the default title for
+  // any route that ships without one of its own; the object form is not usable
+  // here because Next's type pairs `default` with a required `template`.
+  title: 'Flowza — nine business systems, one operating fabric',
   description:
     'Flowza runs nine purpose-built business systems for MEA and India — Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS — on one shared data layer. Customers, inventory and ledger entries move between them without re-entry.',
   openGraph: {

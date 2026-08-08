@@ -8,7 +8,7 @@ export interface RevealProps {
   delay?: 1 | 2 | 3 | 4 | 5;
   className?: string;
   style?: React.CSSProperties;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 }
 
 export function Reveal({ children, delay, className, style, as: Tag = 'div' }: RevealProps) {
