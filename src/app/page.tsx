@@ -69,20 +69,20 @@ export default function HomePage() {
                 role="img"
                 aria-label="Diagram of the FlowZa AI platform. One box at the top is labelled FlowZa AI. Beneath it, nine separate boxes are listed — FlowZa Finance, LogisPro, Spa Master, Fleetza, QRForge, POS, Club, RentFlow and PMS. A single line runs down from FlowZa AI and branches once to each application. The nine applications are not connected to one another, and there is no shared data store between them."
               >
-                {/* the umbrella */}
-                <rect className="node-core" x="14" y="12" width="150" height="34" rx="3" />
-                <text x="30" y="33" fontSize="9" fill="var(--on-dark)" letterSpacing=".12em">FLOWZA AI</text>
-                <text x="176" y="33" fontSize="8.5" fill="var(--slate-2)">THE PLATFORM</text>
+                {/* the umbrella — label centred on the spine that drops from it */}
+                <rect className="node-core" x="14" y="10" width="150" height="38" rx="3" />
+                <text className="node-core-t" x="89" y="33" textAnchor="middle">FLOWZA AI</text>
+                <text className="dgm-note" x="176" y="33" fontSize="8.5">THE PLATFORM</text>
 
                 {/* the spine, and one branch per application */}
                 <g className="wire">
-                  <path d="M89 46V371" />
+                  <path d="M89 48V375" />
                   {HERO_APPS.map((_, i) => (
                     <path key={i} d={`M89 ${71 + i * 38}H180`} />
                   ))}
                 </g>
                 <g className="wire-live" style={{ '--len': '1200' } as React.CSSProperties}>
-                  <path d="M89 46V371" />
+                  <path d="M89 48V375" />
                   {HERO_APPS.map((_, i) => (
                     <path key={i} d={`M89 ${71 + i * 38}H180`} />
                   ))}
@@ -98,7 +98,7 @@ export default function HomePage() {
                   ))}
                 </g>
 
-                <text x="14" y="410" fontSize="8.5" fill="var(--slate-2)">
+                <text className="dgm-note" x="14" y="410" fontSize="8.5">
                   NINE INDEPENDENT APPLICATIONS · NOT ONE SHARED SYSTEM
                 </text>
               </svg>
