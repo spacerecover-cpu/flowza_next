@@ -33,7 +33,7 @@ export function SystemExplorer({ initialIndex = 0 }: SystemExplorerProps) {
 
   return (
     <div className="mx rv">
-      <div className="mx__board" id="mxBoard" role="group" aria-label="The nine Flowza AI applications">
+      <div className="mx__board" id="mxBoard" role="group" aria-label="The nine FlowZa AI applications">
         {SYSTEMS.map((system, i) => {
           const isSelected = i === selected;
 

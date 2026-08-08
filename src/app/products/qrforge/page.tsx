@@ -16,7 +16,7 @@ import { SmartRoutingDiagram } from '@/components/SmartRoutingDiagram';
 import { QR_BULK } from '@/lib/data/qrforge';
 
 export const metadata: Metadata = {
-  title: 'Flowza QRForge — dynamic QR codes with live analytics',
+  title: 'FlowZa QRForge — dynamic QR codes with live analytics',
   description:
     'Change the destination of a printed QR code at any time, log every scan with location, device and time, and mint thousands of unique codes from one CSV.',
 };
@@ -113,7 +113,7 @@ const faqItems = [
 ];
 
 const relatedLinks = [
-  { href: '/products/pos', title: 'Flowza POS', subtitle: 'Where the scan turns into a sale' },
+  { href: '/products/pos', title: 'FlowZa POS', subtitle: 'Where the scan turns into a sale' },
   { href: '/industries/retail', title: 'Retail & hospitality', subtitle: 'Placement, footfall and baskets' },
   { href: '/platform', title: 'Platform', subtitle: 'How the records are shared' },
 ];
@@ -134,7 +134,7 @@ export default function QRForgePage() {
                   <path d="M10.5 10.5h5v5" stroke="#0C0E0D" strokeWidth="1.6" />
                 </svg>
               </span>
-              <span className="pbadge__t">Flowza QRForge</span>
+              <span className="pbadge__t">FlowZa QRForge</span>
             </div>
             <h1 className="d-xl">
               The code is printed.<br />The destination<br />is not.
@@ -428,8 +428,8 @@ export default function QRForgePage() {
                 The one system whose output leaves the building
               </h3>
               <p className="body-l" style={{ marginBottom: 'var(--s5)' }}>
-                Eight of the nine Flowza AI applications are read by people who work for you. QRForge is not. A
-                code printed on a carton or a menu is a Flowza record that a member of the public can
+                Eight of the nine FlowZa AI applications are read by people who work for you. QRForge is not. A
+                code printed on a carton or a menu is a FlowZa record that a member of the public can
                 reach — from a pavement, a table, a shelf, months after it was printed and long after
                 whoever printed it has moved on.
               </p>

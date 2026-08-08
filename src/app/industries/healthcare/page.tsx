@@ -10,7 +10,7 @@ import { KeylineList } from '@/components/KeylineList';
 import { PathwayRibbon } from '@/components/PathwayRibbon';
 
 export const metadata: Metadata = {
-  title: 'Healthcare — Flowza AI',
+  title: 'Healthcare — FlowZa AI',
   description:
     'Three per cent of an elective pathway is clinical contact. Measure cost per episode from what actually happened rather than allocating a budget.',
 };
@@ -157,7 +157,7 @@ export default function HealthcarePage() {
             items={[
               {
                 question: 'Is this a clinical system?',
-                answer: 'No, and that distinction matters. Flowza runs the operational and financial side — scheduling, resources, consumables, procurement, costing, billing and the ledger. The clinical record stays in your EPR, and the two exchange the events each needs. We are not asking you to migrate clinical documentation.',
+                answer: 'No, and that distinction matters. FlowZa runs the operational and financial side — scheduling, resources, consumables, procurement, costing, billing and the ledger. The clinical record stays in your EPR, and the two exchange the events each needs. We are not asking you to migrate clinical documentation.',
               },
               {
                 question: 'How do you handle payer and insurer billing?',
@@ -173,7 +173,7 @@ export default function HealthcarePage() {
           <RelatedLinks
             className="rv"
             links={[
-              { href: '/products/qrforge', title: 'Flowza QRForge', subtitle: 'Codes on printed patient material' },
+              { href: '/products/qrforge', title: 'FlowZa QRForge', subtitle: 'Codes on printed patient material' },
               { href: '/enterprise', title: 'Enterprise', subtitle: 'Access, residency and audit' },
               { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
             ]}

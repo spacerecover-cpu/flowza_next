@@ -30,7 +30,7 @@ import {
 } from '@/lib/data/club';
 
 export const metadata: Metadata = {
-  title: 'Flowza Club — membership, booking and billing for clubs',
+  title: 'FlowZa Club — membership, booking and billing for clubs',
   description:
     'Membership and household billing, a double-entry ledger that ties out, charge-to-account registers across every outlet, and a booking engine where double-bookings are impossible by construction.',
 };
@@ -50,7 +50,7 @@ export default function ClubPage() {
                     <circle cx="13.2" cy="14.4" r="1.5" stroke="#F6F6F3" strokeWidth="1.4" />
                   </svg>
                 </span>
-                <span className="pbadge__t">Flowza Club</span>
+                <span className="pbadge__t">FlowZa Club</span>
               </div>
               <h1 className="d-xl" style={{ marginBottom: 'var(--s5)' }}>
                 The slot cannot<br />be sold twice.
@@ -357,7 +357,7 @@ export default function ClubPage() {
                 </p>
                 <p>
                   <Link className="btn btn--text" href="/products/spamaster">
-                    Flowza Spa Master <span className="arw">→</span>
+                    FlowZa Spa Master <span className="arw">→</span>
                   </Link>
                 </p>
               </Card>
@@ -374,7 +374,7 @@ export default function ClubPage() {
                 </p>
                 <p>
                   <Link className="btn btn--text" href="/products/pos">
-                    Flowza POS <span className="arw">→</span>
+                    FlowZa POS <span className="arw">→</span>
                   </Link>
                 </p>
               </Card>

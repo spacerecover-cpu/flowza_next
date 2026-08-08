@@ -9,9 +9,9 @@ import { RoleSwitcher } from '@/components/RoleSwitcher';
 import { HandoffDiagram } from '@/components/HandoffDiagram';
 
 export const metadata: Metadata = {
-  title: 'Solutions by function — Flowza AI',
+  title: 'Solutions by function — FlowZa AI',
   description:
-    'What finance, operations, revenue and IT each cannot answer today, and which Flowza AI cloud application answers it.',
+    'What finance, operations, revenue and IT each cannot answer today, and which FlowZa AI cloud application answers it.',
 };
 
 export default function SolutionsPage() {

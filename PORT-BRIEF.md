@@ -1,4 +1,4 @@
-# Porting the Flowza reposition into the Next.js codebase
+# Porting the FlowZa reposition into the Next.js codebase
 
 ## The situation
 
@@ -9,7 +9,7 @@ to bring the repo back into parity for the slice you have been given.
 > **SUPERSEDED — read `README.md` for the current positioning.** This brief describes a port that
 > has since been repositioned again. Both the "eighteen modules" positioning *and* the "nine
 > systems sharing one data layer" positioning below are wrong and have been removed from the site.
-> Flowza AI is nine **independent** cloud applications: each has its own database, its own
+> FlowZa AI is nine **independent** cloud applications: each has its own database, its own
 > subscription and its own pricing, and none of them shares data with another automatically. The
 > conventions further down this file are still accurate; the positioning is not.
 
@@ -24,15 +24,15 @@ The nine, in order, with the app each actually runs on:
 
 | # | Product | Subdomain | Tagline |
 |---|---------|-----------|---------|
-| 1 | Flowza Finance | finance.flowza.ai | Accounting, ERP and payroll on one ledger |
-| 2 | Flowza LogisPro | logispro.flowza.ai | Routes, shipments and warehouses, optimised |
-| 3 | Flowza Spa Master | spamaster.flowza.ai | Bookings, rosters and loyalty for wellness |
-| 4 | Flowza Fleetza | fleetza.flowza.ai | Live tracking, driver scores and maintenance |
-| 5 | Flowza QRForge | qr.flowza.ai | Dynamic QR codes with live analytics |
-| 6 | Flowza POS | pos.flowza.ai | Point of sale that survives the internet |
-| 7 | Flowza Club | club.flowza.ai | Membership, booking and billing for clubs |
-| 8 | Flowza RentFlow | rentflow.flowza.ai | Tenant applications, screened and decided |
-| 9 | Flowza PMS | pms.flowza.ai | Rate, calibrate and pay on one system |
+| 1 | FlowZa Finance | finance.flowza.ai | Accounting, ERP and payroll on one ledger |
+| 2 | FlowZa LogisPro | logispro.flowza.ai | Routes, shipments and warehouses, optimised |
+| 3 | FlowZa Spa Master | spamaster.flowza.ai | Bookings, rosters and loyalty for wellness |
+| 4 | FlowZa Fleetza | fleetza.flowza.ai | Live tracking, driver scores and maintenance |
+| 5 | FlowZa QRForge | qr.flowza.ai | Dynamic QR codes with live analytics |
+| 6 | FlowZa POS | pos.flowza.ai | Point of sale that survives the internet |
+| 7 | FlowZa Club | club.flowza.ai | Membership, booking and billing for clubs |
+| 8 | FlowZa RentFlow | rentflow.flowza.ai | Tenant applications, screened and decided |
+| 9 | FlowZa PMS | pms.flowza.ai | Rate, calibrate and pay on one system |
 
 **Never** claim the nine are one application, one deployment, or modules of a platform. Nine
 separate apps — and, per the correction at the top of this file, nine separate **databases** too.

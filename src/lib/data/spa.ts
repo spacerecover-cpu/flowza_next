@@ -1,5 +1,5 @@
 /**
- * Flowza Spa Master — /products/spamaster
+ * FlowZa Spa Master — /products/spamaster
  *
  * The day board and the retention loop, plus the certification matrix the
  * roster engine is built on. The therapists in CERT_THERAPISTS are the same

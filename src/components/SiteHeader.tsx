@@ -61,7 +61,7 @@ function MegaPanel({
 const PRODUCT_LINKS: { href: string; name: string; tagline: string; icon: React.ReactElement }[] = [
   {
     href: '/products/finance',
-    name: 'Flowza Finance',
+    name: 'FlowZa Finance',
     tagline: 'Accounting, ERP and payroll on one ledger',
     icon: (
       <svg className="mlink__ico" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -72,7 +72,7 @@ const PRODUCT_LINKS: { href: string; name: string; tagline: string; icon: React.
   },
   {
     href: '/products/logispro',
-    name: 'Flowza LogisPro',
+    name: 'FlowZa LogisPro',
     tagline: 'Routes, shipments and warehouses',
     icon: (
       <svg className="mlink__ico" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -84,7 +84,7 @@ const PRODUCT_LINKS: { href: string; name: string; tagline: string; icon: React.
   },
   {
     href: '/products/spamaster',
-    name: 'Flowza Spa Master',
+    name: 'FlowZa Spa Master',
     tagline: 'Bookings, rosters and loyalty',
     icon: (
       <svg className="mlink__ico" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -94,7 +94,7 @@ const PRODUCT_LINKS: { href: string; name: string; tagline: string; icon: React.
   },
   {
     href: '/products/fleetza',
-    name: 'Flowza Fleetza',
+    name: 'FlowZa Fleetza',
     tagline: 'Tracking, driver scores, maintenance',
     icon: (
       <svg className="mlink__ico" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -106,7 +106,7 @@ const PRODUCT_LINKS: { href: string; name: string; tagline: string; icon: React.
   },
   {
     href: '/products/qrforge',
-    name: 'Flowza QRForge',
+    name: 'FlowZa QRForge',
     tagline: 'Dynamic QR codes, live analytics',
     icon: (
       <svg className="mlink__ico" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -119,7 +119,7 @@ const PRODUCT_LINKS: { href: string; name: string; tagline: string; icon: React.
   },
   {
     href: '/products/pos',
-    name: 'Flowza POS',
+    name: 'FlowZa POS',
     tagline: 'Point of sale that survives the internet',
     icon: (
       <svg className="mlink__ico" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -130,7 +130,7 @@ const PRODUCT_LINKS: { href: string; name: string; tagline: string; icon: React.
   },
   {
     href: '/products/club',
-    name: 'Flowza Club',
+    name: 'FlowZa Club',
     tagline: 'Membership, booking and billing',
     icon: (
       /* a flag on a green */
@@ -142,7 +142,7 @@ const PRODUCT_LINKS: { href: string; name: string; tagline: string; icon: React.
   },
   {
     href: '/products/rentflow',
-    name: 'Flowza RentFlow',
+    name: 'FlowZa RentFlow',
     tagline: 'Tenant applications, screened and decided',
     icon: (
       /* a document with a tick */
@@ -154,7 +154,7 @@ const PRODUCT_LINKS: { href: string; name: string; tagline: string; icon: React.
   },
   {
     href: '/products/pms',
-    name: 'Flowza PMS',
+    name: 'FlowZa PMS',
     tagline: 'Rate, calibrate and pay on one system',
     icon: (
       /* a bell curve */
@@ -188,7 +188,7 @@ function MegaProducts({ open, onClose }: { open: boolean; onClose: () => void })
         <div className="mega__col">
           <div className="mega__feature">
             <span className="tag tag--ai">AI</span>
-            <p style={{ margin: 'var(--s4) 0 var(--s2)', fontSize: '1rem', fontFamily: 'var(--display)', fontWeight: 600, letterSpacing: '-.025em', lineHeight: 1.1 }}>Flowza Copilot</p>
+            <p style={{ margin: 'var(--s4) 0 var(--s2)', fontSize: '1rem', fontFamily: 'var(--display)', fontWeight: 600, letterSpacing: '-.025em', lineHeight: 1.1 }}>FlowZa Copilot</p>
             <p className="tiny" style={{ marginBottom: 'var(--s4)' }}>
               AI built into the work each application does — routing, scoring, forecasting, invoice reading.
               It acts under your permission model, never above it.
@@ -420,9 +420,9 @@ export function SiteHeader() {
   return (
     <header className={`nav${openMega ? ' is-open' : ''}`} id="nav" ref={navRef} onBlur={handleBlur}>
       <div className="nav__bar">
-        <Link className="brand" href="/" aria-label="Flowza home">
+        <Link className="brand" href="/" aria-label="FlowZa home">
           <BrandMark />
-          <span className="brand__word">Flowza</span>
+          <span className="brand__word">FlowZa</span>
           <span className="brand__sup">AI</span>
         </Link>
 

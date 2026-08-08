@@ -8,9 +8,9 @@ import { IndustryConfigurator } from '@/components/IndustryConfigurator';
 import { INDUSTRIES } from '@/lib/data/industries';
 
 export const metadata: Metadata = {
-  title: 'Solutions by industry — Flowza AI',
+  title: 'Solutions by industry — FlowZa AI',
   description:
-    'Which of the nine Flowza AI cloud applications to start with in retail, logistics, manufacturing, services, construction, healthcare, wellness and the public sector — and how each is configured.',
+    'Which of the nine FlowZa AI cloud applications to start with in retail, logistics, manufacturing, services, construction, healthcare, wellness and the public sector — and how each is configured.',
 };
 
 const INDUSTRY_NUMBERS = ['01', '02', '03', '04', '05', '06', '07', '08'];
@@ -19,7 +19,7 @@ export default function IndustriesPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Industries served by Flowza AI',
+    name: 'Industries served by FlowZa AI',
     itemListElement: INDUSTRIES.map((ind, i) => ({
       '@type': 'ListItem',
       position: i + 1,
@@ -89,7 +89,7 @@ export default function IndustriesPage() {
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                Industry software usually means a sector edition with its own release train, and a vendor who quietly stops investing in the smaller vertical. There is no sector edition of a Flowza AI application, so there is nothing to fall behind.
+                Industry software usually means a sector edition with its own release train, and a vendor who quietly stops investing in the smaller vertical. There is no sector edition of a FlowZa AI application, so there is nothing to fall behind.
               </p>
             </div>
           </Cols>
@@ -118,7 +118,7 @@ export default function IndustriesPage() {
               </p>
               <h3 className="d-s" style={{ marginBottom: 'var(--s3)' }}>A familiar review</h3>
               <p className="small">
-                Identity, permissions, residency and audit are built to the same standard in every application and enforced inside each one. A conglomerate running four of these sectors on five Flowza AI applications reviews the same controls five times, not five different security models.
+                Identity, permissions, residency and audit are built to the same standard in every application and enforced inside each one. A conglomerate running four of these sectors on five FlowZa AI applications reviews the same controls five times, not five different security models.
               </p>
             </div>
           </Cols>
@@ -135,7 +135,7 @@ export default function IndustriesPage() {
           <div className="cmp-scroll rv">
             <table className="cmp">
               <caption className="sr">
-                Comparison of eight industries by unit of work, binding constraint, deciding metric, and which of the nine Flowza AI applications to deploy first
+                Comparison of eight industries by unit of work, binding constraint, deciding metric, and which of the nine FlowZa AI applications to deploy first
               </caption>
               <thead>
                 <tr>

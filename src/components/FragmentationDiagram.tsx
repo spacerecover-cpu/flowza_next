@@ -16,7 +16,7 @@ interface Tile {
 }
 
 /**
- * Fourteen tools today, wired to one another. On Flowza AI the tangle goes and
+ * Fourteen tools today, wired to one another. On FlowZa AI the tangle goes and
  * so does most of the shelf: four applications, chosen deliberately, each
  * standing on its own.
  *
@@ -130,7 +130,7 @@ export function FragmentationDiagram({ className }: FragmentationDiagramProps) {
           aria-pressed={chosen}
           onClick={() => setChosen(true)}
         >
-          On Flowza AI
+          On FlowZa AI
         </button>
         <span className="tiny" style={{ marginLeft: 'auto' }}>Buy four · not fourteen</span>
       </div>

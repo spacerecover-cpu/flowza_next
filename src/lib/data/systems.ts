@@ -1,5 +1,5 @@
 /**
- * The nine Flowza AI applications.
+ * The nine FlowZa AI applications.
  *
  * Each entry describes one application on its own terms: who it is built for,
  * what it does, and what it replaces. There is deliberately no exchange graph
@@ -7,7 +7,7 @@
  * applications, each with its own database, its own subscription and its own
  * release train. An earlier version of this file encoded a shared record layer
  * with a symmetric exchange graph between the nine; that described an
- * architecture Flowza AI does not have, and it has been removed rather than
+ * architecture FlowZa AI does not have, and it has been removed rather than
  * softened.
  */
 
@@ -49,7 +49,7 @@ export interface FlowzaSystem {
 export const SYSTEMS: FlowzaSystem[] = [
   {
     key: 'Finance',
-    name: 'Flowza Finance',
+    name: 'FlowZa Finance',
     app: 'finance.flowza.ai',
     href: '/products/finance',
     tagline: 'Accounting, ERP and payroll on one ledger',
@@ -67,7 +67,7 @@ export const SYSTEMS: FlowzaSystem[] = [
 
   {
     key: 'LogisPro',
-    name: 'Flowza LogisPro',
+    name: 'FlowZa LogisPro',
     app: 'logispro.flowza.ai',
     href: '/products/logispro',
     tagline: 'Routes, shipments and warehouses, optimised',
@@ -85,7 +85,7 @@ export const SYSTEMS: FlowzaSystem[] = [
 
   {
     key: 'Spa Master',
-    name: 'Flowza Spa Master',
+    name: 'FlowZa Spa Master',
     app: 'spamaster.flowza.ai',
     href: '/products/spamaster',
     tagline: 'Bookings, rosters and loyalty for wellness',
@@ -103,7 +103,7 @@ export const SYSTEMS: FlowzaSystem[] = [
 
   {
     key: 'Fleetza',
-    name: 'Flowza Fleetza',
+    name: 'FlowZa Fleetza',
     app: 'fleetza.flowza.ai',
     href: '/products/fleetza',
     tagline: 'Live tracking, driver scores and maintenance',
@@ -121,7 +121,7 @@ export const SYSTEMS: FlowzaSystem[] = [
 
   {
     key: 'QRForge',
-    name: 'Flowza QRForge',
+    name: 'FlowZa QRForge',
     app: 'qr.flowza.ai',
     href: '/products/qrforge',
     tagline: 'Dynamic QR codes with live analytics',
@@ -139,7 +139,7 @@ export const SYSTEMS: FlowzaSystem[] = [
 
   {
     key: 'POS',
-    name: 'Flowza POS',
+    name: 'FlowZa POS',
     app: 'pos.flowza.ai',
     href: '/products/pos',
     tagline: 'Point of sale that survives the internet',
@@ -157,7 +157,7 @@ export const SYSTEMS: FlowzaSystem[] = [
 
   {
     key: 'Club',
-    name: 'Flowza Club',
+    name: 'FlowZa Club',
     app: 'club.flowza.ai',
     href: '/products/club',
     tagline: 'Membership, booking and billing for clubs',
@@ -175,7 +175,7 @@ export const SYSTEMS: FlowzaSystem[] = [
 
   {
     key: 'RentFlow',
-    name: 'Flowza RentFlow',
+    name: 'FlowZa RentFlow',
     app: 'rentflow.flowza.ai',
     href: '/products/rentflow',
     tagline: 'Tenant applications, screened and decided',
@@ -193,7 +193,7 @@ export const SYSTEMS: FlowzaSystem[] = [
 
   {
     key: 'PMS',
-    name: 'Flowza PMS',
+    name: 'FlowZa PMS',
     app: 'pms.flowza.ai',
     href: '/products/pms',
     tagline: 'Rate, calibrate and pay on one system',

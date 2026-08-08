@@ -2,7 +2,7 @@ import React from 'react';
 import { PROPOSED_JOURNAL } from '@/lib/data/finance';
 
 /**
- * The journal Flowza drafts from the invoice in the hero. The proposed row is
+ * The journal FlowZa drafts from the invoice in the hero. The proposed row is
  * highlighted rather than hidden, because the claim is that a person reviews it
  * and the correction becomes a rule.
  */

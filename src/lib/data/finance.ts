@@ -1,5 +1,5 @@
 /**
- * Flowza Finance — the repeated and tabular content of /products/finance.
+ * FlowZa Finance — the repeated and tabular content of /products/finance.
  * Ported from the `products/finance` route in `parts/30-products-a.html`.
  *
  * The eight modules are ordered 01 to 08 exactly as the definition list under
@@ -180,11 +180,11 @@ export interface JournalLine {
   /** Formatted as it is published, em-dash where there is no amount. */
   debit: string;
   credit: string;
-  /** Proposed by Flowza rather than entered by a person. */
+  /** Proposed by FlowZa rather than entered by a person. */
   proposed?: boolean;
 }
 
-/** The entry Flowza drafts from invoice NW-88214. */
+/** The entry FlowZa drafts from invoice NW-88214. */
 export const PROPOSED_JOURNAL: JournalLine[] = [
   { account: '1400', description: 'Inventory — raw', debit: '3,768.00', credit: '—' },
   {

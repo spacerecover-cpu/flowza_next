@@ -1,5 +1,5 @@
 /**
- * Flowza LogisPro — the repeated, tabular and plotted content of
+ * FlowZa LogisPro — the repeated, tabular and plotted content of
  * /products/logispro. Ported from the `products/logispro` route in
  * `parts/31-products-b.html`.
  *

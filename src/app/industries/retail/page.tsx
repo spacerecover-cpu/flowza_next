@@ -11,7 +11,7 @@ import { FootfallChart } from '@/components/FootfallChart';
 import { SpaceExplorer, SpaceTreemap, SpacePanel } from '@/components/SpaceTreemap';
 
 export const metadata: Metadata = {
-  title: 'Retail and hospitality — Flowza AI',
+  title: 'Retail and hospitality — FlowZa AI',
   description:
     'Trading space is inventory you cannot reorder. Measure what each square metre earns, forecast labour against real footfall, and run one stock pool across every channel.',
 };
@@ -35,13 +35,13 @@ export default function RetailPage() {
                   Space is the<br />inventory you<br />cannot reorder.
                 </h1>
                 <p className="lede" style={{ marginBottom: 'var(--s7)' }}>
-                  Every category is competing for the same square metres, and the allocation was usually decided years ago by whoever shouted loudest. Flowza measures what each metre actually earns, then makes the trade-off explicit.
+                  Every category is competing for the same square metres, and the allocation was usually decided years ago by whoever shouted loudest. FlowZa measures what each metre actually earns, then makes the trade-off explicit.
                 </p>
                 <div className="row">
                   <Link className="btn btn--primary" href="/pricing">
                     Book a walkthrough <span className="arw">→</span>
                   </Link>
-                  <Link className="btn btn--ghost" href="/products/pos">Flowza POS</Link>
+                  <Link className="btn btn--ghost" href="/products/pos">FlowZa POS</Link>
                 </div>
               </div>
               <div className="c-7 rv rv-d2">
@@ -228,7 +228,7 @@ export default function RetailPage() {
               },
               {
                 question: 'Can we keep our existing ecommerce platform?',
-                answer: 'Yes. The storefront stays where it is and reads availability and pricing from Flowza, which is what removes the overselling problem. Replacing the storefront is a separate decision and not part of a deployment.',
+                answer: 'Yes. The storefront stays where it is and reads availability and pricing from FlowZa, which is what removes the overselling problem. Replacing the storefront is a separate decision and not part of a deployment.',
               },
               {
                 question: 'Do franchise and concession models work?',
@@ -244,7 +244,7 @@ export default function RetailPage() {
           <RelatedLinks
             className="rv"
             links={[
-              { href: '/products/pos', title: 'Flowza POS', subtitle: 'The till and the ledger' },
+              { href: '/products/pos', title: 'FlowZa POS', subtitle: 'The till and the ledger' },
               { href: '/industries/logistics', title: 'Logistics and Freight', subtitle: 'Getting stock to the site' },
               { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
             ]}

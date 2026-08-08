@@ -10,7 +10,7 @@ import { KeylineList } from '@/components/KeylineList';
 import { LaneExplorer, LaneQuadrant, LanePanel } from '@/components/LaneQuadrant';
 
 export const metadata: Metadata = {
-  title: 'Logistics and freight — Flowza AI',
+  title: 'Logistics and freight — FlowZa AI',
   description:
     'Lanes are a portfolio. Price each one from posted cost, close the gap between paying for a movement and being paid for it, and stop running empty.',
 };
@@ -34,13 +34,13 @@ export default function LogisticsPage() {
                   You do not<br />run a fleet.<br />You run a<br />portfolio.
                 </h1>
                 <p className="lede" style={{ marginBottom: 'var(--s7)' }}>
-                  Lanes are positions. Some fund the network, some are held out of habit, and one or two are quietly financed by the others. Flowza prices each one from real postings, which is the only way to tell them apart.
+                  Lanes are positions. Some fund the network, some are held out of habit, and one or two are quietly financed by the others. FlowZa prices each one from real postings, which is the only way to tell them apart.
                 </p>
                 <div className="row">
                   <Link className="btn btn--primary" href="/pricing">
                     Book a walkthrough <span className="arw">→</span>
                   </Link>
-                  <Link className="btn btn--ghost" href="/products/logispro">Flowza LogisPro</Link>
+                  <Link className="btn btn--ghost" href="/products/logispro">FlowZa LogisPro</Link>
                 </div>
               </div>
               <div className="c-7 rv rv-d2">
@@ -276,7 +276,7 @@ export default function LogisticsPage() {
           <RelatedLinks
             className="rv"
             links={[
-              { href: '/products/logispro', title: 'Flowza LogisPro', subtitle: 'The operational product' },
+              { href: '/products/logispro', title: 'FlowZa LogisPro', subtitle: 'The operational product' },
               { href: '/industries/manufacturing', title: 'Manufacturing', subtitle: 'Where the freight originates' },
               { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
             ]}

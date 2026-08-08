@@ -11,7 +11,7 @@ export function HandoffDiagram({ className }: HandoffDiagramProps) {
         className="dgm hand"
         viewBox="0 0 1000 250"
         role="img"
-        aria-label="Diagram comparing quote-to-cash across six stages. Today, the revenue-to-operations and operations-to-finance boundaries each require a scheduled sync. On Flowza the six stages sit on one continuous record."
+        aria-label="Diagram comparing quote-to-cash across six stages. Today, the revenue-to-operations and operations-to-finance boundaries each require a scheduled sync. On FlowZa the six stages sit on one continuous record."
       >
         <text x="0" y="14" className="fn">TODAY · THREE SYSTEMS</text>
         <g>

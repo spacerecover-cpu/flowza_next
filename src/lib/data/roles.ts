@@ -59,7 +59,7 @@ export const ROLES: FunctionRole[] = [
     hardToday:
       'Eleven contracts, eleven permission models and eleven renewal dates. Offboarding means touching every one of them, and proving who saw a record means collecting logs in five different formats.',
     whatChanges:
-      'Every Flowza AI application connects to your directory the same way and keeps an audit log in the same shape, so single sign-on is configured once per application rather than reinvented, and an access review asks the same question of each one.',
+      'Every FlowZa AI application connects to your directory the same way and keeps an audit log in the same shape, so single sign-on is configured once per application rather than reinvented, and an access review asks the same question of each one.',
     stats: [
       { value: 'One', label: 'Vendor, one questionnaire, one renewal conversation' },
       { value: 'Same', label: 'Security model to review in every application' },

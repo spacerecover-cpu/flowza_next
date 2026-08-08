@@ -7,9 +7,9 @@ import { Eyebrow } from '@/components/Eyebrow';
 import { Stat } from '@/components/Stat';
 
 export const metadata: Metadata = {
-  title: 'Enterprise security and compliance — Flowza AI',
+  title: 'Enterprise security and compliance — FlowZa AI',
   description:
-    'Access control, encryption, data residency, recovery objectives and assurance status — the standard every Flowza AI cloud application is built to, stated plainly enough to hand to a security reviewer.',
+    'Access control, encryption, data residency, recovery objectives and assurance status — the standard every FlowZa AI cloud application is built to, stated plainly enough to hand to a security reviewer.',
 };
 
 export default function EnterprisePage() {
@@ -25,7 +25,7 @@ export default function EnterprisePage() {
             </div>
             <div className="c-5 rv rv-d2">
               <p className="lede">
-                Every Flowza AI application is built to the same security and operational bar, and enforces it inside its
+                Every FlowZa AI application is built to the same security and operational bar, and enforces it inside its
                 own boundary. That is deliberately useful in procurement: the review you run on the first application tells
                 you what to expect of the next, and a finding in one cannot reach another. These are the controls, stated
                 plainly enough to hand to a security reviewer.

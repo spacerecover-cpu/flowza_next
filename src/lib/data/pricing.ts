@@ -1,7 +1,7 @@
 /**
  * Pricing philosophy, not a price list.
  *
- * Every Flowza AI application is priced on its own — by product, by the
+ * Every FlowZa AI application is priced on its own — by product, by the
  * features you switch on and by the scale of the deployment. There is no
  * universal licence and no per-person price that covers the nine, so this file
  * deliberately holds no headline figure. It previously described tiers such as
@@ -35,7 +35,7 @@ export const TIERS: PricingTier[] = [
   {
     name: 'Growth',
     shape: 'Several applications',
-    description: 'For businesses running more than one part of the operation on Flowza AI.',
+    description: 'For businesses running more than one part of the operation on FlowZa AI.',
     features: [
       'Each application priced separately',
       'Multi-entity and multi-currency where the application supports it',

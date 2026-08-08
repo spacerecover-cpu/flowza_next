@@ -22,7 +22,7 @@ export function RecordMatrix() {
       <div className="mtx-scroll rv">
         <table className="mtx">
           <caption className="sr">
-            Matrix of the nine Flowza AI applications against six business functions — selling, stock,
+            Matrix of the nine FlowZa AI applications against six business functions — selling, stock,
             money, people, field and site, and customer — marking each as a core capability, a supporting
             capability, or not covered. Each row describes one application on its own; no row depends on
             any other application being present.

@@ -18,9 +18,9 @@ import { PostingList } from '@/components/PostingList';
 import { SiteStockGrid } from '@/components/SiteStockGrid';
 
 export const metadata: Metadata = {
-  title: 'Flowza POS — point of sale that survives the internet',
+  title: 'FlowZa POS — point of sale that survives the internet',
   description:
-    'Sub-second transactions, true offline mode with no lost sales, multi-location inventory and customer analytics, posting into Flowza Finance without an export.',
+    'Sub-second transactions, true offline mode with no lost sales, multi-location inventory and customer analytics, posting into FlowZa Finance without an export.',
 };
 
 const METRICS = [
@@ -52,7 +52,7 @@ const continuityItems = [
 const counterItems = [
   {
     heading: 'Native integrations',
-    body: 'Flowza Finance for the books, plus delivery platforms, eCommerce channels and your CRM. An order that arrives from a delivery app is a sale in the same place as a walk-in, and the customer record is the same record.',
+    body: 'FlowZa Finance for the books, plus delivery platforms, eCommerce channels and your CRM. An order that arrives from a delivery app is a sale in the same place as a walk-in, and the customer record is the same record.',
   },
   {
     heading: 'Customer analytics as a by-product',
@@ -95,12 +95,12 @@ const faqItems = [
   {
     question: 'Do we have to buy your hardware?',
     answer:
-      'No. iPad, Android tablet, Windows terminal or a browser — your Flowza POS subscription covers every device, and there is no proprietary hardware in the product. If you already have terminals on the counter, start with those.',
+      'No. iPad, Android tablet, Windows terminal or a browser — your FlowZa POS subscription covers every device, and there is no proprietary hardware in the product. If you already have terminals on the counter, start with those.',
   },
   {
     question: 'How does a sale reach our accounts?',
     answer:
-      'Flowza POS records the full accounting detail of every sale — revenue by line, tax, tender and cost of goods — and makes it available as a scheduled export or over its API. That feeds whichever accounting system you keep, including Flowza Finance, which is a separate application on a separate subscription. Delivery platforms, eCommerce channels and your CRM connect through the same API.',
+      'FlowZa POS records the full accounting detail of every sale — revenue by line, tax, tender and cost of goods — and makes it available as a scheduled export or over its API. That feeds whichever accounting system you keep, including FlowZa Finance, which is a separate application on a separate subscription. Delivery platforms, eCommerce channels and your CRM connect through the same API.',
   },
   {
     question: 'We run several sites. Is that one dashboard or several?',
@@ -115,8 +115,8 @@ const faqItems = [
 ];
 
 const relatedLinks = [
-  { href: '/products/finance', title: 'Flowza Finance', subtitle: 'The ledger the till posts into' },
-  { href: '/products/club', title: 'Flowza Club', subtitle: 'Charge-to-account registers for clubs' },
+  { href: '/products/finance', title: 'FlowZa Finance', subtitle: 'The ledger the till posts into' },
+  { href: '/products/club', title: 'FlowZa Club', subtitle: 'Charge-to-account registers for clubs' },
   { href: '/industries/retail', title: 'Retail', subtitle: 'How the sector is configured' },
 ];
 
@@ -135,7 +135,7 @@ export default function POSPage() {
                     <path d="M6 15h6" stroke="#0C0E0D" strokeWidth="1.6" />
                   </svg>
                 </span>
-                <span className="pbadge__t">Flowza POS</span>
+                <span className="pbadge__t">FlowZa POS</span>
               </div>
               <ProductBadges badges={['Offline mode', 'Multi-location', 'Customer analytics']} />
               <h1 className="d-xl" style={{ marginBottom: 'var(--s5)' }}>
@@ -147,7 +147,7 @@ export default function POSPage() {
                 not — and nothing is lost while it is down.
               </p>
               <p className="small" style={{ marginBottom: 'var(--s7)', maxWidth: '58ch' }}>
-                Flowza POS is its own application, not a screen bolted onto an accounting package. It
+                FlowZa POS is its own application, not a screen bolted onto an accounting package. It
                 is bought on its own subscription and it is complete on its own — every sale is
                 recorded with the stock movement, the revenue split, the tax and the tender behind
                 it, so the accounting detail is ready for whichever books you keep.
@@ -216,7 +216,7 @@ export default function POSPage() {
             </Reveal>
             <Reveal className="c-5" delay={2}>
               <p className="lede">
-                A sale is never just a total. Flowza POS records the stock that moved, the revenue
+                A sale is never just a total. FlowZa POS records the stock that moved, the revenue
                 line it belongs to, the tax due on it, the tender that settled it and the customer who
                 bought it — at the moment the sale clears, not in a nightly job that rebuilds it from
                 a total afterwards.
@@ -307,7 +307,7 @@ export default function POSPage() {
                 Whatever you already own
               </h2>
               <p className="small" style={{ marginBottom: 'var(--s5)' }}>
-                Your Flowza POS subscription covers every device, and none of them have to be bought
+                Your FlowZa POS subscription covers every device, and none of them have to be bought
                 from us. A tablet at a market stall and a Windows terminal in a flagship run the same
                 software and the same price list.
               </p>

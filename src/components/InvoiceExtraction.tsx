@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * The hero artefact: a supplier invoice on the left, and what Flowza read off
+ * The hero artefact: a supplier invoice on the left, and what FlowZa read off
  * it on the right. The highlighted marks on the document are the lines the
  * extraction cites, which is the point — the proposal carries its evidence.
  */

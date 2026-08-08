@@ -11,7 +11,7 @@ import { BudgetConsumption } from '@/components/BudgetConsumption';
 import { CaseAgeing } from '@/components/CaseAgeing';
 
 export const metadata: Metadata = {
-  title: 'Public sector — Flowza AI',
+  title: 'Public sector — FlowZa AI',
   description:
     'Commitment accounting at the requisition, case ageing against the statutory window, and a platform designed to be audited.',
 };
@@ -150,7 +150,7 @@ export default function PublicPage() {
             className="rv"
             links={[
               { href: '/enterprise', title: 'Enterprise', subtitle: 'Audit, access and residency' },
-              { href: '/products/finance', title: 'Flowza Finance', subtitle: 'Multi-book and controls' },
+              { href: '/products/finance', title: 'FlowZa Finance', subtitle: 'Multi-book and controls' },
               { href: '/industries', title: 'All industries', subtitle: 'Compare all eight sectors' },
             ]}
           />

@@ -2,7 +2,7 @@ import React from 'react';
 import { POSTING_LINES } from '@/lib/data/pos';
 
 /**
- * What the sale on the receipt records inside Flowza POS: the stock movement,
+ * What the sale on the receipt records inside FlowZa POS: the stock movement,
  * the revenue split, the tax, the tender and the customer's history, all written
  * as the sale clears rather than reconstructed later.
  *

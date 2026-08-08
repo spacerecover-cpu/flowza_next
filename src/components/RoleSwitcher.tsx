@@ -34,7 +34,7 @@ function RoleSwitcherInner() {
           </button>
         ))}
         <p className="role__hint tiny">
-          Four teams, four questions, four different applications. Pick a role to see which Flowza AI application answers it.
+          Four teams, four questions, four different applications. Pick a role to see which FlowZa AI application answers it.
         </p>
       </div>
       <div className="brief" aria-live="polite">
@@ -45,7 +45,7 @@ function RoleSwitcherInner() {
             <p className="small">{role.hardToday}</p>
           </div>
           <div>
-            <span className="brief__k">What changes on Flowza</span>
+            <span className="brief__k">What changes on FlowZa</span>
             <p className="small" style={{ color: 'var(--fg)' }}>{role.whatChanges}</p>
           </div>
         </div>

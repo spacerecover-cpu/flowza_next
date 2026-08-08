@@ -1,15 +1,15 @@
-# Flowza — marketing site
+# FlowZa — marketing site
 
-The Flowza marketing site, as a Next.js 15 App Router application. TypeScript in strict
+The FlowZa marketing site, as a Next.js 15 App Router application. TypeScript in strict
 mode, server components by default, and a design system built out of CSS custom properties.
 
 This repo is a port. The source of truth is the single-file site at `../flowza/`
 (`index.html`, assembled from `parts/*.html`); when the two disagree, the single-file site
 is right and this repo is behind.
 
-## What Flowza AI is, and the claim the site makes
+## What FlowZa AI is, and the claim the site makes
 
-Flowza AI is **nine specialised AI cloud applications** for the Middle East, Africa and
+FlowZa AI is **nine specialised AI cloud applications** for the Middle East, Africa and
 India. Each runs as its own application on its own subdomain, **holds its own data in its
 own database**, has its own release train, and carries its own subscription and its own
 pricing. They belong to one ecosystem and are built to a common security and compliance
@@ -45,15 +45,15 @@ claims that cross an application boundary.
 
 | # | Product | Route | App subdomain | Tagline |
 |---|---------|-------|---------------|---------|
-| 1 | Flowza Finance | `/products/finance` | finance.flowza.ai | Accounting, ERP and payroll on one ledger |
-| 2 | Flowza LogisPro | `/products/logispro` | logispro.flowza.ai | Routes, shipments and warehouses, optimised |
-| 3 | Flowza Spa Master | `/products/spamaster` | spamaster.flowza.ai | Bookings, rosters and loyalty for wellness |
-| 4 | Flowza Fleetza | `/products/fleetza` | fleetza.flowza.ai | Live tracking, driver scores and maintenance |
-| 5 | Flowza QRForge | `/products/qrforge` | qr.flowza.ai | Dynamic QR codes with live analytics |
-| 6 | Flowza POS | `/products/pos` | pos.flowza.ai | Point of sale that survives the internet |
-| 7 | Flowza Club | `/products/club` | club.flowza.ai | Membership, booking and billing for clubs |
-| 8 | Flowza RentFlow | `/products/rentflow` | rentflow.flowza.ai | Tenant applications, screened and decided |
-| 9 | Flowza PMS | `/products/pms` | pms.flowza.ai | Rate, calibrate and pay on one system |
+| 1 | FlowZa Finance | `/products/finance` | finance.flowza.ai | Accounting, ERP and payroll on one ledger |
+| 2 | FlowZa LogisPro | `/products/logispro` | logispro.flowza.ai | Routes, shipments and warehouses, optimised |
+| 3 | FlowZa Spa Master | `/products/spamaster` | spamaster.flowza.ai | Bookings, rosters and loyalty for wellness |
+| 4 | FlowZa Fleetza | `/products/fleetza` | fleetza.flowza.ai | Live tracking, driver scores and maintenance |
+| 5 | FlowZa QRForge | `/products/qrforge` | qr.flowza.ai | Dynamic QR codes with live analytics |
+| 6 | FlowZa POS | `/products/pos` | pos.flowza.ai | Point of sale that survives the internet |
+| 7 | FlowZa Club | `/products/club` | club.flowza.ai | Membership, booking and billing for clubs |
+| 8 | FlowZa RentFlow | `/products/rentflow` | rentflow.flowza.ai | Tenant applications, screened and decided |
+| 9 | FlowZa PMS | `/products/pms` | pms.flowza.ai | Rate, calibrate and pay on one system |
 
 Catalogue order matters. It is the order in `src/lib/data/systems.ts`, the order in the
 nav, the order in the sitemap, and the order the `systemIndexes` in
